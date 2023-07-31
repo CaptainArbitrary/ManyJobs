@@ -1,0 +1,41 @@
+name: '[PR] Require Labels'
+
+env:
+  TYPE_LABELS: 'chore, bug, enhancement, feature'
+  VERSION_LABELS: 'patch, minor, major'
+
+on:
+  pull_request:
+    types: [ opened, labeled, unlabeled, synchronize ]
+    branches: [ main ]
+
+jobs:
+
+  require-labels:
+
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    outputs:
+      type-label: ${{ steps.get-type-label.outputs.labels }}
+      version-label: ${{ steps.get-version-label.outputs.labels }}
+
+    steps:
+
+    - id: get-type-label
+      uses: mheap/github-action-required-labels@v5
+      with:
+        labels: ${{ env.TYPE_LABELS }}
+        mode: exactly
+        count: 1
+        add_comment: true
+        message: "This pull request cannot be merged because {{ errorString }} {{ count }} of `{{ provided }}` is required."
+
+    - id: get-version-label
+      uses: mheap/github-action-required-labels@v5
+      with:
+        labels: ${{ env.VERSION_LABELS }}
+        mode: maximum
+        count: 1
+        add_comment: true
+        message: "This pull request cannot be merged because {{ errorString }} {{ count }} of `{{ provided }}` is required."
