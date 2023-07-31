@@ -102,6 +102,7 @@ Biotech adds children and their care and mechanoids and _their_ care.
 Many Jobs patches the following mods to make the Work tab nicer:
 
 - [Dubs Bad Hygiene](https://steamcommunity.com/sharedfiles/filedetails/?id=836308268)
+- [Fluffy Breakdowns](https://steamcommunity.com/sharedfiles/filedetails/?id=726244033)
 - [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
 
 # Strong Recommendations
