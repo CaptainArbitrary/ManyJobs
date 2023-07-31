@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "FeedHemogen"]/workType</xpath>
+    <value>
+      <workType>MJobs_Caring</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "ChildcarerTeach"]/workType</xpath>
+    <value>
+      <workType>MJobs_Teaching</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "CarryToGeneExtractor"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "CarryToGrowthVat"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "HaulToGrowthVat"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "RepairMech"]/workType</xpath>
+    <value>
+      <workType>MJobs_Mechanitor</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "DoBillsMechGestator"]/workType</xpath>
+    <value>
+      <workType>MJobs_Mechanitor</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "DoBillsSubcoreEncoder"]/workType</xpath>
+    <value>
+      <workType>MJobs_Mechanitor</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "EmptyWasteContainer"]/workType</xpath>
+    <value>
+      <workType>MJobs_Mechanitor</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "HaulMechsToCharger"]/workType</xpath>
+    <value>
+      <workType>MJobs_Mechanitor</workType>
+    </value>
+  </Operation>
+
+</Patch>
