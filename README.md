@@ -97,6 +97,12 @@ Biotech adds children and their care and mechanoids and _their_ care.
 | Teach | Teach lessons to children in a classroom. |
 | Mechanitor | Use the Subcore Encoder, gestate mechanoids, repair mechs and do related tasks. |
 
+# Mod Support
+
+Many Jobs patches the following mods to make the Work tab nicer:
+
+- [Dubs Bad Hygiene](https://steamcommunity.com/sharedfiles/filedetails/?id=836308268)
+
 # Strong Recommendations
 
 - [Work Tab](https://steamcommunity.com/sharedfiles/filedetails/?id=725219116)
