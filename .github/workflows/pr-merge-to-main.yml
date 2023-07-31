@@ -8,7 +8,7 @@ on:
 env:
   VERSION_LABELS: 'patch, minor, major'
   MOD_NAME: 'ManyJobs'
-  ZIP_CONTENTS: '1.4 About LICENSE LoadFolders.xml'
+  ZIP_CONTENTS: '1.4 About LICENSE LoadFolders.xml Mods'
 
 jobs:
 
