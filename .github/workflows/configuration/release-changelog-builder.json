@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "title": "### New Features",
+      "labels": [ "feature" ]
+    },
+    {
+      "title": "### Enhancements",
+      "labels": [ "enhancement" ]
+    },
+    {
+      "title": "### Bug Fixes",
+      "labels": [ "bug" ]
+    }
+  ],
+  "sort": {
+    "order": "ASC",
+    "on_property": "mergedAt"
+  },
+  "template": "${{CHANGELOG}}\n\n### Full Changelog\n\n- ${{RELEASE_DIFF}}",
+  "pr_template": "- **${{TITLE}}** ([PR #${{NUMBER}}](${{URL}}) by @${{AUTHOR}})\n"
+}
