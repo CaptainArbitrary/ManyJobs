@@ -1,0 +1,32 @@
+name: '[Push] CI'
+
+on:
+  push:
+    branches-ignore: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    # Do build tasks here ↓
+
+    - uses: tecolicom/actions-use-apt-tools@v1
+      with:
+        tools: libxml2-utils
+    - uses: tj-actions/glob@v17
+      id: glob
+      with:
+        files: |
+          **/*.xml
+    - run: |
+        for i in '${{ steps.glob.outputs.paths }}'; do xmllint --noout $i; done
+
+    # Do build tasks here ↑
