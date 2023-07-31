@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+  <WorkTypeDef>
+    <defName>Childcare</defName>
+    <labelShort>childcare</labelShort>
+    <pawnLabel>Childcarer</pawnLabel>
+    <gerundLabel>caring</gerundLabel>
+    <description>Care for a baby or child of the colony.</description>
+    <verb>Care</verb>
+    <alwaysStartActive>true</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+    <naturalPriority>1175</naturalPriority>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+-->
+
+  <WorkTypeDef>
+    <defName>MJobs_Teaching</defName>
+    <labelShort>teach</labelShort>
+    <pawnLabel>Teacher</pawnLabel>
+    <gerundLabel>teaching</gerundLabel>
+    <description>Teach the children of the colony.</description>
+    <verb>Teach</verb>
+    <alwaysStartActive>true</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+    <naturalPriority>1170</naturalPriority>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
+    <defName>MJobs_Mechanitor</defName>
+    <labelShort>mechanitor</labelShort>
+    <pawnLabel>Mechanitor</pawnLabel>
+    <gerundLabel>working with mechanoids</gerundLabel>
+    <description>Work with mechanoids</description>
+    <verb>Work at</verb>
+    <naturalPriority>480</naturalPriority>
+    <relevantSkills>
+      <li>Crafting</li>
+    </relevantSkills>
+    <workTags>
+      <li>Crafting</li>
+      <li>ManualSkilled</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+</Defs>
