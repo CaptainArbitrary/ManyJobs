@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+  <!-- Commented out lines come from Core/Defs/ThingDefs_Races/Races_Humanlike.xml
+  and are here for reference. As much as possible, Many Jobs worktypes follow the
+  game's built-in life stage work settings, with some common-sense changes like not
+  allowing children to perform surgery etc. -->
+
+  <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+    <xpath>Defs/ThingDef[defName = "Human"]/race/lifeStageWorkSettings</xpath>
+    <value>
+      <MJobs_Rescuing>7</MJobs_Rescuing>
+        <!-- <Firefighter>7</Firefighter> -->
+        <!-- <Patient>0</Patient> -->
+        <!-- <Doctor>10</Doctor> -->
+      <MJobs_Operating>13</MJobs_Operating>
+        <!-- <PatientBedRest>0</PatientBedRest> -->
+      <MJobs_Caring>7</MJobs_Caring>
+      <MJobs_PriorityHauling>7</MJobs_PriorityHauling>
+      <MJobs_PriorityCleaning>3</MJobs_PriorityCleaning>
+        <!-- <BasicWorker>3</BasicWorker> -->
+      <MJobs_Undertaking>13</MJobs_Undertaking>
+      <MJobs_Recruiting>13</MJobs_Recruiting>
+        <!-- <Warden>10</Warden> -->
+      <MJobs_AnimalTraining>7</MJobs_AnimalTraining>
+        <!-- <Handling>7</Handling> -->
+      <MJobs_AnimalTaming>7</MJobs_AnimalTaming>
+      <MJobs_Butchering>7</MJobs_Butchering>
+        <!-- <Cooking>7</Cooking> -->
+      <MJobs_Brewing>7</MJobs_Brewing>
+        <!-- <Hunting>7</Hunting> -->
+      <MJobs_Maintaining>10</MJobs_Maintaining>
+      <MJobs_Deconstructing>10</MJobs_Deconstructing>
+        <!-- <Construction>10</Construction> -->
+      <MJobs_Harvesting>7</MJobs_Harvesting>
+      <!-- <Growing>7</Growing> -->
+      <!-- <Mining>7</Mining> -->
+      <MJobs_Drilling>7</MJobs_Drilling>
+      <!-- <PlantCutting>7</PlantCutting> -->
+      <MJobs_Fabricating>13</MJobs_Fabricating>
+      <!-- <Smithing>13</Smithing> -->
+      <!-- <Tailoring>7</Tailoring> -->
+      <!-- <Art>10</Art> -->
+      <MJobs_Synthesizing>13</MJobs_Synthesizing>
+      <MJobs_Refining>7</MJobs_Refining>
+      <MJobs_Smelting>13</MJobs_Smelting>
+      <MJobs_Stonecutting>7</MJobs_Stonecutting>
+      <!-- <Crafting>7</Crafting> -->
+      <MJobs_Delivering>7</MJobs_Delivering>
+      <MJobs_Loading>7</MJobs_Loading>
+      <Hauling>7</Hauling>
+      <!-- <Cleaning>3</Cleaning> -->
+      <!-- <Research>13</Research> -->
+      <MJobs_Scanning>13</MJobs_Scanning>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Rescuing -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoctorRescue"]/workType</xpath>
+    <value>
+      <workType>MJobs_Rescuing</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoctorRescue"]</xpath>
+    <value>
+      <emergency>true</emergency>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Operating -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsMedicalHumanOperation"]/workType</xpath>
+    <value>
+      <workType>MJobs_Operating</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsMedicalAnimalOperation"]/workType</xpath>
+    <value>
+      <workType>MJobs_Operating</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "TakeToBedToOperate"]/workType</xpath>
+    <value>
+      <workType>MJobs_Operating</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Caring -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoctorFeedHumanlikes"]/workType</xpath>
+    <value>
+      <workType>MJobs_Caring</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
+    <value>
+      <workType>MJobs_Caring</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "VisitSickPawn"]/workType</xpath>
+    <value>
+      <workType>MJobs_Caring</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "FeedPrisoner"]/workType</xpath>
+    <value>
+      <workType>MJobs_Caring</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DeliverFoodToPrisoner"]/workType</xpath>
+    <value>
+      <workType>MJobs_Caring</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_PriorityHauling -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Refuel"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "RearmTurrets"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "TakeBeerOutOfFermentingBarrel"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "FillFermentingBarrel"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_PriorityCleaning -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "CleanClearSnow"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityCleaning</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Undertaking -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Strip"]/workType</xpath>
+    <value>
+      <workType>MJobs_Undertaking</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "HaulCorpses"]/workType</xpath>
+    <value>
+      <workType>MJobs_Undertaking</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsCremate"]/workType</xpath>
+    <value>
+      <workType>MJobs_Undertaking</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Recruiting -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "ChatWithPrisoner"]/workType</xpath>
+    <value>
+      <workType>MJobs_Recruiting</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_AnimalTraining -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Train"]/workType</xpath>
+    <value>
+      <workType>MJobs_AnimalTraining</workType>
+    </value>
+  </Operation>
+
+  <!-- Handling -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "EmptyEggBox"]/workType</xpath>
+    <value>
+      <workType>Handling</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_AnimalTaming -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Tame"]/workType</xpath>
+    <value>
+      <workType>MJobs_AnimalTaming</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Butchering -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsButcherFlesh"]/workType</xpath>
+    <value>
+      <workType>MJobs_Butchering</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Brewing -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsBrew"]/workType</xpath>
+    <value>
+      <workType>MJobs_Brewing</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Maintaining -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "FixBrokenDownBuilding"]/workType</xpath>
+    <value>
+      <workType>MJobs_Maintaining</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Repair"]/workType</xpath>
+    <value>
+      <workType>MJobs_Maintaining</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Deconstructing -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Uninstall"]/workType</xpath>
+    <value>
+      <workType>MJobs_Deconstructing</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Deconstruct"]/workType</xpath>
+    <value>
+      <workType>MJobs_Deconstructing</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "ConstructRemoveFloors"]/workType</xpath>
+    <value>
+      <workType>MJobs_Deconstructing</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Harvesting -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "GrowerHarvest"]/workType</xpath>
+    <value>
+      <workType>MJobs_Harvesting</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Drilling -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "Drill"]/workType</xpath>
+    <value>
+      <workType>MJobs_Drilling</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Fabricating -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsFabricationBench"]/workType</xpath>
+    <value>
+      <workType>MJobs_Fabricating</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Synthesizing -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsProduceDrugs"]/workType</xpath>
+    <value>
+      <workType>MJobs_Synthesizing</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Refining -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsRefinery"]/workType</xpath>
+    <value>
+      <workType>MJobs_Refining</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Smelting -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsSmelter"]/workType</xpath>
+    <value>
+      <workType>MJobs_Smelting</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Stonecutting -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DoBillsStonecut"]/workType</xpath>
+    <value>
+      <workType>MJobs_Stonecutting</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Delivering -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DeliverResourcesToFrames"]/workType</xpath>
+    <value>
+      <workType>MJobs_Delivering</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "DeliverResourcesToBlueprints"]/workType</xpath>
+    <value>
+      <workType>MJobs_Delivering</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Loading -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "UnloadCarriers"]/workType</xpath>
+    <value>
+      <workType>MJobs_Loading</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "HelpGatheringItemsForCaravan"]/workType</xpath>
+    <value>
+      <workType>MJobs_Loading</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "LoadTransporters"]/workType</xpath>
+    <value>
+      <workType>MJobs_Loading</workType>
+    </value>
+  </Operation>
+
+  <!-- MJobs_Scanning -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "LongRangeScan"]/workType</xpath>
+    <value>
+      <workType>MJobs_Scanning</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "GroundPenetratingScan"]/workType</xpath>
+    <value>
+      <workType>MJobs_Scanning</workType>
+    </value>
+  </Operation>
+
+</Patch>
