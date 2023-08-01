@@ -1,5 +1,14 @@
 name: '[Push] CI'
 
+env:
+  MOD_NAME: 'ManyJobs'
+  ZIP_CONTENTS: |
+    1.4/
+    About/
+    LICENSE
+    LoadFolders.xml
+    Mods/
+
 on:
   push:
     branches-ignore: [ main ]
@@ -30,3 +39,11 @@ jobs:
         for i in '${{ steps.glob.outputs.paths }}'; do xmllint --noout $i; done
 
     # Do build tasks here ↑
+
+    - id: get-short-sha
+      run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: '${{ env.MOD_NAME }}-${{ steps.get-short-sha.outputs.short_sha }}'
+        path: ${{ env.ZIP_CONTENTS }}
