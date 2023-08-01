@@ -4,7 +4,7 @@
 &emsp;
 [![License](https://img.shields.io/github/license/CaptainArbitrary/ManyJobs?style=for-the-badge)](LICENSE)
 &emsp;
-[![CI Status](https://img.shields.io/github/actions/workflow/status/CaptainArbitrary/ManyJobs/ci.yml?style=for-the-badge&label=CI)](https://github.com/CaptainArbitrary/ManyJobs/actions/workflows/ci.yml)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/CaptainArbitrary/ManyJobs/push-ci.yml?style=for-the-badge&label=CI)](https://github.com/CaptainArbitrary/ManyJobs/actions/workflows/push-ci.yml)
 &emsp;
 [![Issues](https://img.shields.io/github/issues/CaptainArbitrary/ManyJobs?style=for-the-badge)](https://github.com/CaptainArbitrary/ManyJobs/issues)
 
