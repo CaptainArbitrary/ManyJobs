@@ -3,7 +3,7 @@
   <packageId>CaptainArbitrary.ManyJobs</packageId>
   <name>Many Jobs</name>
   <author>CaptainArbitrary</author>
-  <description></description>
+  <description>Many Jobs attempts to improve the Work tab by creating new work types and rearranging how the game's jobs are categorized into those work types.</description>
   <url>https://github.com/CaptainArbitrary/ManyJobs</url>
   <supportedVersions>
     <li>1.4</li>

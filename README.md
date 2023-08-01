@@ -118,6 +118,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
 - [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
   - the haul urgently job is now -- surprise, surprise -- part of the Priority Haul work type
   - the finish off job, if enabled in Allow Tool's mod options, gets prioritized just about Priority Haul
+- [Snap Out!](https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555)
 
 # Recommendations
 
