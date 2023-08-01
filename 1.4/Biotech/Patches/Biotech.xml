@@ -88,5 +88,41 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "Mech_Fabricor"]/race/mechEnabledWorkTypes</xpath>
     <value>
+      <li>MJobs_Butchering</li>
+      <li>MJobs_Brewing</li>
+      <li>MJobs_Fabricating</li>
+      <li>MJobs_Fabricating</li>
+      <li>MJobs_Synthesizing</li>
+      <li>MJobs_Refining</li>
+      <li>MJobs_Smelting</li>
+      <li>MJobs_Stonecutting</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "Mech_Agrihand"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Harvesting</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "Mech_Cleansweeper"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_PriorityCleaning</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "Mech_Paramedic"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Rescuing</li>
+      <li>MJobs_Operating</li>
+      <li>MJobs_Caring</li>
+    </value>
+  </Operation>
+
 </Patch>
