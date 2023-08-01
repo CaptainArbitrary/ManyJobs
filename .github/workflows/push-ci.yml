@@ -36,12 +36,9 @@ jobs:
     # Do build tasks here ↑
 
     - id: get-short-sha
-      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-
-    - run: |
-        zip -r '${{ env.MOD_NAME }}-${{ steps.get-short-sha.outputs.sha_short }}.zip' ${{ env.ZIP_CONTENTS }}
+      run: echo "short_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
     - uses: actions/upload-artifact@v3
       with:
-        name: '${{ env.MOD_NAME }}-${{ steps.get-short-sha.outputs.sha_short }}.zip'
-        path: '${{ env.MOD_NAME }}-${{ steps.get-short-sha.outputs.sha_short }}.zip'
+        name: '${{ env.MOD_NAME }}-${{ steps.get-short-sha.outputs.short_sha }}.zip'
+        path: '${{ env.ZIP_CONTENTS }}'
