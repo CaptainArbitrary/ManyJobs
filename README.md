@@ -102,21 +102,33 @@ Biotech adds children and their care and mechanoids and _their_ care.
 Many Jobs patches the following mods to make the Work tab nicer:
 
 - [Dubs Bad Hygiene](https://steamcommunity.com/sharedfiles/filedetails/?id=836308268)
+  - washing patients, cleaning bedpans and administering fluids to the sick is now a Caregiver job
+  - clearing blocked drains is under Maintain
+  - loading and unloading washing machines and composters is part of Priority Haul
+  - refilling water containers is also part of Priority Haul
+  - emptying septic tanks is a Basic job
 - [Fluffy Breakdowns](https://steamcommunity.com/sharedfiles/filedetails/?id=726244033)
+  - this mod's maintenance job is part of Maintain
 - [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
+  - the management job has been moved _way_ up in the priority list, now falling between Basic and Undertaker
 - [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
-- [Vanilla Books Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2193152410)
-- [Vanilla Fishing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1914064942)
+  - VEF has jobs for adding ingredients to ingredient processor buildings and removing the finished product; Many Jobs makes these all Priority Haul jobs
 - [Vanilla Furniture Expanded - Security](https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007)
+  - trap rearming is a Priority Haul job
 - [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
+  - the haul urgently job is now -- surprise, surprise -- part of the Priority Haul work type
+  - the finish off job, if enabled in Allow Tool's mod options, gets prioritized just about Priority Haul
 - [Snap Out!](https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555)
+  - this mod's calm-down-pawn job is now part of a Counsel work type that falls in the Work tab just above Recruit
 
-# Strong Recommendations
+# Recommendations
 
 - [Work Tab](https://steamcommunity.com/sharedfiles/filedetails/?id=725219116)
 - [Grouped Pawns Lists](https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428)
 
-These two mods together dramatically improve the Work tab user interface. I use them and you should too.
+In my opinion these two mods together dramatically improve the Work tab user interface, making it easier to read and use.
+
+[![Work Tab Work Tab](.github/README/Work_Tab_Work_Tab_lol.png)](.github/README/Work_Tab_Work_Tab_lol.png?raw=true)
 
 # Incompatibilities
 
