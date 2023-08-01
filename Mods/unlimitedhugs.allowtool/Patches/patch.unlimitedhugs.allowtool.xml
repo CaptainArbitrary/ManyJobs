@@ -16,13 +16,6 @@
   </Operation>
 
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkTypeDef[defName = "FinishingOff"]/labelShort</xpath>
-    <value>
-      <labelShort>finish off</labelShort>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorkTypeDef[defName = "FinishingOff"]/naturalPriority</xpath>
     <value>
       <naturalPriority>1167</naturalPriority>
