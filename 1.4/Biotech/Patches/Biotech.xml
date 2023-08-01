@@ -71,4 +71,13 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "Mech_Lifter"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_PriorityHauling</li>
+      <li>MJobs_Delivering</li>
+      <li>MJobs_Loading</li>
+    </value>
+  </Operation>
+
 </Patch>
