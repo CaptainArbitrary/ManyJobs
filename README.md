@@ -120,6 +120,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
   - the finish off job, if enabled in Allow Tool's mod options, gets prioritized just about Priority Haul
 - [Snap Out!](https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555)
   - this mod's calm-down-pawn job is now part of a Counsel work type that falls in the Work tab just above Recruit
+- [Hospitality](https://steamcommunity.com/sharedfiles/filedetails/?id=753498552)
 
 # Recommendations
 
