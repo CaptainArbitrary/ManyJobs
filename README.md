@@ -119,6 +119,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
   - the haul urgently job is now -- surprise, surprise -- part of the Priority Haul work type
   - the finish off job, if enabled in Allow Tool's mod options, gets prioritized just about Priority Haul
 - [Snap Out!](https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555)
+  - this mod's calm-down-pawn job is now part of a Counsel work type that falls in the Work tab just above Recruit
 
 # Recommendations
 
