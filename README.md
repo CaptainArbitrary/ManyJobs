@@ -112,8 +112,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
 - [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
   - the management job has been moved _way_ up in the priority list, now falling between Basic and Undertaker
 - [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
-- [Vanilla Books Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2193152410)
-- [Vanilla Fishing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1914064942)
+  - VEF has jobs for adding ingredients to ingredient processor buildings and removing the finished product; Many Jobs makes these all Priority Haul jobs
 - [Vanilla Furniture Expanded - Security](https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007)
 - [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
 
