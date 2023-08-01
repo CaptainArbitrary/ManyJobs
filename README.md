@@ -108,6 +108,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
 - [Vanilla Books Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2193152410)
 - [Vanilla Fishing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1914064942)
 - [Vanilla Furniture Expanded - Security](https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007)
+- [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
 
 # Strong Recommendations
 
