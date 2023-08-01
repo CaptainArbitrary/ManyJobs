@@ -14,5 +14,6 @@
     <li IfModActive="vanillaexpanded.vfesecurity">Mods/vanillaexpanded.vfesecurity</li>
     <li IfModActive="unlimitedhugs.allowtool">Mods/unlimitedhugs.allowtool</li>
     <li IfModActive="weilbyte.snapout">Mods/weilbyte.snapout</li>
+    <li IfModActive="orion.hospitality">Mods/orion.hospitality</li>
   </v1.4>
 </loadFolders>
