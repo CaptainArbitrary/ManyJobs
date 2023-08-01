@@ -110,6 +110,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
 - [Fluffy Breakdowns](https://steamcommunity.com/sharedfiles/filedetails/?id=726244033)
   - this mod's maintenance job is part of Maintain
 - [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
+  - the management job has been moved _way_ up in the priority list, now falling between Basic and Undertaker
 - [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
 - [Vanilla Books Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2193152410)
 - [Vanilla Fishing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1914064942)
