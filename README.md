@@ -60,7 +60,7 @@ In my opinion these two mods together dramatically improve the Work tab user int
 
 ### Can I add this mod to a save game?
 
-Yes. It should be no problem to add Many Jobs to a game already in progress. You may want to redo your Work tab settings after you install the mod, though.
+Yes, with one important caveat: Many Jobs patches friendly mechanoids so they can do the new work types. But if you add the mod to a game where you already have friendly mechanoids, they _won't_ start doing the new work types even though their descriptions say they should. (This may be a RimWorld bug, I'm not sure.) The workaround for this is to destroy your mechanoids with dev mode then spawn in new ones to replace them. Or if you prefer, you can just disassemble your mechanoids and gestate new ones.
 
 ### Can I remove this mod from a save game?
 
