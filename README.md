@@ -16,113 +16,38 @@ I've always had a love-hate relationship with RimWorld's Work tab. Getting pawns
 
 [![Many Jobs Work Tab](.github/README/Many_Jobs_Work_Tab.png)](.github/README/Many_Jobs_Work_Tab.png?raw=true)
 
-## Work Types
+In general, jobs that depend on a skill have been separated from jobs that use but don't especially depend on that skill. For example, harvesting crops and wild plants is highly dependent on a pawn's Plants skill; low Plants skill can result in a botched harvest and loss of product. But when sowing crops, a pawn's Plants skill only affects work speed. So if you're training up a pawn to be a farmer, maybe you want to enable Grow on that pawn but only enable Harvest on your highest-skilled pawn.
 
-With Many Jobs installed, RimWorld's work types look like this:
+I've also tried to put work types in a sensible order of priority. Rescuing injured pawns is now the highest-priority work type; when a pawn's bleeding heavily seconds count. The Undertaker work type, which consists of jobs that in vanilla RimWorld are way down in the Haul category, is relatively high up so your pawns don't leave dead bodies out in the sun indefinitely to rot and stink up the place.
 
-| Work&nbsp;Type | Description |
-|:---------------|:------------|
-| Rescue | Rescue downed allies and take them to medical beds. |
-| Firefight | Fight fires in the home area. |
-| Patient | Go to a medical bed for treatment. |
-| Doctor | Tend to patients, oneself and animals, in that order. |
-| Surgeon | Perform operations on humanlikes and animals. |
-| Bed Rest | Rest and recuperate in bed. |
-| Caregiver | Feed patients, prisoners and animals; visit the sick to cheer them up. |
-| Priority Haul | Do important hauling jobs. |
-| Priority Clean | Do important cleaning jobs. |
-| Basic | The standard work type for unskilled and simple tasks. |
-| Undertaker | Strip, haul and cremate corpses. |
-| Recruit | Recruit prisoners. |
-| Warden | Generally handle prisoners. |
-| Train | Train colony animals. |
-| Handle | Handle colony animals, including roping them, slaughtering them and harvesting their resources. |
-| Tame | Tame wild animals. |
-| Butcher | Butcher creatures. |
-| Cook | Prepare meals. |
-| Brew | Brew drinks. |
-| Hunt | Hunt down and kill animals that are designated to be hunted. |
-| Maintain | Fix broken-down buildings and repair things. |
-| Deconstruct | Uninstall and deconstruct things. |
-| Construct | Build things and structures. |
-| Harvest | Harvest crops. |
-| Grow | Plant crops. |
-| Mine | Dig. |
-| Drill | Operate deep drills. |
-| Plant cut | Cut plants and extract trees. |
-| Fabricate | Do jobs at fabrication benches. |
-| Smith | Make things at smithies or machining tables. |
-| Tailor | Make things at tailor benches. |
-| Art | Paint things and make art. |
-| Synthesize | Synthesize drugs at drug labs. |
-| Refine | Operate biofuel refineries. |
-| Smelt | Do bills at smelters. |
-| Cut stone | Do bills at stonecutting tables. |
-| Craft | Make things at crafting spots. |
-| Deliver | Deliver construction materials to where they're needed. |
-| Load | Load and unload caravans and transport pods. |
-| Haul | Do general hauling jobs. |
-| Clean | Do general cleaning jobs. |
-| Research | Do research at research benches. |
-| Scan | Operate long-range and ground-penetrating scanners. |
+## Compatibility
 
-In general, jobs that depend on a skill have been separated from jobs that don't especially depend on that skill. For example, harvesting crops and wild plants is highly dependent on a pawn's Plants skill; low Plants skill can result in a botched harvest and loss of product. But when it comes to sowing crops, a pawn's Plants skill only affects the speed at which that pawn works. So if you're training up a pawn to be a farmer, maybe you want to enable Grow on that pawn but only enable Harvest on your highest-skilled pawn.
+Many Jobs is incompatible with any other mod that does the same basic thing:
 
-Also, I've made a concerted effort to put work types in a sensible order of priority. Rescuing injured pawns is the highest-priority work type because when a pawn's bleeding heavily seconds count. The Undertaker work type, which consists of jobs that in vanilla RimWorld are way down in the Haul category, is relatively high up so your pawns don't leave dead bodies out in the sun indefinitely to rot and stink up the place.
+- [[FSF] Complex Jobs](https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319)
+- [Job Splitter](https://steamcommunity.com/sharedfiles/filedetails/?id=1211661009)
+- [Nurse Job](https://steamcommunity.com/sharedfiles/filedetails/?id=1820501433)
 
-# DLC
+Trying to run Many Jobs with one of these other mods will have surprising results.
 
-Many Jobs is compatible with and supports the Royalty, Ideology and Biotech DLCs and their new features.
+### DLC
 
-[![All DLCs Work Tab](.github/README/All_DLCs_Work_Tab.png)](.github/README/All_DLCs_Work_Tab.png?raw=true)
+Many Jobs is compatible with Royalty, Ideology and Biotech.
 
-## Royalty
+### Compatible Mods
 
-Royalty doesn't add any new workgivers or worktypes to the game, so Many Jobs "just works" with it.
-
-## Ideology
-
-With Ideology installed you get:
-
-| Work&nbsp;Type | Description |
-|:---------------|:------------|
-| Convert | Convert prisoners to an ideoligion. |
-
-## Biotech
-
-Biotech adds children and their care and mechanoids and _their_ care.
-
-| Work&nbsp;Type | Description |
-|:---------------|:------------|
-| Teach | Teach lessons to children in a classroom. |
-| Mechanitor | Use the Subcore Encoder, gestate mechanoids, repair mechs and do related tasks. |
-
-# Mod Support
-
-Many Jobs patches the following mods to make the Work tab nicer:
+Many Jobs includes patches for the following mods:
 
 - [Dubs Bad Hygiene](https://steamcommunity.com/sharedfiles/filedetails/?id=836308268)
-  - washing patients, cleaning bedpans and administering fluids to the sick is now a Caregiver job
-  - clearing blocked drains is under Maintain
-  - loading and unloading washing machines and composters is part of Priority Haul
-  - refilling water containers is also part of Priority Haul
-  - emptying septic tanks is a Basic job
 - [Fluffy Breakdowns](https://steamcommunity.com/sharedfiles/filedetails/?id=726244033)
-  - this mod's maintenance job is part of Maintain
 - [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
-  - the management job has been moved _way_ up in the priority list, now falling between Basic and Undertaker
 - [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
-  - VEF has jobs for adding ingredients to ingredient processor buildings and removing the finished product; Many Jobs makes these all Priority Haul jobs
 - [Vanilla Furniture Expanded - Security](https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007)
-  - trap rearming is a Priority Haul job
 - [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
-  - the haul urgently job is now -- surprise, surprise -- part of the Priority Haul work type
-  - the finish off job, if enabled in Allow Tool's mod options, gets prioritized just about Priority Haul
 - [Snap Out!](https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555)
-  - this mod's calm-down-pawn job is now part of a Counsel work type that falls in the Work tab just above Recruit
 - [Hospitality](https://steamcommunity.com/sharedfiles/filedetails/?id=753498552)
 
-# Recommendations
+### Recommended Mods
 
 - [Work Tab](https://steamcommunity.com/sharedfiles/filedetails/?id=725219116)
 - [Grouped Pawns Lists](https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428)
@@ -131,25 +56,15 @@ In my opinion these two mods together dramatically improve the Work tab user int
 
 [![Work Tab Work Tab](.github/README/Work_Tab_Work_Tab_lol.png)](.github/README/Work_Tab_Work_Tab_lol.png?raw=true)
 
-# Incompatibilities
-
-Many Jobs is not generally compatible with any other mod that does the same basic thing:
-
-- [[FSF] Complex Jobs](https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319)
-- [Job Splitter](https://steamcommunity.com/sharedfiles/filedetails/?id=1211661009)
-- [Nurse Job](https://steamcommunity.com/sharedfiles/filedetails/?id=1820501433)
-
-Trying to run Many Jobs with one of these other mods will have surprising results.
-
-# FAQ
+## FAQ
 
 ### Can I add this mod to a save game?
 
-Yes. In technical terms, Many Jobs neither creates nor removes any work types or work givers; it just rearranges their relationships. It should be no problem to add Many Jobs to a game already in progress.
+Yes. It should be no problem to add Many Jobs to a game already in progress. You may want to redo your Work tab settings after you install the mod, though.
 
 ### Can I remove this mod from a save game?
 
-It's generally not a good idea to remove mods in the middle of a game. That being said, it should be safe to remove Many Jobs. You'll have to redo all your Work tab settings after you do. To emphasize, though, removing Many Jobs mid-game _is not supported._ If doing it breaks your game, you're on your own.
+It's generally not a good idea to remove mods in the middle of a game. That being said, it should be safe to remove Many Jobs. You'll have to redo all your Work tab settings after you do. But for the record, removing Many Jobs mid-game _is not supported,_ and if doing it breaks your game, I can't help you.
 
 ### Can I use this with [some other mod]?
 
@@ -163,7 +78,7 @@ Sure, if I can. Send me a message telling me about the mod you want supported an
 
 Probably? I really don't know. Try it and report back.
 
-# Acknowledgments
+## Acknowledgments
 
 This mod has been _heavily_ inspired by the work of other modders. I mention in particular FrozenSnowFox's [Complex Jobs](https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319) mod, which I used for a long time before deciding to do my own thing. If you don't like my mod, I wholeheartedly recommend you try his.
 
