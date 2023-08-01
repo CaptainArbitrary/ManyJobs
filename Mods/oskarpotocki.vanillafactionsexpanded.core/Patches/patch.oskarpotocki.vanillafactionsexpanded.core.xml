@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_InsertFirstIngredient"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_InsertFirstIngredient"]/label</xpath>
+    <value>
+      <label>add first ingredient</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_InsertSecondIngredient"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_InsertSecondIngredient"]/label</xpath>
+    <value>
+      <label>add second ingredient</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_InsertThirdIngredient"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_InsertThirdIngredient"]/label</xpath>
+    <value>
+      <label>add third ingredient</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_RemoveProduct"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "IP_RemoveProduct"]/label</xpath>
+    <value>
+      <label>remove finished product</label>
+    </value>
+  </Operation>
+
+</Patch>
