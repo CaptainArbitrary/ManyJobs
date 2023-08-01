@@ -10,5 +10,6 @@
     <li IfModActive="fluffy.fluffybreakdowns">Mods/fluffy.fluffybreakdowns</li>
     <li IfModActive="oskarpotocki.vanillafactionsexpanded.core">Mods/oskarpotocki.vanillafactionsexpanded.core</li>
     <li IfModActive="vanillaexpanded.vbookse">Mods/vanillaexpanded.vbookse</li>
+    <li IfModActive="vanillaexpanded.vcef">Mods/vanillaexpanded.vcef</li>
   </v1.4>
 </loadFolders>
