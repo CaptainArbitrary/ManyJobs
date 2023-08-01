@@ -13,5 +13,6 @@
     <li IfModActive="vanillaexpanded.vcef">Mods/vanillaexpanded.vcef</li>
     <li IfModActive="vanillaexpanded.vfesecurity">Mods/vanillaexpanded.vfesecurity</li>
     <li IfModActive="unlimitedhugs.allowtool">Mods/unlimitedhugs.allowtool</li>
+    <li IfModActive="weilbyte.snapout">Mods/weilbyte.snapout</li>
   </v1.4>
 </loadFolders>
