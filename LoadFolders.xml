@@ -9,5 +9,6 @@
     <li IfModActive="fluffy.colonymanager">Mods/fluffy.colonymanager</li>
     <li IfModActive="fluffy.fluffybreakdowns">Mods/fluffy.fluffybreakdowns</li>
     <li IfModActive="oskarpotocki.vanillafactionsexpanded.core">Mods/oskarpotocki.vanillafactionsexpanded.core</li>
+    <li IfModActive="vanillaexpanded.vbookse">Mods/vanillaexpanded.vbookse</li>
   </v1.4>
 </loadFolders>
