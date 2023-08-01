@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "VFES_ConstructRearmTrap"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName = "VFES_RearmTrap"]/workType</xpath>
+    <value>
+      <workType>MJobs_PriorityHauling</workType>
+    </value>
+  </Operation>
+
+</Patch>
