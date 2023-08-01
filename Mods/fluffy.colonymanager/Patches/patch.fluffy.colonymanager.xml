@@ -2,20 +2,6 @@
 <Patch>
 
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkTypeDef[defName = "Managing"]/labelShort</xpath>
-    <value>
-      <labelShort>managing</labelShort>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkTypeDef[defName = "Managing"]/gerundLabel</xpath>
-    <value>
-      <gerundLabel>managing</gerundLabel>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorkTypeDef[defName = "Managing"]/naturalPriority</xpath>
     <value>
       <naturalPriority>1135</naturalPriority>
