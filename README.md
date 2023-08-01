@@ -114,6 +114,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
 - [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
   - VEF has jobs for adding ingredients to ingredient processor buildings and removing the finished product; Many Jobs makes these all Priority Haul jobs
 - [Vanilla Furniture Expanded - Security](https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007)
+  - trap rearming is a Priority Haul job
 - [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
 
 # Strong Recommendations
