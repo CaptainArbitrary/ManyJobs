@@ -119,12 +119,14 @@ Many Jobs patches the following mods to make the Work tab nicer:
   - the haul urgently job is now -- surprise, surprise -- part of the Priority Haul work type
   - the finish off job, if enabled in Allow Tool's mod options, gets prioritized just about Priority Haul
 
-# Strong Recommendations
+# Recommendations
 
 - [Work Tab](https://steamcommunity.com/sharedfiles/filedetails/?id=725219116)
 - [Grouped Pawns Lists](https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428)
 
-These two mods together dramatically improve the Work tab user interface. I use them and you should too.
+In my opinion these two mods together dramatically improve the Work tab user interface, making it easier to read and use.
+
+[![Work Tab Work Tab](.github/README/Work_Tab_Work_Tab_lol.png)](.github/README/Work_Tab_Work_Tab_lol.png?raw=true)
 
 # Incompatibilities
 
