@@ -12,5 +12,6 @@
     <li IfModActive="vanillaexpanded.vbookse">Mods/vanillaexpanded.vbookse</li>
     <li IfModActive="vanillaexpanded.vcef">Mods/vanillaexpanded.vcef</li>
     <li IfModActive="vanillaexpanded.vfesecurity">Mods/vanillaexpanded.vfesecurity</li>
+    <li IfModActive="unlimitedhugs.allowtool">Mods/unlimitedhugs.allowtool</li>
   </v1.4>
 </loadFolders>
