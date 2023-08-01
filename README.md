@@ -104,6 +104,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
 - [Dubs Bad Hygiene](https://steamcommunity.com/sharedfiles/filedetails/?id=836308268)
 - [Fluffy Breakdowns](https://steamcommunity.com/sharedfiles/filedetails/?id=726244033)
 - [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
+- [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
 
 # Strong Recommendations
 
