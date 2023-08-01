@@ -80,4 +80,13 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "Mech_Constructoid"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Maintaining</li>
+      <li>MJobs_Deconstructing</li>
+    </value>
+  </Operation>
+
+    <value>
 </Patch>
