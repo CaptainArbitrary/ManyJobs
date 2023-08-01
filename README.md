@@ -105,6 +105,7 @@ Many Jobs patches the following mods to make the Work tab nicer:
 - [Fluffy Breakdowns](https://steamcommunity.com/sharedfiles/filedetails/?id=726244033)
 - [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
 - [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
+- [Vanilla Books Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2193152410)
 
 # Strong Recommendations
 
