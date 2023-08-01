@@ -45,5 +45,5 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: '${{ env.MOD_NAME }}-${{ steps.get-short-sha.outputs.short_sha }}.zip'
+        name: '${{ env.MOD_NAME }}-${{ steps.get-short-sha.outputs.short_sha }}'
         path: ${{ env.ZIP_CONTENTS }}
