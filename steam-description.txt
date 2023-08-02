@@ -1,0 +1,71 @@
+[h1]Description[/h1]
+I've always had a love-hate relationship with RimWorld's Work tab. Getting pawns to do [i]what[/i] you want [i]when[/i] you want them to do it has been the source of a lot of frustration for me. Now, there's an argument to be made that that's part of the challenge of the game. If so, then it's a part of the game that [i]I don't particularly enjoy,[/i] so I decided to do something about it.
+
+[url=https://raw.githubusercontent.com/CaptainArbitrary/ManyJobs/1.2.1/.github/README/Many_Jobs_Work_Tab.png][img]https://raw.githubusercontent.com/CaptainArbitrary/ManyJobs/1.2.1/.github/README/Many_Jobs_Work_Tab.png[/img][/url]
+
+In general, jobs that depend on a skill have been separated from jobs that use but don't especially depend on that skill. For example, harvesting crops and wild plants is highly dependent on a pawn's Plants skill; low Plants skill can result in a botched harvest and loss of product. But when sowing crops, a pawn's Plants skill only affects work speed. So if you're training up a pawn to be a farmer, maybe you want to enable Grow on that pawn but only enable Harvest on your highest-skilled pawn.
+
+I've also tried to put work types in a sensible order of priority. Rescuing injured pawns is now the highest-priority work type; when a pawn's bleeding heavily seconds count. The Undertaker work type, which consists of jobs that in vanilla RimWorld are way down in the Haul category, is relatively high up so your pawns don't leave dead bodies out in the sun indefinitely to rot and stink up the place.
+
+[h1]Compatibility[/h1]
+Many Jobs is [b]incompatible[/b] with any other mod that does the same basic thing:
+[list]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319][FSF] Complex Jobs[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1211661009]Job Splitter[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1820501433]Nurse Job[/url]
+[/list]
+Trying to run Many Jobs with one of these other mods will have surprising results.
+
+[h1]DLC[/h1]
+Many Jobs is compatible with, but does not require, Royalty, Ideology and Biotech.
+
+[h1]Compatible Mods[/h1]
+Many Jobs includes patches for the following mods:
+[list]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=836308268]Dubs Bad Hygiene[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=726244033]Fluffy Breakdowns[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=715565262]Fluffy's Colony Manager[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013]Vanilla Expanded Framework[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007]Vanilla Furniture Expanded - Security[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=761421485]Allow Tool[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555]Snap Out![/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=753498552]Hospitality[/url]
+[/list]
+[h1]Recommended Mods[/h1]
+[list]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=725219116]Work Tab[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428]Grouped Pawns Lists[/url]
+[/list]
+In my opinion these two mods together dramatically improve the Work tab user interface, making it easier to read and use.
+
+[h1]FAQ[/h1]
+[b]Can I add this mod to a save game?[/b]
+
+Yes, with one important caveat: Many Jobs patches friendly mechanoids so they can do the new work types. But if you add the mod to a game where you already have friendly mechanoids, they [i]won't[/i] start doing the new work types even though their descriptions say they should. (This may be a RimWorld bug, I'm not sure.) The workaround for this is to destroy your mechanoids with dev mode then spawn in new ones to replace them. Or if you prefer, you can just disassemble your mechanoids and gestate new ones.
+
+[b]Can I remove this mod from a save game?[/b]
+
+It's generally not a good idea to remove mods in the middle of a game. That being said, it should be safe to remove Many Jobs. You'll have to redo all your Work tab settings after you do. But for the record, removing Many Jobs mid-game _is not supported,_ and if doing it breaks your game, I can't help you.
+
+[b]Can I use this with [some other mod]?[/b]
+
+Generally yes. Mods broadly fall into two categories: those that add new work types or work givers and those that don't. Most mods don't. Those ones are almost certain to be totally compatible with Many Jobs. Mods that do create new work types or work givers are also almost certain to be compatible, but strange things might happen, like the Work tab not being quite as perfectly organized as you'd like it to be.
+
+[b]Will you add support for [some other mod]?[/b]
+
+Sure, if I can. Leave a comment telling me about the mod you want supported and I'll give it my best shot.
+
+[b]CE?[/b]
+
+Probably? I really don't know. Try it and report back.
+
+[h1]Acknowledgments[/h1]
+This mod has been [i]heavily[/i] inspired by the work of other modders. I mention in particular FrozenSnowFox's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319]Complex Jobs[/url] mod, which I used for a long time before deciding to do my own thing. If you don't like my mod, I wholeheartedly recommend you try his.
+
+Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This content/mod is not official and is not endorsed by Ludeon.
+
+[url=https://github.com/CaptainArbitrary/ManyJobs/blob/main/LICENSE][img]https://img.shields.io/github/license/CaptainArbitrary/ManyJobs?style=for-the-badge[/img][/url]
+
+[url=https://github.com/CaptainArbitrary/ManyJobs][img]https://img.shields.io/github/v/release/CaptainArbitrary/ManyJobs?style=for-the-badge&label=GitHub%20Release[/img][/url]
+
+[url=https://ko-fi.com/T6T1NNFAL][img]https://shields.io/badge/ko--fi-Buy_me_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badge[/img][/url]
