@@ -37,8 +37,9 @@ Many Jobs is incompatible with any other mod that does the same basic thing:
 - [[FSF] Complex Jobs](https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319)
 - [Job Splitter](https://steamcommunity.com/sharedfiles/filedetails/?id=1211661009)
 - [Nurse Job](https://steamcommunity.com/sharedfiles/filedetails/?id=1820501433)
+- [Some more jobs](https://steamcommunity.com/sharedfiles/filedetails/?id=2245161494)
 
-Trying to run Many Jobs with one of these other mods will have surprising results.
+These mods all improve the Work tab, just in different ways. If you don't like mine, try the others. They're all good.
 
 ### DLC
 
