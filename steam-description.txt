@@ -1,4 +1,3 @@
-[h1]Description[/h1]
 I've always had a love-hate relationship with RimWorld's Work tab. Getting pawns to do [i]what[/i] you want [i]when[/i] you want them to do it has been the source of a lot of frustration for me. Now, there's an argument to be made that that's part of the challenge of the game. If so, then it's a part of the game that [i]I don't particularly enjoy,[/i] so I decided to do something about it.
 
 [url=https://raw.githubusercontent.com/CaptainArbitrary/ManyJobs/1.2.1/.github/README/Many_Jobs_Work_Tab.png][img]https://raw.githubusercontent.com/CaptainArbitrary/ManyJobs/1.2.1/.github/README/Many_Jobs_Work_Tab.png[/img][/url]
@@ -13,11 +12,12 @@ Many Jobs is [b]incompatible[/b] with any other mod that does the same basic thi
   [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319][FSF] Complex Jobs[/url]
   [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1211661009]Job Splitter[/url]
   [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1820501433]Nurse Job[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2245161494]Some more jobs[/url]
 [/list]
-Trying to run Many Jobs with one of these other mods will have surprising results.
+These mods all improve the Work tab, just in different ways. If you don't like mine, try the others. They're all good.
 
 [h1]DLC[/h1]
-Many Jobs is compatible with, but does not require, Royalty, Ideology and Biotech.
+Many Jobs is compatible with Royalty, Ideology and Biotech.
 
 [h1]Compatible Mods[/h1]
 Many Jobs includes patches for the following mods:
@@ -65,7 +65,5 @@ This mod has been [i]heavily[/i] inspired by the work of other modders. I mentio
 Portions of the materials used to create this mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This content/mod is not official and is not endorsed by Ludeon.
 
 [url=https://github.com/CaptainArbitrary/ManyJobs/blob/main/LICENSE][img]https://img.shields.io/github/license/CaptainArbitrary/ManyJobs?style=for-the-badge[/img][/url]
-
 [url=https://github.com/CaptainArbitrary/ManyJobs][img]https://img.shields.io/github/v/release/CaptainArbitrary/ManyJobs?style=for-the-badge&label=GitHub%20Release[/img][/url]
-
 [url=https://ko-fi.com/T6T1NNFAL][img]https://shields.io/badge/ko--fi-Buy_me_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badge[/img][/url]
