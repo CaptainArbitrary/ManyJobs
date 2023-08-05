@@ -22,4 +22,7 @@
     <li>FrozenSnowFox.ComplexJobs</li>
     <li>FrozenSnowFox.ComplexJobsLegacy</li>
   </incompatibleWith>
+  <loadAfter>
+    <li>bustedbunny.recylethis</li>
+  </loadAfter>
 </ModMetaData>
