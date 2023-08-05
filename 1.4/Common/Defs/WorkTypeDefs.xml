@@ -624,7 +624,7 @@
     <labelShort>refine</labelShort>
     <pawnLabel>Refiner</pawnLabel>
     <gerundLabel>refining</gerundLabel>
-    <description>Refine products from raw materials.</description>
+    <description>Do bills at the biofuel refinery.</description>
     <verb>Refine at</verb>
     <naturalPriority>420</naturalPriority>
     <relevantSkills>
