@@ -405,4 +405,76 @@
     </value>
   </Operation>
 
+  <!-- Core WorkTypeDef descriptions -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Doctor"]/description</xpath>
+    <value>
+      <description>Treat the sick. Doctors will care for colonists, prisoners and animals.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Warden"]/description</xpath>
+    <value>
+      <description>Manage prisoners.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Handling"]/description</xpath>
+    <value>
+      <description>Feed, harvest resources from and slaughter animals.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Cooking"]/description</xpath>
+    <value>
+      <description>Prepare meals.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Construction"]/description</xpath>
+    <value>
+      <description>Build things that you've designated.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Growing"]/description</xpath>
+    <value>
+      <description>Plant seeds, replant trees and sow crops.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Mining"]/description</xpath>
+    <value>
+      <description>Digging.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "PlantCutting"]/description</xpath>
+    <value>
+      <description>Cut plants as designated.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Crafting"]/description</xpath>
+    <value>
+      <description>Do general low-skilled labor at work stations.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "Cleaning"]/description</xpath>
+    <value>
+      <description>Clean the floor in the home area.</description>
+    </value>
+  </Operation>
+
 </Patch>
