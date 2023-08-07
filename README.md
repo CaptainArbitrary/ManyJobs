@@ -11,8 +11,8 @@
     <img alt="License" src="https://img.shields.io/github/license/CaptainArbitrary/ManyJobs?style=for-the-badge" />
   </a>
 &emsp;
-  <a href="https://github.com/CaptainArbitrary/ManyJobs/actions/workflows/push-ci.yml">
-    <img alt="CI Status" src="https://img.shields.io/github/actions/workflow/status/CaptainArbitrary/ManyJobs/push-ci.yml?style=for-the-badge&label=CI" />
+  <a href="https://github.com/CaptainArbitrary/ManyJobs/actions/workflows/ci.yml">
+    <img alt="CI Status" src="https://img.shields.io/github/actions/workflow/status/CaptainArbitrary/ManyJobs/ci.yml?style=for-the-badge&label=CI" />
   </a>
 &emsp;
   <a href="https://github.com/CaptainArbitrary/ManyJobs/issues">
