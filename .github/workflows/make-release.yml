@@ -72,7 +72,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: gh pr merge --merge --delete-branch
+    - run: gh pr merge --merge --delete-branch --subject "Merge branch release/${{ steps.increment-version.outputs.version }}"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
