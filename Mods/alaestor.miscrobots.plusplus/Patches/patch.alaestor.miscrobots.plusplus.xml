@@ -247,4 +247,146 @@
 
   <!-- #endregion -->
 
+  <!-- #region RPP_Bot_Omni -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+    <value>
+      <li>
+        <workTypeDef>MJobs_Rescuing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Operating</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Caring</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_PriorityHauling</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_PriorityCleaning</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Undertaking</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Butchering</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Brewing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Maintaining</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Deconstructing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Harvesting</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Drilling</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Fabricating</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Synthesizing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Refining</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Smelting</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Stonecutting</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Delivering</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Loading</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Scanning</workTypeDef>
+        <priority>1</priority>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Rescuing</li>
+      <li>MJobs_Operating</li>
+      <li>MJobs_Caring</li>
+      <li>MJobs_PriorityHauling</li>
+      <li>MJobs_PriorityCleaning</li>
+      <li>MJobs_Undertaking</li>
+      <li>MJobs_Butchering</li>
+      <li>MJobs_Brewing</li>
+      <li>MJobs_Maintaining</li>
+      <li>MJobs_Deconstructing</li>
+      <li>MJobs_Harvesting</li>
+      <li>MJobs_Drilling</li>
+      <li>MJobs_Fabricating</li>
+      <li>MJobs_Synthesizing</li>
+      <li>MJobs_Refining</li>
+      <li>MJobs_Smelting</li>
+      <li>MJobs_Stonecutting</li>
+      <li>MJobs_Delivering</li>
+      <li>MJobs_Loading</li>
+      <li>MJobs_Scanning</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+    <value>
+      <MJobs_Rescuing>1</MJobs_Rescuing>
+      <MJobs_Operating>1</MJobs_Operating>
+      <MJobs_Caring>1</MJobs_Caring>
+      <MJobs_PriorityHauling>1</MJobs_PriorityHauling>
+      <MJobs_PriorityCleaning>1</MJobs_PriorityCleaning>
+      <MJobs_Undertaking>1</MJobs_Undertaking>
+      <MJobs_Butchering>1</MJobs_Butchering>
+      <MJobs_Brewing>1</MJobs_Brewing>
+      <MJobs_Maintaining>1</MJobs_Maintaining>
+      <MJobs_Deconstructing>1</MJobs_Deconstructing>
+      <MJobs_Harvesting>1</MJobs_Harvesting>
+      <MJobs_Drilling>1</MJobs_Drilling>
+      <MJobs_Fabricating>1</MJobs_Fabricating>
+      <MJobs_Synthesizing>1</MJobs_Synthesizing>
+      <MJobs_Refining>1</MJobs_Refining>
+      <MJobs_Smelting>1</MJobs_Smelting>
+      <MJobs_Stonecutting>1</MJobs_Stonecutting>
+      <MJobs_Delivering>1</MJobs_Delivering>
+      <MJobs_Loading>1</MJobs_Loading>
+      <MJobs_Scanning>1</MJobs_Scanning>
+    </value>
+  </Operation>
+
+  <!-- #endregion -->
+
 </Patch>
