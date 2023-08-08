@@ -46,7 +46,7 @@ jobs:
       with:
         configuration: ".github/workflows/configurations/release-changelog-builder.json"
         fromTag: 1.0.0
-        toTag: 226e423ada961c6bc669df56f98f8c5567438717
+        toTag: e255a967fcd48751063cf14eb2cb4d5776d5dfae
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
