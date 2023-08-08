@@ -23,6 +23,7 @@
     <value>
       <li>MJobs_PriorityHauling</li>
       <li>MJobs_Delivering</li>
+      <li>MJobs_Loading</li>
     </value>
   </Operation>
 
@@ -35,6 +36,10 @@
       </li>
       <li>
         <workTypeDef>MJobs_Delivering</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Loading</workTypeDef>
         <priority>1</priority>
       </li>
     </value>
