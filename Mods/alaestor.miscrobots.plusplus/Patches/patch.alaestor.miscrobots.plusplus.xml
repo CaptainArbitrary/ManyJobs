@@ -31,4 +31,28 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/robotWorkTypes</xpath>
+    <value>
+      <li>
+        <workTypeDef>MJobs_PriorityCleaning</workTypeDef>
+        <priority>1</priority>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_PriorityCleaning</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/race/mechWorkTypePriorities</xpath>
+    <value>
+      <MJobs_PriorityCleaning>1</MJobs_PriorityCleaning>
+    </value>
+  </Operation>
+
 </Patch>
