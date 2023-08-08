@@ -109,4 +109,56 @@
 
   <!-- #endregion -->
 
+  <!-- #region RPP_Bot_Crafter -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/robotWorkTypes</xpath>
+    <value>
+      <li>
+        <workTypeDef>MJobs_Fabricating</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Synthesizing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Refining</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Smelting</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Stonecutting</workTypeDef>
+        <priority>1</priority>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Fabricating</li>
+      <li>MJobs_Synthesizing</li>
+      <li>MJobs_Refining</li>
+      <li>MJobs_Smelting</li>
+      <li>MJobs_Stonecutting</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechWorkTypePriorities</xpath>
+    <value>
+      <MJobs_Fabricating>1</MJobs_Fabricating>
+      <MJobs_Synthesizing>1</MJobs_Synthesizing>
+      <MJobs_Refining>1</MJobs_Refining>
+      <MJobs_Smelting>1</MJobs_Smelting>
+      <MJobs_Stonecutting>1</MJobs_Stonecutting>
+    </value>
+  </Operation>
+
+  <!-- #endregion -->
+
 </Patch>
