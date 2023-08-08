@@ -13,5 +13,7 @@
     <li IfModActive="unlimitedhugs.allowtool">Mods/unlimitedhugs.allowtool</li>
     <li IfModActive="weilbyte.snapout">Mods/weilbyte.snapout</li>
     <li IfModActive="orion.hospitality">Mods/orion.hospitality</li>
+    <li IfModActive="haplo.miscellaneous.robots">Mods/haplo.miscellaneous.robots</li>
+    <li IfModActive="alaestor.miscrobots.plusplus">Mods/alaestor.miscrobots.plusplus</li>
   </v1.4>
 </loadFolders>
