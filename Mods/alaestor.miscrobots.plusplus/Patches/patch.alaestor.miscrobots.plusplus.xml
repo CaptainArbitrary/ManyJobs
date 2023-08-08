@@ -201,4 +201,44 @@
 
   <!-- #endregion -->
 
+  <!-- #region RPP_Bot_Kitchen -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/robotWorkTypes</xpath>
+    <value>
+      <li>
+        <workTypeDef>MJobs_Butchering</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Brewing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Harvesting</workTypeDef>
+        <priority>1</priority>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Butchering</li>
+      <li>MJobs_Brewing</li>
+      <li>MJobs_Harvesting</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechWorkTypePriorities</xpath>
+    <value>
+      <MJobs_Butchering>1</MJobs_Butchering>
+      <MJobs_Brewing>1</MJobs_Brewing>
+      <MJobs_Harvesting>1</MJobs_Harvesting>
+    </value>
+  </Operation>
+
+  <!-- #endregion -->
+
 </Patch>
