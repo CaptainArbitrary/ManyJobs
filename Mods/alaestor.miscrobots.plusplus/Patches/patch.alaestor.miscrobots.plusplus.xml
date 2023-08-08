@@ -63,4 +63,50 @@
 
   <!-- #endregion -->
 
+  <!-- #region RPP_Bot_Builder -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/robotWorkTypes</xpath>
+    <value>
+      <li>
+        <workTypeDef>MJobs_Maintaining</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Deconstructing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Drilling</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Delivering</workTypeDef>
+        <priority>1</priority>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Maintaining</li>
+      <li>MJobs_Deconstructing</li>
+      <li>MJobs_Drilling</li>
+      <li>MJobs_Delivering</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechWorkTypePriorities</xpath>
+    <value>
+      <MJobs_Maintaining>1</MJobs_Maintaining>
+      <MJobs_Deconstructing>1</MJobs_Deconstructing>
+      <MJobs_Drilling>1</MJobs_Drilling>
+      <MJobs_Delivering>1</MJobs_Delivering>
+    </value>
+  </Operation>
+
+  <!-- #endregion -->
+
 </Patch>
