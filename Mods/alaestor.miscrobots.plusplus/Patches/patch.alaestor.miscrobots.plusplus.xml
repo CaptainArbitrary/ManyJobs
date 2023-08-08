@@ -161,4 +161,44 @@
 
   <!-- #endregion -->
 
+  <!-- #region RPP_Bot_ER -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/robotWorkTypes</xpath>
+    <value>
+      <li>
+        <workTypeDef>MJobs_Rescuing</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Operating</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Caring</workTypeDef>
+        <priority>1</priority>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_Rescuing</li>
+      <li>MJobs_Operating</li>
+      <li>MJobs_Caring</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechWorkTypePriorities</xpath>
+    <value>
+      <MJobs_Rescuing>1</MJobs_Rescuing>
+      <MJobs_Operating>1</MJobs_Operating>
+      <MJobs_Caring>1</MJobs_Caring>
+    </value>
+  </Operation>
+
+  <!-- #endregion -->
+
 </Patch>
