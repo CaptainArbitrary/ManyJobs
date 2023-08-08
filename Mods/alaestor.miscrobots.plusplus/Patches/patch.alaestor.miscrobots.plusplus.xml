@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+  <!-- #region AIRobot_Hauler -->
+
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/robotWorkTypes</xpath>
     <value>
@@ -31,6 +33,10 @@
     </value>
   </Operation>
 
+  <!-- #endregion -->
+
+  <!-- #region AIRobot_Cleaner -->
+
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/robotWorkTypes</xpath>
     <value>
@@ -54,5 +60,7 @@
       <MJobs_PriorityCleaning>1</MJobs_PriorityCleaning>
     </value>
   </Operation>
+
+  <!-- #endregion -->
 
 </Patch>
