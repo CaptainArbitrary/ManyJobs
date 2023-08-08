@@ -18,4 +18,26 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
+    <value>
+      <li>MJobs_PriorityHauling</li>
+      <li>MJobs_Delivering</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/robotWorkTypes</xpath>
+    <value>
+      <li>
+        <workTypeDef>MJobs_PriorityHauling</workTypeDef>
+        <priority>1</priority>
+      </li>
+      <li>
+        <workTypeDef>MJobs_Delivering</workTypeDef>
+        <priority>1</priority>
+      </li>
+    </value>
+  </Operation>
+
 </Patch>
