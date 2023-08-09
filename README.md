@@ -57,6 +57,8 @@ Many Jobs includes patches for the following mods:
 - [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
 - [Snap Out!](https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555)
 - [Hospitality](https://steamcommunity.com/sharedfiles/filedetails/?id=753498552)
+- [Misc. Robots](https://steamcommunity.com/workshop/filedetails/?id=724602224)
+- [Misc. Robots++](https://steamcommunity.com/sharedfiles/filedetails/?id=747645520)
 
 ### Recommended Mods
 
