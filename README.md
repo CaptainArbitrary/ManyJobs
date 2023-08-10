@@ -20,6 +20,16 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://discord.gg/4SrvKaQTB3">
+    <img alt="Join me on Discord" src="https://img.shields.io/badge/join_me_on-discord-blue?style=for-the-badge&logo=discord"/>
+  </a>
+&emsp;
+  <a href="https://ko-fi.com/T6T1NNFAL">
+    <img alt="Buy me a coffee" src="https://shields.io/badge/ko--fi-Buy_me_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badge"/>
+  </a>
+</p>
+
 ## Description
 
 I've always had a love-hate relationship with RimWorld's Work tab. Getting pawns to do _what_ you _when_ you want them to do it has been the source of a lot of frustration for me. Now, there's an argument to be made that that's part of the challenge of the game. If so, then it's a part of the game that _I don't particularly enjoy,_ so I decided to do something about it.
