@@ -59,6 +59,83 @@ jobs:
 
 #endregion
 
+#region Update CHANGELOG.txt
+
+    - id: update-changelog-txt
+      uses: mikepenz/release-changelog-builder-action@v4
+      with:
+        configuration: ".github/workflows/configurations/changelog-txt.json"
+        fromTag: ${{ steps.increment-version.outputs.current-version }}
+        toTag: ${{ github.ref }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - uses: DamianReeves/write-file-action@v1.2
+      with:
+        path: CHANGELOG.txt.temp
+        write-mode: overwrite
+        contents: "Release ${{ steps.increment-version.outputs.version }}\n\n${{ steps.update-changelog-txt.outputs.changelog }}"
+
+    - run: echo -e "$(cat CHANGELOG.txt.temp)\n\n$(cat CHANGELOG.txt)" > CHANGELOG.txt
+    - run: awk -v RS= -v ORS='\n\n' '1' CHANGELOG.txt > CHANGELOG.txt.temp
+    - run: mv CHANGELOG.txt.temp CHANGELOG.txt
+
+    - run: git add CHANGELOG.txt
+
+#region Update CHANGELOG.bbcode
+
+    - id: update-changelog-bbcode
+      uses: mikepenz/release-changelog-builder-action@v4
+      with:
+        configuration: ".github/workflows/configurations/changelog-bbcode.json"
+        fromTag: ${{ steps.increment-version.outputs.current-version }}
+        toTag: ${{ github.ref }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - uses: DamianReeves/write-file-action@v1.2
+      with:
+        path: CHANGELOG.bbcode.temp
+        write-mode: overwrite
+        contents: "[h1]Release ${{ steps.increment-version.outputs.version }}[/h1]\n\n${{ steps.update-changelog-bbcode.outputs.changelog }}"
+
+    - run: echo -e "$(cat CHANGELOG.bbcode.temp)\n\n$(cat CHANGELOG.bbcode)" > CHANGELOG.bbcode
+    - run: awk -v RS= -v ORS='\n\n' '1' CHANGELOG.bbcode > CHANGELOG.bbcode.temp
+    - run: mv CHANGELOG.bbcode.temp CHANGELOG.bbcode
+
+    - run: git add CHANGELOG.bbcode
+
+#region Update CHANGELOG.md
+
+    - id: update-changelog-md
+      uses: mikepenz/release-changelog-builder-action@v4
+      with:
+        configuration: ".github/workflows/configurations/changelog-md.json"
+        fromTag: ${{ steps.increment-version.outputs.current-version }}
+        toTag: ${{ github.ref }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - uses: DamianReeves/write-file-action@v1.2
+      with:
+        path: CHANGELOG.md.temp
+        write-mode: overwrite
+        contents: "## Release ${{ steps.increment-version.outputs.version }}\n\n${{ steps.update-changelog-md.outputs.changelog }}"
+
+    - run: echo -e "$(cat CHANGELOG.md.temp)\n\n$(cat CHANGELOG.md)" > CHANGELOG.md
+    - run: awk -v RS= -v ORS='\n\n' '1' CHANGELOG.md > CHANGELOG.md.temp
+    - run: mv CHANGELOG.md.temp CHANGELOG.md
+
+    - run: git add CHANGELOG.md
+
+#endregion
+
+#region Commit CHANGELOG files
+
+    - run: git commit -m "Update CHANGELOGs for version ${{ steps.increment-version.outputs.version }}"
+
+#endregion
+
 #region Push release branch to origin
 
     - run: git push --set-upstream origin "release/${{ steps.increment-version.outputs.version }}"
@@ -90,7 +167,7 @@ jobs:
     - id: generate-changelog
       uses: mikepenz/release-changelog-builder-action@v4
       with:
-        configuration: ".github/workflows/configurations/release-changelog-builder.json"
+        configuration: ".github/workflows/configurations/changelog-github.json"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
