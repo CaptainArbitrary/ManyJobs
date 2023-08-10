@@ -15,5 +15,6 @@
     <li IfModActive="orion.hospitality">Mods/orion.hospitality</li>
     <li IfModActive="haplo.miscellaneous.robots">Mods/haplo.miscellaneous.robots</li>
     <li IfModActive="alaestor.miscrobots.plusplus">Mods/alaestor.miscrobots.plusplus</li>
+    <li IfModActive="oskarpotocki.vfe.mechanoid">Mods/oskarpotocki.vfe.mechanoid</li>
   </v1.4>
 </loadFolders>
