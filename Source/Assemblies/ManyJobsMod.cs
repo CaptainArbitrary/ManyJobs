@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Reflection;
 using UnityEngine;
 using Verse;
 
@@ -7,6 +8,7 @@ namespace ManyJobs
     public class ManyJobsMod : Verse.Mod
     {
         ManyJobsModSettings settings;
+        FieldInfo[] settingsFields;
         TextInfo textInfo;
 
         float listingRectCurrentHeight;
@@ -15,6 +17,7 @@ namespace ManyJobs
         public ManyJobsMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<ManyJobsModSettings>();
+            settingsFields = settings.GetType().GetFields();
             textInfo = new CultureInfo("en-US", false).TextInfo;
         }
 
@@ -46,58 +49,20 @@ namespace ManyJobs
             buttonsListing.Begin(buttonsRect.LeftHalf());
             if (buttonsListing.ButtonText("All On"))
             {
-                settings.MJobs_Rescuing = true;
-                settings.MJobs_Operating = true;
-                settings.MJobs_Caring = true;
-                settings.MJobs_PriorityHauling = true;
-                settings.MJobs_PriorityCleaning = true;
-                settings.MJobs_Undertaking = true;
-                settings.MJobs_Recruiting = true;
-                settings.MJobs_AnimalTraining = true;
-                settings.MJobs_AnimalTaming = true;
-                settings.MJobs_Butchering = true;
-                settings.MJobs_Brewing = true;
-                settings.MJobs_Maintaining = true;
-                settings.MJobs_Deconstructing = true;
-                settings.MJobs_Harvesting = true;
-                settings.MJobs_Drilling = true;
-                settings.MJobs_Fabricating = true;
-                settings.MJobs_Synthesizing = true;
-                settings.MJobs_Refining = true;
-                settings.MJobs_Smelting = true;
-                settings.MJobs_Stonecutting = true;
-                settings.MJobs_Delivering = true;
-                settings.MJobs_Loading = true;
-                settings.MJobs_Scanning = true;
+                foreach (FieldInfo field in settingsFields)
+                {
+                    field.SetValue(settings, true);
+                }
             }
             buttonsListing.End();
 
             buttonsListing.Begin(buttonsRect.RightHalf());
             if (buttonsListing.ButtonText("All Off"))
             {
-                settings.MJobs_Rescuing = false;
-                settings.MJobs_Operating = false;
-                settings.MJobs_Caring = false;
-                settings.MJobs_PriorityHauling = false;
-                settings.MJobs_PriorityCleaning = false;
-                settings.MJobs_Undertaking = false;
-                settings.MJobs_Recruiting = false;
-                settings.MJobs_AnimalTraining = false;
-                settings.MJobs_AnimalTaming = false;
-                settings.MJobs_Butchering = false;
-                settings.MJobs_Brewing = false;
-                settings.MJobs_Maintaining = false;
-                settings.MJobs_Deconstructing = false;
-                settings.MJobs_Harvesting = false;
-                settings.MJobs_Drilling = false;
-                settings.MJobs_Fabricating = false;
-                settings.MJobs_Synthesizing = false;
-                settings.MJobs_Refining = false;
-                settings.MJobs_Smelting = false;
-                settings.MJobs_Stonecutting = false;
-                settings.MJobs_Delivering = false;
-                settings.MJobs_Loading = false;
-                settings.MJobs_Scanning = false;
+                foreach (FieldInfo field in settingsFields)
+                {
+                    field.SetValue(settings, false);
+                }
             }
             buttonsListing.End();
 
