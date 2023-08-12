@@ -2,6 +2,8 @@
 
 <Patch>
 
+  <!-- #region lifeStageWorkSettings -->
+
   <!-- Commented out lines come from Core/Defs/ThingDefs_Races/Races_Humanlike.xml
   and are here for reference. As much as possible, Many Jobs worktypes follow the
   game's built-in life stage work settings, with some common-sense changes like not
@@ -56,354 +58,747 @@
     </value>
   </Operation>
 
-  <!-- MJobs_Rescuing -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoctorRescue"]/workType</xpath>
-    <value>
-      <workType>MJobs_Rescuing</workType>
-    </value>
+  <!-- #region MJobs_Rescuing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Rescuing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Rescuing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoctorRescue"]/workType</xpath>
+        <value>
+          <workType>MJobs_Rescuing</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoctorRescue"]</xpath>
+        <value>
+          <emergency>true</emergency>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoctorRescue"]</xpath>
-    <value>
-      <emergency>true</emergency>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Operating -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Operating</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Operating"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsMedicalHumanOperation"]/workType</xpath>
+        <value>
+          <workType>MJobs_Operating</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsMedicalAnimalOperation"]/workType</xpath>
+        <value>
+          <workType>MJobs_Operating</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "TakeToBedToOperate"]/workType</xpath>
+        <value>
+          <workType>MJobs_Operating</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Operating -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsMedicalHumanOperation"]/workType</xpath>
-    <value>
-      <workType>MJobs_Operating</workType>
-    </value>
+  <!-- #region MJobs_Caring -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Caring</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Caring"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoctorFeedHumanlikes"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "VisitSickPawn"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "FeedPrisoner"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DeliverFoodToPrisoner"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsMedicalAnimalOperation"]/workType</xpath>
-    <value>
-      <workType>MJobs_Operating</workType>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_PriorityHauling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Refuel"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "RearmTurrets"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "TakeBeerOutOfFermentingBarrel"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "FillFermentingBarrel"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "TakeToBedToOperate"]/workType</xpath>
-    <value>
-      <workType>MJobs_Operating</workType>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_PriorityCleaning -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_PriorityCleaning</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityCleaning"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "CleanClearSnow"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityCleaning</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Caring -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoctorFeedHumanlikes"]/workType</xpath>
-    <value>
-      <workType>MJobs_Caring</workType>
-    </value>
+  <!-- #region MJobs_Undertaking -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Undertaking</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Undertaking"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Strip"]/workType</xpath>
+        <value>
+          <workType>MJobs_Undertaking</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "HaulCorpses"]/workType</xpath>
+        <value>
+          <workType>MJobs_Undertaking</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsCremate"]/workType</xpath>
+        <value>
+          <workType>MJobs_Undertaking</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
-    <value>
-      <workType>MJobs_Caring</workType>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Recruiting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Recruiting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Recruiting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "ChatWithPrisoner"]/workType</xpath>
+        <value>
+          <workType>MJobs_Recruiting</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "VisitSickPawn"]/workType</xpath>
-    <value>
-      <workType>MJobs_Caring</workType>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_AnimalTraining -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_AnimalTraining</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_AnimalTraining"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Train"]/workType</xpath>
+        <value>
+          <workType>MJobs_AnimalTraining</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "FeedPrisoner"]/workType</xpath>
-    <value>
-      <workType>MJobs_Caring</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DeliverFoodToPrisoner"]/workType</xpath>
-    <value>
-      <workType>MJobs_Caring</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_PriorityHauling -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Refuel"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "RearmTurrets"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "TakeBeerOutOfFermentingBarrel"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "FillFermentingBarrel"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_PriorityCleaning -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "CleanClearSnow"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityCleaning</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_Undertaking -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Strip"]/workType</xpath>
-    <value>
-      <workType>MJobs_Undertaking</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "HaulCorpses"]/workType</xpath>
-    <value>
-      <workType>MJobs_Undertaking</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsCremate"]/workType</xpath>
-    <value>
-      <workType>MJobs_Undertaking</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_Recruiting -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "ChatWithPrisoner"]/workType</xpath>
-    <value>
-      <workType>MJobs_Recruiting</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_AnimalTraining -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Train"]/workType</xpath>
-    <value>
-      <workType>MJobs_AnimalTraining</workType>
-    </value>
-  </Operation>
+  <!-- #endregion -->
 
   <!-- Handling -->
 
-  <Operation Class="PatchOperationReplace">
+  <!-- <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorkGiverDef[defName = "EmptyEggBox"]/workType</xpath>
     <value>
       <workType>Handling</workType>
     </value>
+  </Operation> -->
+
+  <!-- #region MJobs_AnimalTaming -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_AnimalTaming</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_AnimalTaming"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Tame"]/workType</xpath>
+        <value>
+          <workType>MJobs_AnimalTaming</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_AnimalTaming -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Tame"]/workType</xpath>
-    <value>
-      <workType>MJobs_AnimalTaming</workType>
-    </value>
+  <!-- #region MJobs_Butchering -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Butchering</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Butchering"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsButcherFlesh"]/workType</xpath>
+        <value>
+          <workType>MJobs_Butchering</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Butchering -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsButcherFlesh"]/workType</xpath>
-    <value>
-      <workType>MJobs_Butchering</workType>
-    </value>
+  <!-- #region MJobs_Brewing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Brewing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Brewing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsBrew"]/workType</xpath>
+        <value>
+          <workType>MJobs_Brewing</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Brewing -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsBrew"]/workType</xpath>
-    <value>
-      <workType>MJobs_Brewing</workType>
-    </value>
+  <!-- #region MJobs_Maintaining -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Maintaining</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Maintaining"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "FixBrokenDownBuilding"]/workType</xpath>
+        <value>
+          <workType>MJobs_Maintaining</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Repair"]/workType</xpath>
+        <value>
+          <workType>MJobs_Maintaining</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Maintaining -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "FixBrokenDownBuilding"]/workType</xpath>
-    <value>
-      <workType>MJobs_Maintaining</workType>
-    </value>
+  <!-- #region MJobs_Deconstructing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Deconstructing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Deconstructing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Uninstall"]/workType</xpath>
+        <value>
+          <workType>MJobs_Deconstructing</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Deconstruct"]/workType</xpath>
+        <value>
+          <workType>MJobs_Deconstructing</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "ConstructRemoveFloors"]/workType</xpath>
+        <value>
+          <workType>MJobs_Deconstructing</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Repair"]/workType</xpath>
-    <value>
-      <workType>MJobs_Maintaining</workType>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Harvesting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Harvesting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Harvesting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "GrowerHarvest"]/workType</xpath>
+        <value>
+          <workType>MJobs_Harvesting</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Deconstructing -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Uninstall"]/workType</xpath>
-    <value>
-      <workType>MJobs_Deconstructing</workType>
-    </value>
+  <!-- #region MJobs_Drilling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Drilling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Drilling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "Drill"]/workType</xpath>
+        <value>
+          <workType>MJobs_Drilling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Deconstruct"]/workType</xpath>
-    <value>
-      <workType>MJobs_Deconstructing</workType>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Fabricating -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Fabricating</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Fabricating"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsFabricationBench"]/workType</xpath>
+        <value>
+          <workType>MJobs_Fabricating</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "ConstructRemoveFloors"]/workType</xpath>
-    <value>
-      <workType>MJobs_Deconstructing</workType>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Synthesizing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Synthesizing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Synthesizing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsProduceDrugs"]/workType</xpath>
+        <value>
+          <workType>MJobs_Synthesizing</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Harvesting -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "GrowerHarvest"]/workType</xpath>
-    <value>
-      <workType>MJobs_Harvesting</workType>
-    </value>
+  <!-- #region MJobs_Refining -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Refining</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Refining"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsRefinery"]/workType</xpath>
+        <value>
+          <workType>MJobs_Refining</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Drilling -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "Drill"]/workType</xpath>
-    <value>
-      <workType>MJobs_Drilling</workType>
-    </value>
+  <!-- #region MJobs_Smelting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Smelting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Smelting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsSmelter"]/workType</xpath>
+        <value>
+          <workType>MJobs_Smelting</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Fabricating -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsFabricationBench"]/workType</xpath>
-    <value>
-      <workType>MJobs_Fabricating</workType>
-    </value>
+  <!-- #region MJobs_Stonecutting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Stonecutting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Stonecutting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DoBillsStonecut"]/workType</xpath>
+        <value>
+          <workType>MJobs_Stonecutting</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Synthesizing -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsProduceDrugs"]/workType</xpath>
-    <value>
-      <workType>MJobs_Synthesizing</workType>
-    </value>
+  <!-- #region MJobs_Delivering -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Delivering</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Delivering"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DeliverResourcesToFrames"]/workType</xpath>
+        <value>
+          <workType>MJobs_Delivering</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DeliverResourcesToBlueprints"]/workType</xpath>
+        <value>
+          <workType>MJobs_Delivering</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Refining -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsRefinery"]/workType</xpath>
-    <value>
-      <workType>MJobs_Refining</workType>
-    </value>
+  <!-- #region MJobs_Loading -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Loading</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Loading"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "UnloadCarriers"]/workType</xpath>
+        <value>
+          <workType>MJobs_Loading</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "HelpGatheringItemsForCaravan"]/workType</xpath>
+        <value>
+          <workType>MJobs_Loading</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "LoadTransporters"]/workType</xpath>
+        <value>
+          <workType>MJobs_Loading</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Smelting -->
+  <!-- #endregion -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsSmelter"]/workType</xpath>
-    <value>
-      <workType>MJobs_Smelting</workType>
-    </value>
+  <!-- #region MJobs_Scanning -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobsMod</ModClass>
+    <field>MJobs_Scanning</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Scanning"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "LongRangeScan"]/workType</xpath>
+        <value>
+          <workType>MJobs_Scanning</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "GroundPenetratingScan"]/workType</xpath>
+        <value>
+          <workType>MJobs_Scanning</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <!-- MJobs_Stonecutting -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DoBillsStonecut"]/workType</xpath>
-    <value>
-      <workType>MJobs_Stonecutting</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_Delivering -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DeliverResourcesToFrames"]/workType</xpath>
-    <value>
-      <workType>MJobs_Delivering</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "DeliverResourcesToBlueprints"]/workType</xpath>
-    <value>
-      <workType>MJobs_Delivering</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_Loading -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "UnloadCarriers"]/workType</xpath>
-    <value>
-      <workType>MJobs_Loading</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "HelpGatheringItemsForCaravan"]/workType</xpath>
-    <value>
-      <workType>MJobs_Loading</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "LoadTransporters"]/workType</xpath>
-    <value>
-      <workType>MJobs_Loading</workType>
-    </value>
-  </Operation>
-
-  <!-- MJobs_Scanning -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "LongRangeScan"]/workType</xpath>
-    <value>
-      <workType>MJobs_Scanning</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "GroundPenetratingScan"]/workType</xpath>
-    <value>
-      <workType>MJobs_Scanning</workType>
-    </value>
-  </Operation>
+  <!-- #endregion -->
 
   <!-- Core WorkTypeDef descriptions -->
 
