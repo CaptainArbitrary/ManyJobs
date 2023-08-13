@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -26,6 +26,7 @@ namespace ManyJobs
         public bool MJobs_Deconstructing;
         public bool MJobs_Harvesting;
         public bool MJobs_Drilling;
+        public bool MJobs_Mechanitor;
         public bool MJobs_Fabricating;
         public bool MJobs_Synthesizing;
         public bool MJobs_Refining;
