@@ -39,7 +39,6 @@ namespace ManyJobs
 
         public ModSettings()
         {
-            DefDatabase<WorkTypeDef>.ResolveAllReferences();
             foreach (FieldInfo field in this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
             {
                 WorkTypes.Add(new WorkType(field.Name));
