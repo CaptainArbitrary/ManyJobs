@@ -15,6 +15,7 @@ namespace ManyJobs
         public bool MJobs_PriorityHauling;
         public bool MJobs_PriorityCleaning;
         public bool MJobs_Undertaking;
+        public bool MJobs_Converting;
         public bool MJobs_Recruiting;
         public bool MJobs_AnimalTraining;
         public bool MJobs_AnimalTaming;

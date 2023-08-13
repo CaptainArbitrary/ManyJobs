@@ -197,6 +197,26 @@
   </WorkTypeDef>
 
   <WorkTypeDef>
+    <defName>MJobs_Converting</defName>
+    <labelShort>convert</labelShort>
+    <pawnLabel>Coverter</pawnLabel>
+    <gerundLabel>converting</gerundLabel>
+    <description>Convert prisoners to an ideoligion.</description>
+    <verb>Convert</verb>
+    <visible>false</visible>
+    <naturalPriority>1107</naturalPriority>
+    <requireCapableColonist>true</requireCapableColonist>
+    <disabledForSlaves>true</disabledForSlaves>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
     <defName>MJobs_Recruiting</defName>
     <labelShort>recruit</labelShort>
     <pawnLabel>Recruiter</pawnLabel>
