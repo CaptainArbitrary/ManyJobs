@@ -88,10 +88,10 @@ namespace ManyJobs
 
             foreach (WorkType workType in WorkTypes)
             {
-                workTypesListing.CheckboxLabeled(textInfo.ToTitleCase(workType.Def.labelShort), ref workType.Enabled);
+                workTypesListing.CheckboxLabeled(textInfo.ToTitleCase(workType.Def?.labelShort ?? workType.Name), ref workType.Enabled);
                 Text.Font = GameFont.Tiny;
                 GUI.color = Color.gray;
-                workTypesListing.Label(workType.Def.description);
+                workTypesListing.Label(workType.Def?.description ?? string.Empty);
                 GUI.color = Color.white;
                 Text.Font = GameFont.Small;
                 if (workType != WorkTypes.Last())
