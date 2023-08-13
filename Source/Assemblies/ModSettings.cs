@@ -60,8 +60,8 @@ namespace ManyJobs
         Listing_Standard workTypesListing = new Listing_Standard();
         Vector2 scrollPositionVector = Vector2.zero;
 
-        readonly float buttonWidth = 100f;
-        readonly float buttonHeight = GenUI.ListSpacing;
+        const float buttonWidth = 100f;
+        const float buttonHeight = GenUI.ListSpacing;
 
         public void DoSettingsWindowContents(Rect inRect)
         {
