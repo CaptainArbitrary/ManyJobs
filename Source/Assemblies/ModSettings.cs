@@ -62,7 +62,7 @@ namespace ManyJobs
 
         public void DoSettingsWindowContents(Rect inRect)
         {
-            Rect scrollViewRect = new Rect(inRect.x, inRect.y, inRect.width - 24f, listingRectCurrentHeight);
+            Rect scrollViewRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), listingRectCurrentHeight);
             Widgets.BeginScrollView(inRect, ref scrollPositionVector, scrollViewRect);
             Listing_Standard listing = new Listing_Standard();
             Rect listingRect = new Rect(scrollViewRect.x, scrollViewRect.y, scrollViewRect.width, 99999f);
