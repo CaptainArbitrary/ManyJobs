@@ -75,29 +75,28 @@ namespace ManyJobs
             listing.Gap();
 
             Rect buttonsRect = listing.GetRect(30f);
-            Listing_Standard buttonsListing = new Listing_Standard();
 
-            buttonsListing.Begin(buttonsRect.LeftHalf());
-            if (buttonsListing.ButtonText("All On"))
+            Rect allOnButtonRect = new Rect(252f, buttonsRect.y, 180f, buttonsRect.height);
+            bool allOnButton = Widgets.ButtonText(allOnButtonRect, "All On");
+            Rect allOffButtonRect = new Rect(432f, buttonsRect.y, 180f, buttonsRect.height);
+            bool allOffButton = Widgets.ButtonText(allOffButtonRect, "All Off");
+
+            if (allOnButton)
             {
                 foreach (WorkType workType in WorkTypes)
                 {
                     workType.Enabled = true;
                 }
             }
-            buttonsListing.End();
 
-            buttonsListing.Begin(buttonsRect.RightHalf());
-            if (buttonsListing.ButtonText("All Off"))
+
+            if (allOffButton)
             {
                 foreach (WorkType workType in WorkTypes)
                 {
                     workType.Enabled = false;
                 }
             }
-            buttonsListing.End();
-
-            listing.Gap();
 
             listing.End();
 
