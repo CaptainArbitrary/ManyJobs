@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -16,6 +16,7 @@ namespace ManyJobs
         public bool MJobs_PriorityHauling;
         public bool MJobs_PriorityCleaning;
         public bool MJobs_Undertaking;
+        public bool MJobs_Counseling;
         public bool MJobs_Converting;
         public bool MJobs_Recruiting;
         public bool MJobs_AnimalTraining;

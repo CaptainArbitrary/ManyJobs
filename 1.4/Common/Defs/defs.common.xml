@@ -238,6 +238,26 @@
   </WorkTypeDef>
 
   <WorkTypeDef>
+    <defName>MJobs_Counseling</defName>
+    <labelShort>counsel</labelShort>
+    <pawnLabel>Counselor</pawnLabel>
+    <gerundLabel>counseling</gerundLabel>
+    <description>Counsel other colonists.</description>
+    <verb>Counsel</verb>
+    <visible>false</visible>
+    <naturalPriority>1108</naturalPriority>
+    <requireCapableColonist>true</requireCapableColonist>
+    <disabledForSlaves>true</disabledForSlaves>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
     <defName>MJobs_Converting</defName>
     <labelShort>convert</labelShort>
     <pawnLabel>Coverter</pawnLabel>
@@ -600,7 +620,7 @@
     <labelShort>mechanitor</labelShort>
     <pawnLabel>Mechanitor</pawnLabel>
     <gerundLabel>working with mechanoids</gerundLabel>
-    <description>Work with mechanoids</description>
+    <description>Work with mechanoids.</description>
     <verb>Work at</verb>
     <visible>false</visible>
     <naturalPriority>480</naturalPriority>
