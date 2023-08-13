@@ -12,6 +12,7 @@ namespace ManyJobs
         public bool MJobs_Rescuing;
         public bool MJobs_Operating;
         public bool MJobs_Caring;
+        public bool MJobs_Teaching;
         public bool MJobs_PriorityHauling;
         public bool MJobs_PriorityCleaning;
         public bool MJobs_Undertaking;
