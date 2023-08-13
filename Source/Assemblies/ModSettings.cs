@@ -62,11 +62,8 @@ namespace ManyJobs
 
         public void DoSettingsWindowContents(Rect inRect)
         {
-            Rect scrollViewRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), listingRectCurrentHeight);
-            Widgets.BeginScrollView(inRect, ref scrollPositionVector, scrollViewRect);
             Listing_Standard listing = new Listing_Standard();
-            Rect listingRect = new Rect(scrollViewRect.x, scrollViewRect.y, scrollViewRect.width, 99999f);
-            listing.Begin(listingRect);
+            listing.Begin(inRect);
 
             Color savedColor = GUI.color;
             GUI.color = ColorLibrary.RedReadable;
@@ -101,6 +98,15 @@ namespace ManyJobs
             buttonsListing.End();
 
             listing.Gap();
+
+            listing.End();
+
+            Rect outerRect = new Rect(inRect.x, inRect.y + listing.CurHeight, inRect.width, inRect.height - listing.CurHeight);
+            Rect innerRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), listingRectCurrentHeight);
+            Widgets.BeginScrollView(outerRect, ref scrollPositionVector, innerRect);
+
+            Rect listingRect = new Rect(innerRect.x, innerRect.y, innerRect.width, 99999f);
+            listing.Begin(listingRect);
 
             foreach (WorkType workType in WorkTypes)
             {
