@@ -62,14 +62,16 @@ namespace ManyJobs
         Vector2 scrollPositionVector = Vector2.zero;
 
         readonly float buttonWidth = 100f;
-        readonly float buttonHeight = 30f;
+        readonly float buttonHeight = GenUI.ListSpacing;
 
         public void DoSettingsWindowContents(Rect inRect)
         {
-            Rect restartGameMessageRect = new Rect(inRect.x, inRect.y, 644f, 30f);
+            Rect restartGameMessageRect = new Rect(inRect.x, inRect.y, 644f, buttonHeight);
             Color savedColor = GUI.color;
             GUI.color = ColorLibrary.RedReadable;
+            Text.Anchor = TextAnchor.MiddleLeft;
             Widgets.Label(restartGameMessageRect, "You will need to restart the game for any changes to take effect.");
+            Text.Anchor = TextAnchor.UpperLeft;
             GUI.color = savedColor;
 
             Rect allOnButtonRect = new Rect(inRect.width - buttonWidth - GenUI.GapSmall - buttonWidth, inRect.y, buttonWidth, buttonHeight);
@@ -109,7 +111,6 @@ namespace ManyJobs
                     workType.Enabled = true;
                 }
             }
-
 
             if (allOffButton)
             {
