@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using Verse;
@@ -57,29 +58,49 @@ namespace ManyJobs
             base.ExposeData();
         }
 
-        float listingRectCurrentHeight = 0f;
+        Listing_Standard workTypesListing = new Listing_Standard();
         Vector2 scrollPositionVector = Vector2.zero;
+
+        readonly float buttonWidth = 100f;
+        readonly float buttonHeight = 30f;
 
         public void DoSettingsWindowContents(Rect inRect)
         {
-            Listing_Standard listing = new Listing_Standard();
-            listing.Begin(inRect);
-
+            Rect restartGameMessageRect = new Rect(inRect.x, inRect.y, 644f, 30f);
             Color savedColor = GUI.color;
             GUI.color = ColorLibrary.RedReadable;
-            Text.Anchor = TextAnchor.MiddleCenter;
-            listing.Label("You will need to restart the game for any changes to take effect.");
-            GenUI.ResetLabelAlign();
+            Widgets.Label(restartGameMessageRect, "You will need to restart the game for any changes to take effect.");
             GUI.color = savedColor;
 
-            listing.Gap();
-
-            Rect buttonsRect = listing.GetRect(30f);
-
-            Rect allOnButtonRect = new Rect(252f, buttonsRect.y, 180f, buttonsRect.height);
+            Rect allOnButtonRect = new Rect(inRect.width - buttonWidth - GenUI.GapSmall - buttonWidth, inRect.y, buttonWidth, buttonHeight);
             bool allOnButton = Widgets.ButtonText(allOnButtonRect, "All On");
-            Rect allOffButtonRect = new Rect(432f, buttonsRect.y, 180f, buttonsRect.height);
+
+            Rect allOffButtonRect = new Rect(inRect.width - buttonWidth, inRect.y, buttonWidth, buttonHeight);
             bool allOffButton = Widgets.ButtonText(allOffButtonRect, "All Off");
+
+            Rect outerRect = new Rect(inRect.x, inRect.y + buttonHeight + GenUI.GapSmall, inRect.width, inRect.height - buttonHeight - GenUI.GapSmall);
+            Rect innerRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), workTypesListing.CurHeight);
+            Rect listingRect = new Rect(innerRect.x, innerRect.y, innerRect.width, 99999f);
+
+            Widgets.BeginScrollView(outerRect, ref scrollPositionVector, innerRect, true);
+            workTypesListing.Begin(listingRect);
+
+            foreach (WorkType workType in WorkTypes)
+            {
+                workTypesListing.CheckboxLabeled(textInfo.ToTitleCase(workType.Def.labelShort), ref workType.Enabled);
+                Text.Font = GameFont.Tiny;
+                GUI.color = Color.gray;
+                workTypesListing.Label(workType.Def.description);
+                GUI.color = Color.white;
+                Text.Font = GameFont.Small;
+                if (workType != WorkTypes.Last())
+                {
+                    workTypesListing.Gap();
+                }
+            }
+
+            workTypesListing.End();
+            Widgets.EndScrollView();
 
             if (allOnButton)
             {
@@ -97,30 +118,6 @@ namespace ManyJobs
                     workType.Enabled = false;
                 }
             }
-
-            listing.End();
-
-            Rect outerRect = new Rect(inRect.x, inRect.y + listing.CurHeight, inRect.width, inRect.height - listing.CurHeight);
-            Rect innerRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), listingRectCurrentHeight);
-            Widgets.BeginScrollView(outerRect, ref scrollPositionVector, innerRect);
-
-            Rect listingRect = new Rect(innerRect.x, innerRect.y, innerRect.width, 99999f);
-            listing.Begin(listingRect);
-
-            foreach (WorkType workType in WorkTypes)
-            {
-                listing.CheckboxLabeled(textInfo.ToTitleCase(workType.Def.labelShort), ref workType.Enabled);
-                Text.Font = GameFont.Tiny;
-                GUI.color = Color.gray;
-                listing.Label(workType.Def.description);
-                GUI.color = Color.white;
-                Text.Font = GameFont.Small;
-                listing.Gap();
-            }
-
-            listingRectCurrentHeight = listing.CurHeight;
-            listing.End();
-            Widgets.EndScrollView();
         }
     }
 }
