@@ -1,32 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "IP_InsertFirstIngredient"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
+  <!-- #region MJobs_PriorityHauling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "IP_InsertFirstIngredient"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "IP_InsertSecondIngredient"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "IP_InsertThirdIngredient"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "IP_RemoveProduct"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "IP_InsertSecondIngredient"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "IP_InsertThirdIngredient"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "IP_RemoveProduct"]/workType</xpath>
-    <value>
-      <workType>MJobs_PriorityHauling</workType>
-    </value>
-  </Operation>
+  <!-- #endregion -->
 
 </Patch>
