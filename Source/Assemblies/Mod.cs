@@ -24,5 +24,11 @@ namespace ManyJobs
             settings.DoSettingsWindowContents(inRect);
             base.DoSettingsWindowContents(inRect);
         }
+
+        public override void WriteSettings()
+        {
+            settings.WriteSettings();
+            base.WriteSettings();
+        }
     }
 }

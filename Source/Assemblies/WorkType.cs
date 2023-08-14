@@ -6,25 +6,33 @@ namespace ManyJobs
     public class WorkType
     {
         public string Name;
-        public bool Enabled;
-        
-        WorkTypeDef _def;
+        public bool IsEnabled;
+        public bool IsEnabledInConfigFile;
+
+        WorkTypeDef workTypeDef;
 
         public WorkType(string name) {
             Name = name;
-            Enabled = true;
-            _def = null;
+            IsEnabled = true;
+            IsEnabledInConfigFile = true;
+            workTypeDef = null;
+        }
+
+        public bool IsDirty { get
+            {
+                return IsEnabled != IsEnabledInConfigFile;
+            }
         }
 
         public WorkTypeDef Def
         {
             get
             {
-                if (_def == null)
+                if (workTypeDef == null)
                 {
-                    _def = DefDatabase<WorkTypeDef>.GetNamedSilentFail(Name);
+                    workTypeDef = DefDatabase<WorkTypeDef>.GetNamedSilentFail(Name);
                 }
-                return _def;
+                return workTypeDef;
             }
         }
     }

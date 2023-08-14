@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -37,8 +38,7 @@ namespace ManyJobs
         public bool MJobs_Loading;
         public bool MJobs_Scanning;
 
-        List<WorkType> WorkTypes = new List<WorkType>();
-
+        readonly List<WorkType> WorkTypes = new List<WorkType>();
         readonly TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
 
         public ModSettings()
@@ -50,12 +50,37 @@ namespace ManyJobs
             }
         }
 
+        const string restartDialogMessage = "Changing the list of enabled work types requires a restart. Unsaved progress will be lost.\n\nRestart now?";
+
+        internal void WriteSettings()
+        {
+            bool isDirty = false;
+            foreach (WorkType workType in WorkTypes)
+            {
+                if (workType.IsDirty)
+                {
+                    isDirty = true;
+                    break;
+                }
+            }
+
+            if (isDirty)
+            {
+                Find.WindowStack.Add(new Dialog_MessageBox(restartDialogMessage, "Yes".Translate(), delegate
+                {
+                    ExposeData();
+                    GenCommandLine.Restart();
+                }, "No".Translate(), null, null, true, null, null, WindowLayer.Dialog));
+            }
+        }
+
         public override void ExposeData()
         {
             foreach (WorkType workType in WorkTypes)
             {
-                Scribe_Values.Look(ref workType.Enabled, workType.Name, true);
-                this.GetType().GetField(workType.Name).SetValue(this, workType.Enabled);
+                Scribe_Values.Look(ref workType.IsEnabled, workType.Name, true);
+                workType.IsEnabledInConfigFile = workType.IsEnabled;
+                this.GetType().GetField(workType.Name).SetValue(this, workType.IsEnabled);
             }
 
             base.ExposeData();
@@ -92,7 +117,7 @@ namespace ManyJobs
 
             foreach (WorkType workType in WorkTypes)
             {
-                workTypesListing.CheckboxLabeled(textInfo.ToTitleCase(workType.Def?.labelShort ?? workType.Name), ref workType.Enabled);
+                workTypesListing.CheckboxLabeled(textInfo.ToTitleCase(workType.Def?.labelShort ?? workType.Name), ref workType.IsEnabled);
                 Text.Font = GameFont.Tiny;
                 GUI.color = Color.gray;
                 workTypesListing.Label(workType.Def?.description ?? string.Empty);
@@ -111,7 +136,7 @@ namespace ManyJobs
             {
                 foreach (WorkType workType in WorkTypes)
                 {
-                    workType.Enabled = true;
+                    workType.IsEnabled = true;
                 }
             }
 
@@ -119,7 +144,7 @@ namespace ManyJobs
             {
                 foreach (WorkType workType in WorkTypes)
                 {
-                    workType.Enabled = false;
+                    workType.IsEnabled = false;
                 }
             }
         }
