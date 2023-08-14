@@ -107,7 +107,7 @@ namespace ManyJobs
             Rect allOffButtonRect = new Rect(inRect.width - buttonWidth, inRect.y, buttonWidth, buttonHeight);
             bool allOffButton = Widgets.ButtonText(allOffButtonRect, "All Off");
 
-            Rect outerRect = new Rect(inRect.x, inRect.y + buttonHeight + GenUI.GapSmall, inRect.width, inRect.height - buttonHeight - GenUI.GapSmall);
+            Rect outerRect = new Rect(inRect.x, inRect.y + buttonHeight + GenUI.GapSmall, inRect.width, inRect.height - buttonHeight - GenUI.GapSmall - GenUI.GapSmall - buttonHeight);
             Rect innerRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), workTypesListing.CurHeight);
             Rect listingRect = new Rect(innerRect.x, innerRect.y, innerRect.width, 99999f);
 
@@ -130,6 +130,15 @@ namespace ManyJobs
 
             workTypesListing.End();
             Widgets.EndScrollView();
+
+            Rect versionInfoRect = new Rect(inRect.x, outerRect.y + outerRect.height, inRect.width, buttonHeight);
+            Text.Anchor = TextAnchor.MiddleRight;
+            Text.Font = GameFont.Tiny;
+            GUI.color = Color.gray;
+            Widgets.Label(versionInfoRect, "Mod Version " + Mod.Content.ModMetaData.ModVersion + ", Assembly Version " + Assembly.GetExecutingAssembly().GetName().Version);
+            GUI.color = Color.white;
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.UpperLeft;
 
             if (allOnButton)
             {
