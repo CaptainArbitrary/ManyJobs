@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorkGiverDef[defName = "FluffyBreakdowns_Maintenance"]/workType</xpath>
-    <value>
-      <workType>MJobs_Maintaining</workType>
-    </value>
+  <!-- #region MJobs_Maintaining -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Maintaining</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Maintaining"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "FluffyBreakdowns_Maintenance"]/workType</xpath>
+        <value>
+          <workType>MJobs_Maintaining</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
+
+  <!-- #endregion -->
 
 </Patch>
