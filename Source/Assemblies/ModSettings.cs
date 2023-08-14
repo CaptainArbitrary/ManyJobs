@@ -68,7 +68,6 @@ namespace ManyJobs
             {
                 Find.WindowStack.Add(new Dialog_MessageBox(restartDialogMessage, "Yes".Translate(), delegate
                 {
-                    ExposeData();
                     GenCommandLine.Restart();
                 }, "No".Translate(), null, null, true, null, null, WindowLayer.Dialog));
             }
