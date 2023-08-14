@@ -1,36 +1,212 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autocleaner"]/race/mechEnabledWorkTypes</xpath>
-    <value>
-      <li>MJobs_PriorityCleaning</li>
-    </value>
+  <!-- #region MJobs_Rescuing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Rescuing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Rescuing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_AutoMedic"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Rescuing</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autohauler"]/race/mechEnabledWorkTypes</xpath>
-    <value>
-      <li>MJobs_PriorityHauling</li>
-      <li>MJobs_Delivering</li>
-      <li>MJobs_Loading</li>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Operating -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Operating</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Operating"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_AutoMedic"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Operating</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autominer"]/race/mechEnabledWorkTypes</xpath>
-    <value>
-      <li>MJobs_Drilling</li>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Caring -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Caring</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Caring"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_AutoMedic"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Caring</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
 
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_AutoMedic"]/race/mechEnabledWorkTypes</xpath>
-    <value>
-      <li>MJobs_Rescuing</li>
-      <li>MJobs_Operating</li>
-      <li>MJobs_Caring</li>
-    </value>
+  <!-- #endregion -->
+
+  <!-- #region MJobs_PriorityHauling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autohauler"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_PriorityHauling</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
   </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_PriorityCleaning -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityCleaning</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityCleaning"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autocleaner"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_PriorityCleaning</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Drilling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Drilling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Drilling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autominer"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Drilling</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Delivering -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Delivering</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Delivering"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autohauler"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Delivering</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Loading -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Loading</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Loading"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autohauler"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Loading</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
 
 </Patch>
