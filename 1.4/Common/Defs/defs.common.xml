@@ -8,7 +8,7 @@
     <gerundLabel>rescuing</gerundLabel>
     <description>Rescue downed allies.</description>
     <verb>Rescue</verb>
-    <visible>true</visible>
+    <visible>false</visible>
     <naturalPriority>1500</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <disabledForSlaves>false</disabledForSlaves>
@@ -75,7 +75,7 @@
     <gerundLabel>operating</gerundLabel>
     <description>Perform medical operations on colonists, prisoners and animals.</description>
     <verb>Operate on</verb>
-    <visible>true</visible>
+    <visible>false</visible>
     <naturalPriority>1290</naturalPriority>
     <alwaysStartActive>false</alwaysStartActive>
     <relevantSkills>
@@ -107,7 +107,7 @@
     <gerundLabel>caregiving</gerundLabel>
     <description>Care for colonists, animals and prisoners.</description>
     <verb>Care for</verb>
-    <visible>true</visible>
+    <visible>false</visible>
     <naturalPriority>1197</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <relevantSkills>
@@ -120,6 +120,47 @@
     </workTags>
   </WorkTypeDef>
 
+  <!-- <WorkTypeDef>
+    <defName>Childcare</defName>
+    <labelShort>childcare</labelShort>
+    <pawnLabel>Childcarer</pawnLabel>
+    <gerundLabel>caring</gerundLabel>
+    <description>Care for a baby or child of the colony.</description>
+    <verb>Care</verb>
+    <alwaysStartActive>true</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+    <naturalPriority>1175</naturalPriority>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef> -->
+
+  <WorkTypeDef>
+    <defName>MJobs_Teaching</defName>
+    <labelShort>teach</labelShort>
+    <pawnLabel>Teacher</pawnLabel>
+    <gerundLabel>teaching</gerundLabel>
+    <description>Teach the children of the colony.</description>
+    <verb>Teach</verb>
+    <visible>false</visible>
+    <alwaysStartActive>true</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+    <naturalPriority>1170</naturalPriority>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
   <WorkTypeDef>
     <defName>MJobs_PriorityHauling</defName>
     <labelShort>priority haul</labelShort>
@@ -127,6 +168,7 @@
     <gerundLabel>priority hauling</gerundLabel>
     <description>Do high-priority hauling jobs.</description>
     <verb>Haul</verb>
+    <visible>false</visible>
     <naturalPriority>1165</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <relevantSkills>
@@ -147,6 +189,7 @@
     <gerundLabel>priority cleaning</gerundLabel>
     <description>Do high-priority cleaning jobs.</description>
     <verb>Clean</verb>
+    <visible>false</visible>
     <naturalPriority>1160</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <relevantSkills>
@@ -182,6 +225,7 @@
     <gerundLabel>undertaking</gerundLabel>
     <description>Strip, haul and dispose of the dead.</description>
     <verb>Deal with</verb>
+    <visible>false</visible>
     <naturalPriority>1110</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <requireCapableColonist>true</requireCapableColonist>
@@ -194,12 +238,53 @@
   </WorkTypeDef>
 
   <WorkTypeDef>
+    <defName>MJobs_Counseling</defName>
+    <labelShort>counsel</labelShort>
+    <pawnLabel>Counselor</pawnLabel>
+    <gerundLabel>counseling</gerundLabel>
+    <description>Counsel other colonists.</description>
+    <verb>Counsel</verb>
+    <visible>false</visible>
+    <naturalPriority>1108</naturalPriority>
+    <requireCapableColonist>true</requireCapableColonist>
+    <disabledForSlaves>true</disabledForSlaves>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
+    <defName>MJobs_Converting</defName>
+    <labelShort>convert</labelShort>
+    <pawnLabel>Coverter</pawnLabel>
+    <gerundLabel>converting</gerundLabel>
+    <description>Convert prisoners to an ideoligion.</description>
+    <verb>Convert</verb>
+    <visible>false</visible>
+    <naturalPriority>1107</naturalPriority>
+    <requireCapableColonist>true</requireCapableColonist>
+    <disabledForSlaves>true</disabledForSlaves>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
     <defName>MJobs_Recruiting</defName>
     <labelShort>recruit</labelShort>
     <pawnLabel>Recruiter</pawnLabel>
     <gerundLabel>recruiting</gerundLabel>
     <description>Chat with and recruit prisoners.</description>
     <verb>Recruit</verb>
+    <visible>false</visible>
     <naturalPriority>1105</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
     <disabledForSlaves>true</disabledForSlaves>
@@ -238,6 +323,7 @@
     <gerundLabel>training</gerundLabel>
     <description>Train animals.</description>
     <verb>Train</verb>
+    <visible>false</visible>
     <naturalPriority>1060</naturalPriority>
     <relevantSkills>
       <li>Animals</li>
@@ -274,6 +360,7 @@
     <gerundLabel>taming</gerundLabel>
     <description>Tame animals.</description>
     <verb>Tame</verb>
+    <visible>false</visible>
     <naturalPriority>1040</naturalPriority>
     <relevantSkills>
       <li>Animals</li>
@@ -292,6 +379,7 @@
     <gerundLabel>butchering</gerundLabel>
     <description>Butcher meat.</description>
     <verb>Butcher</verb>
+    <visible>false</visible>
     <naturalPriority>1010</naturalPriority>
     <relevantSkills>
       <li>Cooking</li>
@@ -330,6 +418,7 @@
     <gerundLabel>brewing</gerundLabel>
     <description>Brew liquors.</description>
     <verb>Brew</verb>
+    <visible>false</visible>
     <naturalPriority>995</naturalPriority>
     <relevantSkills>
       <li>Cooking</li>
@@ -371,6 +460,7 @@
     <gerundLabel>maintaining</gerundLabel>
     <description>Fix damaged or broken-down buildings.</description>
     <verb>Maintain</verb>
+    <visible>false</visible>
     <naturalPriority>910</naturalPriority>
     <relevantSkills>
       <li>Construction</li>
@@ -390,6 +480,7 @@
     <gerundLabel>deconstructing</gerundLabel>
     <description>Deconstruct things.</description>
     <verb>Deconstruct</verb>
+    <visible>false</visible>
     <naturalPriority>905</naturalPriority>
     <relevantSkills>
       <li>Construction</li>
@@ -429,6 +520,7 @@
     <gerundLabel>harvesting</gerundLabel>
     <description>Harvest crops and forage for wild plants.</description>
     <verb>Harvest</verb>
+    <visible>false</visible>
     <naturalPriority>705</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
     <relevantSkills>
@@ -489,6 +581,7 @@
     <gerundLabel>drilling</gerundLabel>
     <description>Operate deep drills.</description>
     <verb>Drill</verb>
+    <visible>false</visible>
     <naturalPriority>595</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
     <relevantSkills>
@@ -523,12 +616,33 @@
   </WorkTypeDef> -->
 
   <WorkTypeDef>
+    <defName>MJobs_Mechanitor</defName>
+    <labelShort>mechanitor</labelShort>
+    <pawnLabel>Mechanitor</pawnLabel>
+    <gerundLabel>working with mechanoids</gerundLabel>
+    <description>Work with mechanoids.</description>
+    <verb>Work at</verb>
+    <visible>false</visible>
+    <naturalPriority>480</naturalPriority>
+    <relevantSkills>
+      <li>Crafting</li>
+    </relevantSkills>
+    <workTags>
+      <li>Crafting</li>
+      <li>ManualSkilled</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
     <defName>MJobs_Fabricating</defName>
     <labelShort>fabricate</labelShort>
     <pawnLabel>Fabricator</pawnLabel>
     <gerundLabel>fabricating</gerundLabel>
     <description>Fabricate things.</description>
     <verb>Fabricate at</verb>
+    <visible>false</visible>
     <naturalPriority>475</naturalPriority>
     <relevantSkills>
       <li>Crafting</li>
@@ -605,6 +719,7 @@
     <gerundLabel>synthesizing</gerundLabel>
     <description>Synthesize drugs and other substances from raw materials.</description>
     <verb>Synthesize at</verb>
+    <visible>false</visible>
     <naturalPriority>425</naturalPriority>
     <relevantSkills>
       <li>Crafting</li>
@@ -626,6 +741,7 @@
     <gerundLabel>refining</gerundLabel>
     <description>Do bills at the biofuel refinery.</description>
     <verb>Refine at</verb>
+    <visible>false</visible>
     <naturalPriority>420</naturalPriority>
     <relevantSkills>
       <li>Crafting</li>
@@ -646,6 +762,7 @@
     <gerundLabel>smelting</gerundLabel>
     <description>Smelt things.</description>
     <verb>Smelt at</verb>
+    <visible>false</visible>
     <naturalPriority>415</naturalPriority>
     <relevantSkills>
       <li>Crafting</li>
@@ -666,6 +783,7 @@
     <gerundLabel>stonecutting</gerundLabel>
     <description>Cut stone chunks into blocks and do other related tasks.</description>
     <verb>Cut stone at</verb>
+    <visible>false</visible>
     <naturalPriority>405</naturalPriority>
     <relevantSkills>
       <li>Crafting</li>
@@ -706,6 +824,7 @@
     <gerundLabel>delivering</gerundLabel>
     <description>Deliver resources to blueprints.</description>
     <verb>Deliver</verb>
+    <visible>false</visible>
     <naturalPriority>330</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <requireCapableColonist>true</requireCapableColonist>
@@ -724,6 +843,7 @@
     <gerundLabel>loading</gerundLabel>
     <description>Load and unload caravans and transport pods.</description>
     <verb>Load</verb>
+    <visible>false</visible>
     <naturalPriority>310</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <requireCapableColonist>true</requireCapableColonist>
@@ -797,6 +917,7 @@
     <gerundLabel>scanning</gerundLabel>
     <description>Operate ground penetrating and long range scanners.</description>
     <verb>Scan at</verb>
+    <visible>false</visible>
     <naturalPriority>97</naturalPriority>
     <disabledForSlaves>true</disabledForSlaves>
     <relevantSkills>

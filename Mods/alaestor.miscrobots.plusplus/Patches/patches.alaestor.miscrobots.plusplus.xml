@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- #region MJobs_Rescuing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Rescuing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Rescuing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Rescuing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Rescuing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Rescuing>1</MJobs_Rescuing>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Rescuing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Rescuing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Rescuing>1</MJobs_Rescuing>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Operating -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Operating</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Operating"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Operating</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Operating</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Operating>1</MJobs_Operating>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Operating</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Operating</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Operating>1</MJobs_Operating>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Caring -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Caring</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Caring"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Caring</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Caring</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_ER_I" or defName="RPP_Bot_ER_II" or defName="RPP_Bot_ER_III" or defName="RPP_Bot_ER_IV" or defName="RPP_Bot_ER_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Caring>1</MJobs_Caring>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Caring</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Caring</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Caring>1</MJobs_Caring>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_PriorityHauling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_PriorityHauling</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_PriorityHauling</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_PriorityHauling>1</MJobs_PriorityHauling>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_PriorityHauling</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_PriorityHauling</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_PriorityHauling>1</MJobs_PriorityHauling>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_PriorityCleaning -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityCleaning</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityCleaning"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_PriorityCleaning</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_PriorityCleaning</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_PriorityCleaning>1</MJobs_PriorityCleaning>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_PriorityCleaning</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_PriorityCleaning</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_PriorityCleaning>1</MJobs_PriorityCleaning>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Undertaking -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Undertaking</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Undertaking"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Undertaking</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Undertaking</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Undertaking>1</MJobs_Undertaking>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Butchering -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Butchering</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Butchering"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Butchering</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Butchering</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Butchering>1</MJobs_Butchering>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Butchering</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Butchering</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Butchering>1</MJobs_Butchering>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Brewing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Brewing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Brewing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Brewing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Brewing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Brewing>1</MJobs_Brewing>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Brewing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Brewing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Brewing>1</MJobs_Brewing>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Maintaining -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Maintaining</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Maintaining"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Maintaining</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Maintaining</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Maintaining>1</MJobs_Maintaining>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Maintaining</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Maintaining</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Maintaining>1</MJobs_Maintaining>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Deconstructing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Deconstructing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Deconstructing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Deconstructing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Deconstructing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Deconstructing>1</MJobs_Deconstructing>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Deconstructing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Deconstructing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Deconstructing>1</MJobs_Deconstructing>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Harvesting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Harvesting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Harvesting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Harvesting</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Harvesting</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Kitchen_I" or defName="RPP_Bot_Kitchen_II" or defName="RPP_Bot_Kitchen_III" or defName="RPP_Bot_Kitchen_IV" or defName="RPP_Bot_Kitchen_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Harvesting>1</MJobs_Harvesting>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Harvesting</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Harvesting</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Harvesting>1</MJobs_Harvesting>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Drilling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Drilling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Drilling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Drilling</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Drilling</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Drilling>1</MJobs_Drilling>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Drilling</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Drilling</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Drilling>1</MJobs_Drilling>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Fabricating -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Fabricating</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Fabricating"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Fabricating</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Fabricating</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Fabricating>1</MJobs_Fabricating>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Fabricating</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Fabricating</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Fabricating>1</MJobs_Fabricating>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Synthesizing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Synthesizing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Synthesizing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Synthesizing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Synthesizing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Synthesizing>1</MJobs_Synthesizing>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Synthesizing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Synthesizing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Synthesizing>1</MJobs_Synthesizing>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Refining -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Refining</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Refining"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Refining</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Refining</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Refining>1</MJobs_Refining>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Refining</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Refining</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Refining>1</MJobs_Refining>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Smelting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Smelting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Smelting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Smelting</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Smelting</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Crafter_I" or defName="RPP_Bot_Crafter_II" or defName="RPP_Bot_Crafter_III" or defName="RPP_Bot_Crafter_IV" or defName="RPP_Bot_Crafter_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Smelting>1</MJobs_Smelting>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Smelting</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Smelting</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Smelting>1</MJobs_Smelting>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Stonecutting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Stonecutting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Stonecutting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Stonecutting</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Stonecutting</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Stonecutting>1</MJobs_Stonecutting>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Delivering -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Delivering</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Delivering"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Delivering</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Delivering</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Delivering>1</MJobs_Delivering>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Delivering</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Delivering</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Delivering>1</MJobs_Delivering>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Delivering</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Delivering</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Delivering>1</MJobs_Delivering>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Loading -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Loading</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Loading"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Loading</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Loading</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Loading>1</MJobs_Loading>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Loading</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Loading</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Loading>1</MJobs_Loading>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Scanning -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Scanning</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Scanning"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Scanning</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Scanning</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Scanning>1</MJobs_Scanning>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+</Patch>

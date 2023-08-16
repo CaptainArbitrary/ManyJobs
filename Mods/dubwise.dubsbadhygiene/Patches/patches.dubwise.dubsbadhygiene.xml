@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- #region MJobs_Caring -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Caring</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Caring"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DBHAdministerFluids"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "washPatient"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "DocCleanBedpan"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_PriorityHauling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "UnloadWashing"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "LoadWashing"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "UnloadComposter"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "FillComposter"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "emptySepticTank"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "RefillWater"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Maintaining -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Maintaining</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Maintaining"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "ClearBlockage"]/workType</xpath>
+        <value>
+          <workType>MJobs_Maintaining</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+</Patch>

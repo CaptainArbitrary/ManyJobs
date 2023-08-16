@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- #region MJobs_PriorityHauling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+        <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]</xpath>
+        <value>
+          <visible>false</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "HaulUrgently"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkTypeDef[defName = "FinishingOff"]/naturalPriority</xpath>
+    <value>
+      <naturalPriority>1167</naturalPriority>
+    </value>
+  </Operation>
+
+</Patch>

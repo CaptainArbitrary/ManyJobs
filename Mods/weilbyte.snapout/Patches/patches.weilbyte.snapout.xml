@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- #region MJobs_Counseling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Counseling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Counseling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "SnapOut_CalmPawnDownWorkgiver"]/workType</xpath>
+        <value>
+          <workType>MJobs_Counseling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+</Patch>

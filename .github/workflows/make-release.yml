@@ -59,6 +59,24 @@ jobs:
 
 #endregion
 
+#region Increment assembly version and build
+
+    - id: increment-assembly-version
+      uses: Mudlet/xmlstarlet-action@v1.1
+      with:
+        args: ed -P -O -L --update "/Project/PropertyGroup[1]/AssemblyVersion" -v "${{ steps.increment-version.outputs.version }}.0" "${{ vars.CSPROJ_PATH }}"
+
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - run: dotnet restore ${{ vars.SLN_PATH }}
+    - run: dotnet build ${{ vars.SLN_PATH }} --configuration Release --no-restore
+
+    - run: git add ${{ vars.ASSEMBLY_PATH }}
+    - run: git commit -m "Increment assembly version to ${{ steps.increment-version.outputs.version }}"
+
+#endregion
+
 #region Update CHANGELOG.txt
 
     - id: update-changelog-txt

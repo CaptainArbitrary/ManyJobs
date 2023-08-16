@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- #region MJobs_PriorityHauling -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName = "HaulToBiosculpterPod"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Converting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Converting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Converting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName = "ConvertPrisoner"]/workType</xpath>
+        <value>
+          <workType>MJobs_Converting</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Undertaking -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Undertaking</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Undertaking"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName = "ExtractSkull"]/workType</xpath>
+        <value>
+          <workType>MJobs_Undertaking</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+</Patch>
