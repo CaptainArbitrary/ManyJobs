@@ -309,6 +309,30 @@
     <caseTrue>
 
       <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Undertaking</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Undertaking</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Undertaking>1</MJobs_Undertaking>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
         <value>
           <li>

@@ -143,6 +143,25 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_Undertaking -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Undertaking</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_Lifter"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Undertaking</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Butchering -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
