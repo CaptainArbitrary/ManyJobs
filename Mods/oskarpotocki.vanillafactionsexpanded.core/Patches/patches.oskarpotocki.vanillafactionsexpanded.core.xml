@@ -9,13 +9,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "IP_InsertFirstIngredient"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>

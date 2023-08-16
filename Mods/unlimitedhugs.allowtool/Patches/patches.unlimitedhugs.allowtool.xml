@@ -8,13 +8,6 @@
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
       <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
         <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]</xpath>
         <value>
