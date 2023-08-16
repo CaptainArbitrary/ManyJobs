@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "ManyJobs": {
+      "commandName": "Project"
+    },
+    "RimWorld": {
+      "commandName": "Executable",
+      "executablePath": "../../../../RimWorldWin64.exe"
+    }
+  }
+}
