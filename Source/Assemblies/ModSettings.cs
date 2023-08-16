@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -39,8 +38,17 @@ namespace ManyJobs
         public bool MJobs_Loading;
         public bool MJobs_Scanning;
 
-        readonly List<WorkType> WorkTypes = new List<WorkType>();
-        readonly TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+        private readonly List<WorkType> WorkTypes = new List<WorkType>();
+        private readonly TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+
+        private const string restartGameWarning = "You will need to restart the game for any changes to take effect.";
+        private const string restartDialogMessage = "Changing the list of enabled work types requires a restart. Unsaved progress will be lost.\n\nRestart now?";
+
+        private Listing_Standard workTypesListing = new Listing_Standard();
+        private Vector2 scrollPositionVector = Vector2.zero;
+
+        private const float buttonWidth = 100f;
+        private const float buttonHeight = GenUI.ListSpacing;
 
         public ModSettings()
         {
@@ -50,8 +58,6 @@ namespace ManyJobs
                 field.SetValue(this, true);
             }
         }
-
-        const string restartDialogMessage = "Changing the list of enabled work types requires a restart. Unsaved progress will be lost.\n\nRestart now?";
 
         internal void WriteSettings()
         {
@@ -86,19 +92,13 @@ namespace ManyJobs
             base.ExposeData();
         }
 
-        Listing_Standard workTypesListing = new Listing_Standard();
-        Vector2 scrollPositionVector = Vector2.zero;
-
-        const float buttonWidth = 100f;
-        const float buttonHeight = GenUI.ListSpacing;
-
         public void DoSettingsWindowContents(Rect inRect)
         {
             Rect restartGameMessageRect = new Rect(inRect.x, inRect.y, 644f, buttonHeight);
             Color savedColor = GUI.color;
             GUI.color = ColorLibrary.RedReadable;
             Text.Anchor = TextAnchor.MiddleLeft;
-            Widgets.Label(restartGameMessageRect, "You will need to restart the game for any changes to take effect.");
+            Widgets.Label(restartGameMessageRect, restartGameWarning);
             Text.Anchor = TextAnchor.UpperLeft;
             GUI.color = savedColor;
 
