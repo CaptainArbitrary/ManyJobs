@@ -9,13 +9,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Caring"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DBHAdministerFluids"]/workType</xpath>
         <value>
           <workType>MJobs_Caring</workType>
@@ -47,13 +40,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "UnloadWashing"]/workType</xpath>
@@ -108,13 +94,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Maintaining</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Maintaining"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "ClearBlockage"]/workType</xpath>

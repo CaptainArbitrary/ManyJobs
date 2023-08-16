@@ -8,13 +8,6 @@
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
       <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
         <value>
@@ -43,13 +36,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_PriorityCleaning</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityCleaning"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Cleaner"]/race/mechEnabledWorkTypes</xpath>
@@ -80,13 +66,6 @@
     <field>MJobs_Delivering</field>
     <caseTrue>
 
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Delivering"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
       <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
         <value>
@@ -115,13 +94,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Loading</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Loading"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>

@@ -68,13 +68,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Rescuing"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoctorRescue"]/workType</xpath>
         <value>
           <workType>MJobs_Rescuing</workType>
@@ -99,13 +92,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Operating</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Operating"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsMedicalHumanOperation"]/workType</xpath>
@@ -139,13 +125,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Caring</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Caring"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoctorFeedHumanlikes"]/workType</xpath>
@@ -195,13 +174,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "Refuel"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
@@ -242,13 +214,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityCleaning"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "CleanClearSnow"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityCleaning</workType>
@@ -266,13 +231,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Undertaking</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Undertaking"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "Strip"]/workType</xpath>
@@ -308,13 +266,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Recruiting"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "ChatWithPrisoner"]/workType</xpath>
         <value>
           <workType>MJobs_Recruiting</workType>
@@ -332,13 +283,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_AnimalTraining</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_AnimalTraining"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "Train"]/workType</xpath>
@@ -369,13 +313,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_AnimalTaming"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "Tame"]/workType</xpath>
         <value>
           <workType>MJobs_AnimalTaming</workType>
@@ -393,13 +330,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Butchering</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Butchering"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsButcherFlesh"]/workType</xpath>
@@ -421,13 +351,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Brewing"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsBrew"]/workType</xpath>
         <value>
           <workType>MJobs_Brewing</workType>
@@ -445,13 +368,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Maintaining</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Maintaining"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "FixBrokenDownBuilding"]/workType</xpath>
@@ -478,13 +394,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Deconstructing</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Deconstructing"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "Uninstall"]/workType</xpath>
@@ -520,13 +429,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Harvesting"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "GrowerHarvest"]/workType</xpath>
         <value>
           <workType>MJobs_Harvesting</workType>
@@ -544,13 +446,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Drilling</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Drilling"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "Drill"]/workType</xpath>
@@ -572,13 +467,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Fabricating"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsFabricationBench"]/workType</xpath>
         <value>
           <workType>MJobs_Fabricating</workType>
@@ -596,13 +484,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Synthesizing</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Synthesizing"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsProduceDrugs"]/workType</xpath>
@@ -624,13 +505,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Refining"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsRefinery"]/workType</xpath>
         <value>
           <workType>MJobs_Refining</workType>
@@ -648,13 +522,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Smelting</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Smelting"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsSmelter"]/workType</xpath>
@@ -676,13 +543,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Stonecutting"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DoBillsStonecut"]/workType</xpath>
         <value>
           <workType>MJobs_Stonecutting</workType>
@@ -700,13 +560,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Delivering</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Delivering"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "DeliverResourcesToFrames"]/workType</xpath>
@@ -733,13 +586,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Loading</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Loading"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "UnloadCarriers"]/workType</xpath>
@@ -773,13 +619,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Scanning</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Scanning"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "LongRangeScan"]/workType</xpath>

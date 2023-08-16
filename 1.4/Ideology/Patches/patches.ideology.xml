@@ -9,13 +9,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>/Defs/WorkGiverDef[defName = "HaulToBiosculpterPod"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
@@ -35,13 +28,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Converting"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>/Defs/WorkGiverDef[defName = "ConvertPrisoner"]/workType</xpath>
         <value>
           <workType>MJobs_Converting</workType>
@@ -59,13 +45,6 @@
     <ModClass>ManyJobs.Mod</ModClass>
     <field>MJobs_Undertaking</field>
     <caseTrue>
-
-      <Operation Class="PatchOperationReplace">
-        <xpath>Defs/WorkTypeDef[defName = "MJobs_Undertaking"]/visible</xpath>
-        <value>
-          <visible>true</visible>
-        </value>
-      </Operation>
 
       <Operation Class="PatchOperationReplace">
         <xpath>/Defs/WorkGiverDef[defName = "ExtractSkull"]/workType</xpath>
