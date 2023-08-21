@@ -265,13 +265,6 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/WorkGiverDef[defName = "CarryToGeneExtractor"]/workType</xpath>
-        <value>
-          <workType>MJobs_Mechanitor</workType>
-        </value>
-      </Operation>
-
-      <Operation Class="PatchOperationReplace">
         <xpath>/Defs/WorkGiverDef[defName = "RepairMech"]/workType</xpath>
         <value>
           <workType>MJobs_Mechanitor</workType>
