@@ -47,6 +47,13 @@
     <caseTrue>
 
       <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName = "DeliverHemogenToPrisoner"]/workType</xpath>
+        <value>
+          <workType>MJobs_Caring</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
         <xpath>/Defs/WorkGiverDef[defName = "FeedHemogen"]/workType</xpath>
         <value>
           <workType>MJobs_Caring</workType>
@@ -106,7 +113,28 @@
       </Operation>
 
       <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName = "CarryToSubcoreScanner"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/WorkGiverDef[defName = "HaulToCarrier"]</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
         <xpath>/Defs/WorkGiverDef[defName = "HaulToGrowthVat"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/WorkGiverDef[defName = "HaulToSubcoreScanner"]</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
