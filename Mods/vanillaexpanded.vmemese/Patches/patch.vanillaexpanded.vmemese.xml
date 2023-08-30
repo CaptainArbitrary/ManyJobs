@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- #region MJobs_Deconstructing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_Deconstructing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "VME_DeconstructJunk"]/workType</xpath>
+        <value>
+          <workType>MJobs_Deconstructing</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+</Patch>

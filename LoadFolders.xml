@@ -18,5 +18,6 @@
     <li IfModActive="alaestor.miscrobots.plusplus">Mods/alaestor.miscrobots.plusplus</li>
     <li IfModActive="oskarpotocki.vfe.mechanoid">Mods/oskarpotocki.vfe.mechanoid</li>
     <li IfModActive="wvc.sergkart.races.biotech">Mods/wvc.sergkart.races.biotech</li>
+    <li IfModActive="vanillaexpanded.vmemese">Mods/vanillaexpanded.vmemese</li>
   </v1.4>
 </loadFolders>
