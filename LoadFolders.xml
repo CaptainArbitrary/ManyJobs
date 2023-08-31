@@ -31,5 +31,6 @@
     <li IfModActive="vanillaexpanded.vplantsemore">Mods/vanillaexpanded.vplantsemore</li>
     <li IfModActive="vanillaracesexpanded.android">Mods/vanillaracesexpanded.android</li>
     <li IfModActive="vanillaracesexpanded.sanguophage">Mods/vanillaracesexpanded.sanguophage</li>
+    <li IfModActive="smashphil.vehicleframework">Mods/smashphil.vehicleframework</li>
   </v1.4>
 </loadFolders>
