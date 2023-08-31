@@ -153,4 +153,19 @@
 
   <!-- #endregion -->
 
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/WorkGiverDef[defName = "VFEM_RefuelSilo"]/workType</xpath>
+        <value>
+          <li>MJobs_PriorityHauling</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
 </Patch>
