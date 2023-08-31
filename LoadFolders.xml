@@ -28,5 +28,6 @@
     <li IfModActive="vanillaexpanded.vbrewe">Mods/vanillaexpanded.vbrewe</li>
     <li IfModActive="vanillaexpanded.vbrewecandt">Mods/vanillaexpanded.vbrewecandt</li>
     <li IfModActive="oskarpotocki.vfe.insectoid">Mods/oskarpotocki.vfe.insectoid</li>
+    <li IfModActive="vanillaexpanded.vplantsemore">Mods/vanillaexpanded.vplantsemore</li>
   </v1.4>
 </loadFolders>
