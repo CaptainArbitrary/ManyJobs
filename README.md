@@ -55,9 +55,7 @@ These mods all improve the Work tab, just in different ways. If you don't like m
 
 Many Jobs is compatible with Royalty, Ideology and Biotech.
 
-### Compatible Mods
-
-Many Jobs includes patches for the following mods:
+### Supported Mods
 
 [The list of supported mods has gotten a little out of hand, so please find it on this page.](supported-mods.md)
 
