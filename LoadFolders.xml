@@ -30,5 +30,6 @@
     <li IfModActive="oskarpotocki.vfe.insectoid">Mods/oskarpotocki.vfe.insectoid</li>
     <li IfModActive="vanillaexpanded.vplantsemore">Mods/vanillaexpanded.vplantsemore</li>
     <li IfModActive="vanillaracesexpanded.android">Mods/vanillaracesexpanded.android</li>
+    <li IfModActive="vanillaracesexpanded.sanguophage">Mods/vanillaracesexpanded.sanguophage</li>
   </v1.4>
 </loadFolders>

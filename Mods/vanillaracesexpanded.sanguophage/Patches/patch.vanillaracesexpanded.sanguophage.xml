@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.Mod</ModClass>
+    <field>MJobs_PriorityHauling</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "VRE_RefuelDraincaskets"]/workType</xpath>
+        <value>
+          <workType>MJobs_PriorityHauling</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>
