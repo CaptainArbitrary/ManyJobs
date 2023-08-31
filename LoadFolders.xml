@@ -20,5 +20,6 @@
     <li IfModActive="wvc.sergkart.races.biotech">Mods/wvc.sergkart.races.biotech</li>
     <li IfModActive="vanillaexpanded.vmemese">Mods/vanillaexpanded.vmemese</li>
     <li IfModActive="sarg.alphabiomes">Mods/sarg.alphabiomes</li>
+    <li IfModActive="sarg.alphagenes">Mods/sarg.alphagenes</li>
   </v1.4>
 </loadFolders>
