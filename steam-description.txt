@@ -19,21 +19,12 @@ These mods all improve the Work tab, just in different ways. If you don't like m
 [h1]DLC[/h1]
 Many Jobs is compatible with Royalty, Ideology and Biotech.
 
-[h1]Compatible Mods[/h1]
-Many Jobs includes patches for the following mods:
-[list]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=836308268]Dubs Bad Hygiene[/url]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=726244033]Fluffy Breakdowns[/url]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=715565262]Fluffy's Colony Manager[/url]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013]Vanilla Expanded Framework[/url]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007]Vanilla Furniture Expanded - Security[/url]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=761421485]Allow Tool[/url]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555]Snap Out![/url]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=753498552]Hospitality[/url]
-[/list]
+[h1]Supported Mods[/h1]
+[url=https://steamcommunity.com/workshop/filedetails/discussion/3013527266/3823047564751095966/]The list of supported mods has gotten a little out of hand, so please find it on this page.[/url]
+
 [h1]Recommended Mods[/h1]
 [list]
-  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=725219116]Work Tab[/url]
+  [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3027381000]Compact Work Tab[/url]
   [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428]Grouped Pawns Lists[/url]
 [/list]
 In my opinion these two mods together dramatically improve the Work tab user interface, making it easier to read and use.
