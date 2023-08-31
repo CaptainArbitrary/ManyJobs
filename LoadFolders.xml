@@ -22,5 +22,6 @@
     <li IfModActive="sarg.alphabiomes">Mods/sarg.alphabiomes</li>
     <li IfModActive="sarg.alphagenes">Mods/sarg.alphagenes</li>
     <li IfModActive="biomesteam.biomescaverns">Mods/biomesteam.biomescaverns</li>
+    <li IfModActive="redmattis.geneextractor">Mods/redmattis.geneextractor</li>
   </v1.4>
 </loadFolders>
