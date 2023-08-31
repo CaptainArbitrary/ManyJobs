@@ -1,3 +1,65 @@
+Release 1.6.0
+
+New Features
+
+Added support for Vanilla Ideology Expanded - Memes and Structures (PR #93)
+uninstall ancient junk: was hauling, is now deconstructing
+
+Added support for Alpha Biomes (PR #95)
+drill at core sample drill → drilling
+operate exotic smelter → smelting
+
+Added support for Alpha Genes (PR #97)
+- administer metal to patients is now a caregiver job
+- deliver metal to prisoners is now a caregiver job
+
+Added support for Biomes! Caverns (PR #98)
+Filling and emptying mushroom fermenting barrels are now priority hauling jobs
+
+Added support for Gene Extractor Tiers (PR #99)
+Haul to/Carry to gene extractor vat → priority haul
+
+Added support for Tiered Mechs (PR #101)
+"Plus" and "Ultra" mech variants can now do the same jobs as their Biotech counterparts
+
+Added support for Gene Ripper (PR #102)
+Carry to Gene Ripper is now a priority hauling job
+
+Added support for Vanilla Brewing Expanded and the Coffee and Tea add-on (PR #103)
+Mixing drinks at the bar and making drinks at the espresso machine are both brewing jobs now
+
+Added support for Vanilla Factions Expanded - Insectoids (PR #104)
+Inserting genomes is now a priority hauling job
+
+Added support for Vanilla Plants Expanded - More Plants (PR #106)
+If Vanilla Plants Expanded - More Plants is active _and_ Vanilla Cooking Expanded is active, then the "extract milk from plants" job gets reassigned to the brewing category.
+
+Added support for Vanilla Races Expanded - Android (PR #107)
+- Repairing and operating on androids are now fabrication jobs
+- Carrying/hauling to the subcore polyanalyzer are priority hauling jobs
+- Carrying to the android behaviorist station is a priority hauling job
+
+Added support for Vanilla Races Expanded - Sanguophage (PR #108)
+Refilling drain caskets is now a priority hauling job
+
+Added support for Vehicle Framework (PR #109)
+Refueling vehicles, rearming turrets and loading upgrade materials are all priority hauling jobs. Packing vehicles (in the caravan sense) is a loading job.
+
+Enhancements
+
+Updated the workTypes of some Biotech work givers (PR #76)
+Change DeliverHemogenToPrisoner to MJobs_Caring.
+Change CarryToSubcoreScanner to MJobs_PriorityHauling.
+Change HaulToCarrier to MJobs_PriorityHauling.
+Change HaulToSubcoreScanner to MJobs_PriorityHauling.
+
+Improved support for Vanilla Factions Expanded - Mechanoids (PR #105)
+Refueling rocket silos is now a priority hauling job
+
+Bug Fixes
+
+Removed CarryToGeneExtractor from MJobs_Mechanitor (PR #75)
+
 Release 1.5.0
 
 New Features
