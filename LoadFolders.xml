@@ -23,5 +23,6 @@
     <li IfModActive="sarg.alphagenes">Mods/sarg.alphagenes</li>
     <li IfModActive="biomesteam.biomescaverns">Mods/biomesteam.biomescaverns</li>
     <li IfModActive="redmattis.geneextractor">Mods/redmattis.geneextractor</li>
+    <li IfModActive="pyro.tieredmechs">Mods/pyro.tieredmechs</li>
   </v1.4>
 </loadFolders>
