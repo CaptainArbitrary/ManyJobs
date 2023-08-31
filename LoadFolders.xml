@@ -24,5 +24,6 @@
     <li IfModActive="biomesteam.biomescaverns">Mods/biomesteam.biomescaverns</li>
     <li IfModActive="redmattis.geneextractor">Mods/redmattis.geneextractor</li>
     <li IfModActive="pyro.tieredmechs">Mods/pyro.tieredmechs</li>
+    <li IfModActive="danielwedemeyer.generipper">Mods/danielwedemeyer.generipper</li>
   </v1.4>
 </loadFolders>
