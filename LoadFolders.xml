@@ -25,5 +25,7 @@
     <li IfModActive="redmattis.geneextractor">Mods/redmattis.geneextractor</li>
     <li IfModActive="pyro.tieredmechs">Mods/pyro.tieredmechs</li>
     <li IfModActive="danielwedemeyer.generipper">Mods/danielwedemeyer.generipper</li>
+    <li IfModActive="vanillaexpanded.vbrewe">Mods/vanillaexpanded.vbrewe</li>
+    <li IfModActive="vanillaexpanded.vbrewecandt">Mods/vanillaexpanded.vbrewecandt</li>
   </v1.4>
 </loadFolders>
