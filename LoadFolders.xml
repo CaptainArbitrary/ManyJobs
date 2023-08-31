@@ -29,5 +29,6 @@
     <li IfModActive="vanillaexpanded.vbrewecandt">Mods/vanillaexpanded.vbrewecandt</li>
     <li IfModActive="oskarpotocki.vfe.insectoid">Mods/oskarpotocki.vfe.insectoid</li>
     <li IfModActive="vanillaexpanded.vplantsemore">Mods/vanillaexpanded.vplantsemore</li>
+    <li IfModActive="vanillaracesexpanded.android">Mods/vanillaracesexpanded.android</li>
   </v1.4>
 </loadFolders>
