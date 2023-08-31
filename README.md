@@ -61,7 +61,7 @@ Many Jobs is compatible with Royalty, Ideology and Biotech.
 
 ### Recommended Mods
 
-- [Work Tab](https://steamcommunity.com/sharedfiles/filedetails/?id=725219116)
+- [Compact Work Tab](https://steamcommunity.com/sharedfiles/filedetails/?id=3027381000)
 - [Grouped Pawns Lists](https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428)
 
 In my opinion these two mods together dramatically improve the Work tab user interface, making it easier to read and use.
