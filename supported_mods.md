@@ -1,0 +1,27 @@
+# Many Jobs includes patches for the following mods:
+
+- Allow Tool
+- Alpha Biomes
+- Alpha Genes
+- Biomes! Caverns
+- Dubs Bad Hygiene
+- Fluffy Breakdowns
+- Fluffy's Colony Manager
+- Gene Extractor Tiers
+- Gene Ripper
+- Hospitality
+- Misc. Robots
+- Misc. Robots++
+- Snap Out!
+- Tiered Mechs
+- Vanilla Brewing Expanded
+- Vanilla Brewing Expanded - Coffees and Teas
+- Vanilla Expanded Framework
+- Vanilla Factions Expanded - Insectoids
+- Vanilla Factions Expanded - Mechanoids
+- Vanilla Furniture Expanded - Security
+- Vanilla Ideology Expanded - Memes and Structures
+- Vanilla Plants Expanded - More Plants
+- Vanilla Races Expanded - Android
+- Vanilla Races Expanded - Sanguophage
+- Vehicle Framework

@@ -59,16 +59,7 @@ Many Jobs is compatible with Royalty, Ideology and Biotech.
 
 Many Jobs includes patches for the following mods:
 
-- [Dubs Bad Hygiene](https://steamcommunity.com/sharedfiles/filedetails/?id=836308268)
-- [Fluffy Breakdowns](https://steamcommunity.com/sharedfiles/filedetails/?id=726244033)
-- [Fluffy's Colony Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=715565262)
-- [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
-- [Vanilla Furniture Expanded - Security](https://steamcommunity.com/sharedfiles/filedetails/?id=1845154007)
-- [Allow Tool](https://steamcommunity.com/sharedfiles/filedetails/?id=761421485)
-- [Snap Out!](https://steamcommunity.com/sharedfiles/filedetails/?id=1319782555)
-- [Hospitality](https://steamcommunity.com/sharedfiles/filedetails/?id=753498552)
-- [Misc. Robots](https://steamcommunity.com/workshop/filedetails/?id=724602224)
-- [Misc. Robots++](https://steamcommunity.com/sharedfiles/filedetails/?id=747645520)
+[The list of supported mods has gotten a little out of hand, so please find it on this page.](supported-mods.md)
 
 ### Recommended Mods
 
