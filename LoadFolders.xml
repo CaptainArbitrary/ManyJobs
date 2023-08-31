@@ -21,5 +21,6 @@
     <li IfModActive="vanillaexpanded.vmemese">Mods/vanillaexpanded.vmemese</li>
     <li IfModActive="sarg.alphabiomes">Mods/sarg.alphabiomes</li>
     <li IfModActive="sarg.alphagenes">Mods/sarg.alphagenes</li>
+    <li IfModActive="biomesteam.biomescaverns">Mods/biomesteam.biomescaverns</li>
   </v1.4>
 </loadFolders>
