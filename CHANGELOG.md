@@ -1,3 +1,11 @@
+## Release 1.6.1
+
+### Bug Fixes
+
+**Change patchop to PatchOperationReplace** ([PR #113](https://github.com/CaptainArbitrary/ManyJobs/pull/113))
+
+- Change value from `<li>MJobs_PriorityHauling</li>` to `<workType>MJobs_PriorityHauling</workType>`
+
 ## Release 1.6.0
 
 ### New Features
