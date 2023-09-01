@@ -158,10 +158,10 @@
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 
-      <Operation Class="PatchOperationAdd">
+      <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "VFEM_RefuelSilo"]/workType</xpath>
         <value>
-          <li>MJobs_PriorityHauling</li>
+          <workType>MJobs_PriorityHauling</workType>
         </value>
       </Operation>
 
