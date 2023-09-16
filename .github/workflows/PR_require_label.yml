@@ -1,17 +1,13 @@
-name: "pr-label"
+name: "PR Require Label"
 
 on:
   pull_request:
     types: [ opened, labeled, unlabeled, synchronize ]
     branches: [ main ]
 
-concurrency:
-  group: "pr-label-${{ github.ref }}"
-  cancel-in-progress: false
-
 jobs:
 
-  pr-label:
+  pr-require-label:
 
     runs-on: ubuntu-latest
     permissions:

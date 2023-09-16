@@ -1,15 +1,15 @@
 {
   "categories": [
     {
-      "title": "New Features",
+      "title": "### New Features",
       "labels": [ "feature" ]
     },
     {
-      "title": "Enhancements",
+      "title": "### Enhancements",
       "labels": [ "enhancement" ]
     },
     {
-      "title": "Bug Fixes",
+      "title": "### Bug Fixes",
       "labels": [ "bug" ]
     }
   ],
@@ -18,6 +18,6 @@
     "on_property": "mergedAt"
   },
   "template": "${{CHANGELOG}}",
-  "pr_template": "${{TITLE}} (PR #${{NUMBER}})\n${{BODY}}\n\n",
-  "empty_template": "No changes."
+  "pr_template": "${{TITLE}} ([PR #${{NUMBER}}](${{URL}}))\n\n${{BODY}}\n\n",
+  "empty_template": "_No changes._"
 }
