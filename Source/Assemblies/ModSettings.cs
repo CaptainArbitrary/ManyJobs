@@ -173,8 +173,6 @@ namespace ManyJobs
                 Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.center.y - Widgets.CheckboxSize / 2f), ref workType.IsEnabled);
 
                 Widgets.DrawHighlightIfMouseover(rect);
-                
-                TooltipHandler.TipRegion(rect, workType.Def?.description ?? string.Empty);
             }
 
             Text.Anchor = originalAnchor;
