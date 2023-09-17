@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -158,6 +158,8 @@ namespace ManyJobs
                 Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.y), ref workType.IsEnabled);
 
                 Widgets.DrawHighlightIfMouseover(rect);
+                
+                TooltipHandler.TipRegion(rect, workType.Def?.description ?? string.Empty);
             }
 
             workTypesListing.End();
