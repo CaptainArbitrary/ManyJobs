@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
 namespace ManyJobs
 {
@@ -50,6 +51,8 @@ namespace ManyJobs
         private const float buttonWidth = 100f;
         private const float buttonHeight = GenUI.ListSpacing;
 
+        private float maxWorkTypeNameWidth;
+        
         public ModSettings()
         {
             foreach (FieldInfo field in this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
@@ -58,7 +61,17 @@ namespace ManyJobs
                 field.SetValue(this, true);
             }
         }
-
+        
+        public void OnLateInitialize()
+        {
+            foreach (WorkType workType in WorkTypes)
+            {
+                string n = textInfo.ToTitleCase(workType.Def?.labelShort ?? workType.Name);
+                Vector2 nSize = Text.CalcSize(n);
+                maxWorkTypeNameWidth = Mathf.Max(maxWorkTypeNameWidth, nSize.x);
+            }
+        }
+        
         internal void WriteSettings()
         {
             bool isDirty = false;
@@ -117,16 +130,34 @@ namespace ManyJobs
 
             foreach (WorkType workType in WorkTypes)
             {
-                workTypesListing.CheckboxLabeled(textInfo.ToTitleCase(workType.Def?.labelShort ?? workType.Name), ref workType.IsEnabled);
-                Text.Font = GameFont.Tiny;
+                Rect rect = workTypesListing.GetRect(Text.LineHeight);
+                
+                Rect nameRect = new Rect(rect) { width = maxWorkTypeNameWidth + GenUI.Gap };
+                Rect descriptionRect = new Rect(rect) { x = nameRect.xMax, width = rect.width - nameRect.width - GenUI.Gap * 2 };
+                Rect clickableRect = new Rect(rect) { width = rect.width - Widgets.CheckboxSize };
+                
+                Widgets.Label(nameRect, textInfo.ToTitleCase(workType.Def?.labelShort ?? workType.Name));
+                
                 GUI.color = Color.gray;
-                workTypesListing.Label(workType.Def?.description ?? string.Empty);
+                Widgets.Label(descriptionRect, workType.Def?.description ?? string.Empty);
                 GUI.color = Color.white;
-                Text.Font = GameFont.Small;
-                if (workType != WorkTypes.Last())
+
+                if (Widgets.ButtonInvisible(clickableRect))
                 {
-                    workTypesListing.Gap();
+                    workType.IsEnabled = !workType.IsEnabled;
+                    if (workType.IsEnabled)
+                    {
+                        SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
+                    }
+                    else
+                    {
+                        SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
+                    }
                 }
+                
+                Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.y), ref workType.IsEnabled);
+
+                Widgets.DrawHighlightIfMouseover(rect);
             }
 
             workTypesListing.End();
@@ -143,6 +174,7 @@ namespace ManyJobs
 
             if (allOnButton)
             {
+                SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
                 foreach (WorkType workType in WorkTypes)
                 {
                     workType.IsEnabled = true;
@@ -151,6 +183,7 @@ namespace ManyJobs
 
             if (allOffButton)
             {
+                SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
                 foreach (WorkType workType in WorkTypes)
                 {
                     workType.IsEnabled = false;

@@ -13,7 +13,12 @@ namespace ManyJobs
             settings = GetSettings<ModSettings>();
             settingsCategory = content.Name;
         }
-
+        
+        public void OnLateInitialize()
+        {
+            settings.OnLateInitialize();
+        }
+        
         public override string SettingsCategory()
         {
             return settingsCategory;
