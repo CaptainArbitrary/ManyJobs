@@ -1,3 +1,4 @@
+using System;
 using RimWorld;
 using System.Collections.Generic;
 using System.Globalization;
@@ -42,8 +43,7 @@ namespace ManyJobs
         private readonly List<WorkType> WorkTypes = new List<WorkType>();
         private readonly TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
 
-        private const string restartGameWarning = "You will need to restart the game for any changes to take effect.";
-        private const string restartDialogMessage = "Changing the list of enabled work types requires a restart. Unsaved progress will be lost.\n\nRestart now?";
+        private const string restartDialogMessage = "Changing the list of enabled work types requires a restart.\n\nRestart now? Unsaved progress will be lost.";
 
         private Listing_Standard workTypesListing = new Listing_Standard();
         private Vector2 scrollPositionVector = Vector2.zero;
@@ -52,6 +52,8 @@ namespace ManyJobs
         private const float buttonHeight = GenUI.ListSpacing;
 
         private float maxWorkTypeNameWidth;
+
+        private QuickSearchWidget _quickSearchWidget = new QuickSearchWidget();
         
         public ModSettings()
         {
@@ -105,15 +107,15 @@ namespace ManyJobs
             base.ExposeData();
         }
 
+        private string filter;
+        private bool filtered;
+        
         public void DoSettingsWindowContents(Rect inRect)
         {
-            Rect restartGameMessageRect = new Rect(inRect.x, inRect.y, 644f, buttonHeight);
-            Color savedColor = GUI.color;
-            GUI.color = ColorLibrary.RedReadable;
-            Text.Anchor = TextAnchor.MiddleLeft;
-            Widgets.Label(restartGameMessageRect, restartGameWarning);
-            Text.Anchor = TextAnchor.UpperLeft;
-            GUI.color = savedColor;
+            Rect quickSearchRect = new Rect(inRect.x, inRect.y, 644f, buttonHeight);
+            _quickSearchWidget.OnGUI(quickSearchRect);
+            filter = _quickSearchWidget.filter.Text.ToLower();
+            filtered = !String.IsNullOrEmpty(filter);
 
             Rect allOnButtonRect = new Rect(inRect.width - buttonWidth - GenUI.GapSmall - buttonWidth, inRect.y, buttonWidth, buttonHeight);
             bool allOnButton = Widgets.ButtonText(allOnButtonRect, "All On");
@@ -121,16 +123,29 @@ namespace ManyJobs
             Rect allOffButtonRect = new Rect(inRect.width - buttonWidth, inRect.y, buttonWidth, buttonHeight);
             bool allOffButton = Widgets.ButtonText(allOffButtonRect, "All Off");
 
-            Rect outerRect = new Rect(inRect.x, inRect.y + restartGameMessageRect.height + GenUI.GapSmall, inRect.width, inRect.height - restartGameMessageRect.height - GenUI.GapSmall);
+            Rect outerRect = new Rect(inRect.x, inRect.y + quickSearchRect.height + GenUI.GapSmall, inRect.width, inRect.height - quickSearchRect.height - GenUI.GapSmall);
             Rect innerRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), workTypesListing.CurHeight);
             Rect listingRect = new Rect(innerRect.x, innerRect.y, innerRect.width, 99999f);
 
             Widgets.BeginScrollView(outerRect, ref scrollPositionVector, innerRect, true);
             workTypesListing.Begin(listingRect);
 
-            foreach (WorkType workType in WorkTypes)
+            List<WorkType> filteredWorkTypes;
+            if (filtered)
             {
-                Rect rect = workTypesListing.GetRect(Text.LineHeight);
+                filteredWorkTypes = WorkTypes.Where(wt => wt.Def.labelShort.Contains(filter) || wt.Def.description.Contains(filter)).ToList();
+            }
+            else
+            {
+                filteredWorkTypes = WorkTypes;
+            }
+
+            TextAnchor originalAnchor = Text.Anchor;
+            Text.Anchor = TextAnchor.MiddleLeft;
+
+            foreach (WorkType workType in filteredWorkTypes)
+            {
+                Rect rect = workTypesListing.GetRect(GenUI.GapTiny + Text.LineHeight + GenUI.GapTiny);
                 
                 Rect nameRect = new Rect(rect) { width = maxWorkTypeNameWidth + GenUI.Gap };
                 Rect descriptionRect = new Rect(rect) { x = nameRect.xMax, width = rect.width - nameRect.width - GenUI.Gap * 2 };
@@ -155,12 +170,14 @@ namespace ManyJobs
                     }
                 }
                 
-                Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.y), ref workType.IsEnabled);
+                Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.center.y - Widgets.CheckboxSize / 2f), ref workType.IsEnabled);
 
                 Widgets.DrawHighlightIfMouseover(rect);
                 
                 TooltipHandler.TipRegion(rect, workType.Def?.description ?? string.Empty);
             }
+
+            Text.Anchor = originalAnchor;
 
             workTypesListing.End();
             Widgets.EndScrollView();
@@ -179,6 +196,7 @@ namespace ManyJobs
                 SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
                 foreach (WorkType workType in WorkTypes)
                 {
+                    _quickSearchWidget.Reset();
                     workType.IsEnabled = true;
                 }
             }
@@ -188,6 +206,7 @@ namespace ManyJobs
                 SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
                 foreach (WorkType workType in WorkTypes)
                 {
+                    _quickSearchWidget.Reset();
                     workType.IsEnabled = false;
                 }
             }
