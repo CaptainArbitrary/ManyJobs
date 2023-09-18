@@ -1,3 +1,17 @@
+## Release 1.6.2-alpha.1
+
+### Enhancements
+
+Redesigned mod options dialog to be easier to use and more scalable ([PR #117](https://github.com/CaptainArbitrary/ManyJobs/pull/117))
+
+- Dialog is now more compact, showing more on screen at one time
+- Dialog features a filter widget for quick searching of the list of added work types
+- "All On" and "All Off" buttons have been relabeled "Enable All"/"Disable All" unless the list of added work types is filtered; in that case they're "Enable Shown" and "Disable Shown"
+
+Renamed Mod subclass from Mod (lol) to ManyJobs ([PR #118](https://github.com/CaptainArbitrary/ManyJobs/pull/118))
+
+- Note that this will prevent the mod from reading old mod settings config files (unhelpfully named "Mod_3013527266_Mod.xml") in favor of new config files (more helpfully named "Mod_3013527266_ManyJobs.xml"). If you've made any changes to the mod options, you'll need to redo them, but only the first time you run the game after updating.
+
 ## Release 1.6.1
 
 ### Bug Fixes
