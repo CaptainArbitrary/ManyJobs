@@ -129,8 +129,27 @@ namespace ManyJobs
 
         public void DoSettingsWindowContents(Rect inRect)
         {
-            string onButtonLabel = AllOnButtonLabel;
             string offButtonLabel = AllOffButtonLabel;
+
+            Rect offButtonRect = new Rect
+            {
+                width = _maximumButtonLabelSize,
+                height = buttonHeight,
+            };
+            offButtonRect.x = inRect.width - offButtonRect.width;
+            offButtonRect.y = inRect.y;
+            bool offButton = Widgets.ButtonText(offButtonRect, offButtonLabel);
+
+            string onButtonLabel = AllOnButtonLabel;
+
+            Rect onButtonRect = new Rect
+            {
+                width = _maximumButtonLabelSize,
+                height = buttonHeight,
+            };
+            onButtonRect.x = inRect.width - onButtonRect.width - GenUI.GapSmall - onButtonRect.width;
+            onButtonRect.y = inRect.y;
+            bool onButton = Widgets.ButtonText(onButtonRect, onButtonLabel);
 
             Rect quickSearchRect = new Rect(inRect.x, inRect.y, inRect.width - _maximumButtonLabelSize - GenUI.GapSmall - _maximumButtonLabelSize - GenUI.GapSmall, buttonHeight);
             _quickSearchWidget.OnGUI(quickSearchRect);
@@ -148,24 +167,6 @@ namespace ManyJobs
             {
                 filteredWorkTypes = WorkTypes;
             }
-
-            Rect onButtonRect = new Rect
-            {
-                width = _maximumButtonLabelSize,
-                height = buttonHeight,
-            };
-            onButtonRect.x = inRect.width - onButtonRect.width - GenUI.GapSmall - onButtonRect.width;
-            onButtonRect.y = inRect.y;
-            bool onButton = Widgets.ButtonText(onButtonRect, onButtonLabel);
-
-            Rect offButtonRect = new Rect
-            {
-                width = _maximumButtonLabelSize,
-                height = buttonHeight,
-            };
-            offButtonRect.x = inRect.width - offButtonRect.width;
-            offButtonRect.y = inRect.y;
-            bool offButton = Widgets.ButtonText(offButtonRect, offButtonLabel);
 
             Rect outerRect = new Rect(inRect.x, inRect.y + quickSearchRect.height + GenUI.GapSmall, inRect.width, inRect.height - quickSearchRect.height - GenUI.GapSmall);
             Rect innerRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), workTypesListing.CurHeight);
