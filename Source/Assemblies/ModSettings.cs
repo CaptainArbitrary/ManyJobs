@@ -102,10 +102,7 @@ namespace ManyJobs
 
             if (isDirty)
             {
-                Find.WindowStack.Add(new Dialog_MessageBox(RestartDialogMessage, "Yes".Translate(), delegate
-                {
-                    GenCommandLine.Restart();
-                }, "No".Translate(), null, null, true, null, null, WindowLayer.Dialog));
+                Find.WindowStack.Add(new Dialog_MessageBox(RestartDialogMessage, "Yes".Translate(), GenCommandLine.Restart, "No".Translate(), null, null, true, null, null, WindowLayer.Dialog));
             }
         }
 
