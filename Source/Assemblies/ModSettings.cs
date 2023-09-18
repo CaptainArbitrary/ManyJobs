@@ -54,13 +54,13 @@ namespace ManyJobs
         private float maxWorkTypeNameWidth;
 
         private QuickSearchWidget _quickSearchWidget = new QuickSearchWidget();
-        
+
         private const string AllOnButtonLabel = "Enable All";
         private const string AllOffButtonLabel = "Disable All";
         private const string SelectedOnButtonLabel = "Enable Shown";
         private const string SelectedOffButtonLabel = "Disable Shown";
         private float _maximumButtonLabelSize;
-        
+
         public ModSettings()
         {
             foreach (FieldInfo field in this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
@@ -69,7 +69,7 @@ namespace ManyJobs
                 field.SetValue(this, true);
             }
         }
-        
+
         public void OnLateInitialize()
         {
             foreach (WorkType workType in WorkTypes)
@@ -78,19 +78,19 @@ namespace ManyJobs
                 Vector2 nSize = Text.CalcSize(n);
                 maxWorkTypeNameWidth = Mathf.Max(maxWorkTypeNameWidth, nSize.x);
             }
-            
+
             float allOnButtonLabelWidth = GenUI.Gap + Text.CalcSize(AllOnButtonLabel).x + GenUI.Gap;
             float allOffButtonLabelWidth = GenUI.Gap + Text.CalcSize(AllOffButtonLabel).x + GenUI.Gap;
             float selectedOnButtonLabelWidth = GenUI.Gap + Text.CalcSize(SelectedOnButtonLabel).x + GenUI.Gap;
             float selectedOffButtonLabelWidth = GenUI.Gap + Text.CalcSize(SelectedOffButtonLabel).x + GenUI.Gap;
-            
+
             float[] sizes =
             {
                 allOnButtonLabelWidth, allOffButtonLabelWidth, selectedOnButtonLabelWidth, selectedOffButtonLabelWidth
             };
             _maximumButtonLabelSize = sizes.Max();
         }
-        
+
         internal void WriteSettings()
         {
             bool isDirty = false;
@@ -126,17 +126,17 @@ namespace ManyJobs
 
         private string filter;
         private bool filtered;
-        
+
         public void DoSettingsWindowContents(Rect inRect)
         {
             string onButtonLabel = AllOnButtonLabel;
             string offButtonLabel = AllOffButtonLabel;
-            
+
             Rect quickSearchRect = new Rect(inRect.x, inRect.y, inRect.width - _maximumButtonLabelSize - GenUI.GapSmall - _maximumButtonLabelSize - GenUI.GapSmall, buttonHeight);
             _quickSearchWidget.OnGUI(quickSearchRect);
             filter = _quickSearchWidget.filter.Text.ToLower();
             filtered = !String.IsNullOrEmpty(filter);
-            
+
             List<WorkType> filteredWorkTypes;
             if (filtered)
             {
@@ -180,13 +180,13 @@ namespace ManyJobs
             foreach (WorkType workType in filteredWorkTypes)
             {
                 Rect rect = workTypesListing.GetRect(GenUI.GapTiny + Text.LineHeight + GenUI.GapTiny);
-                
+
                 Rect nameRect = new Rect(rect) { width = maxWorkTypeNameWidth + GenUI.Gap };
                 Rect descriptionRect = new Rect(rect) { x = nameRect.xMax, width = rect.width - nameRect.width - GenUI.Gap * 2 };
                 Rect clickableRect = new Rect(rect) { width = rect.width - Widgets.CheckboxSize };
-                
+
                 Widgets.Label(nameRect, textInfo.ToTitleCase(workType.Def?.labelShort ?? workType.Name));
-                
+
                 GUI.color = Color.gray;
                 Widgets.Label(descriptionRect, workType.Def?.description ?? string.Empty);
                 GUI.color = Color.white;
@@ -203,11 +203,11 @@ namespace ManyJobs
                         SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
                     }
                 }
-                
+
                 Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.center.y - Widgets.CheckboxSize / 2f), ref workType.IsEnabled);
 
                 Widgets.DrawHighlightIfMouseover(rect);
-                
+
                 MouseoverSounds.DoRegion(rect);
             }
 
