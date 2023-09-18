@@ -130,6 +130,19 @@ namespace ManyJobs
         public void DoSettingsWindowContents(Rect inRect)
         {
             string offButtonLabel = AllOffButtonLabel;
+            string onButtonLabel = AllOnButtonLabel;
+
+            List<WorkType> filteredWorkTypes;
+            if (filtered)
+            {
+                filteredWorkTypes = WorkTypes.Where(wt => wt.Def.labelShort.Contains(filter) || wt.Def.description.Contains(filter)).ToList();
+                offButtonLabel = SelectedOffButtonLabel;
+                onButtonLabel = SelectedOnButtonLabel;
+            }
+            else
+            {
+                filteredWorkTypes = WorkTypes;
+            }
 
             Rect offButtonRect = new Rect
             {
@@ -139,8 +152,6 @@ namespace ManyJobs
             offButtonRect.x = inRect.width - offButtonRect.width;
             offButtonRect.y = inRect.y;
             bool offButton = Widgets.ButtonText(offButtonRect, offButtonLabel);
-
-            string onButtonLabel = AllOnButtonLabel;
 
             Rect onButtonRect = new Rect
             {
@@ -155,18 +166,6 @@ namespace ManyJobs
             _quickSearchWidget.OnGUI(quickSearchRect);
             filter = _quickSearchWidget.filter.Text.ToLower();
             filtered = !String.IsNullOrEmpty(filter);
-
-            List<WorkType> filteredWorkTypes;
-            if (filtered)
-            {
-                filteredWorkTypes = WorkTypes.Where(wt => wt.Def.labelShort.Contains(filter) || wt.Def.description.Contains(filter)).ToList();
-                onButtonLabel = SelectedOnButtonLabel;
-                offButtonLabel = SelectedOffButtonLabel;
-            }
-            else
-            {
-                filteredWorkTypes = WorkTypes;
-            }
 
             Rect outerRect = new Rect(inRect.x, inRect.y + quickSearchRect.height + GenUI.GapSmall, inRect.width, inRect.height - quickSearchRect.height - GenUI.GapSmall);
             Rect innerRect = new Rect(inRect.x, inRect.y, inRect.width - (GenUI.ScrollBarWidth + GenUI.GapSmall), workTypesListing.CurHeight);
