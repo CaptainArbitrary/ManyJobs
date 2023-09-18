@@ -1,9 +1,12 @@
-﻿using Verse;
+﻿using System.Globalization;
+using Verse;
 
 namespace ManyJobs
 {
     public class WorkType
     {
+        private static TextInfo _textInfo = CultureInfo.CurrentCulture.TextInfo;
+
         public string Name;
         public bool IsEnabled;
         public bool IsEnabledInConfigFile;
@@ -34,5 +37,7 @@ namespace ManyJobs
                 return workTypeDef;
             }
         }
+
+        public override string ToString() => _textInfo.ToTitleCase(Def?.labelShort ?? Name);
     }
 }
