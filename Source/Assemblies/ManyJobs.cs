@@ -3,36 +3,34 @@ using Verse;
 
 namespace ManyJobs
 {
-    public class Mod : Verse.Mod
+    public class ManyJobs : Mod
     {
-        readonly ModSettings settings;
-        readonly string settingsCategory;
+        private readonly ModSettings _settings;
 
-        public Mod(ModContentPack content) : base(content)
+        public ManyJobs(ModContentPack content) : base(content)
         {
-            settings = GetSettings<ModSettings>();
-            settingsCategory = content.Name;
+            _settings = GetSettings<ModSettings>();
         }
-        
+
         public void OnLateInitialize()
         {
-            settings.OnLateInitialize();
+            _settings.OnLateInitialize();
         }
-        
+
         public override string SettingsCategory()
         {
-            return settingsCategory;
+            return Content.Name;
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            settings.DoSettingsWindowContents(inRect);
+            _settings.DoSettingsWindowContents(inRect);
             base.DoSettingsWindowContents(inRect);
         }
 
         public override void WriteSettings()
         {
-            settings.WriteSettings();
+            _settings.WriteSettings();
             base.WriteSettings();
         }
     }

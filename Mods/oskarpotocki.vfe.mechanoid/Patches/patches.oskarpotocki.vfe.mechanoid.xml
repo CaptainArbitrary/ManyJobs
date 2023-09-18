@@ -4,7 +4,7 @@
   <!-- #region MJobs_Rescuing -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Rescuing</field>
     <caseTrue>
 
@@ -23,7 +23,7 @@
   <!-- #region MJobs_Operating -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Operating</field>
     <caseTrue>
 
@@ -42,7 +42,7 @@
   <!-- #region MJobs_Caring -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Caring</field>
     <caseTrue>
 
@@ -61,7 +61,7 @@
   <!-- #region MJobs_PriorityHauling -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 
@@ -80,7 +80,7 @@
   <!-- #region MJobs_PriorityCleaning -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_PriorityCleaning</field>
     <caseTrue>
 
@@ -99,7 +99,7 @@
   <!-- #region MJobs_Drilling -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Drilling</field>
     <caseTrue>
 
@@ -118,7 +118,7 @@
   <!-- #region MJobs_Delivering -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Delivering</field>
     <caseTrue>
 
@@ -137,7 +137,7 @@
   <!-- #region MJobs_Loading -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Loading</field>
     <caseTrue>
 
@@ -154,7 +154,7 @@
   <!-- #endregion -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 

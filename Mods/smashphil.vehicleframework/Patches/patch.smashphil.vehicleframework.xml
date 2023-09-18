@@ -2,7 +2,7 @@
 <Patch>
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 
@@ -31,7 +31,7 @@
   </Operation>
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Loading</field>
     <caseTrue>
 

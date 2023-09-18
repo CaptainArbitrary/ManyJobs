@@ -4,7 +4,7 @@
   <!-- #region MJobs_Drilling -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Drilling</field>
     <caseTrue>
 
@@ -23,7 +23,7 @@
   <!-- #region MJobs_Smelting -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Smelting</field>
     <caseTrue>
 

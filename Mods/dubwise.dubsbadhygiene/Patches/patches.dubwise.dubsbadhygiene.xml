@@ -4,7 +4,7 @@
   <!-- #region MJobs_Caring -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Caring</field>
     <caseTrue>
 
@@ -37,7 +37,7 @@
   <!-- #region MJobs_PriorityHauling -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 
@@ -91,7 +91,7 @@
   <!-- #region MJobs_Maintaining -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Maintaining</field>
     <caseTrue>
 

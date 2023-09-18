@@ -4,7 +4,7 @@
   <!-- #region MJobs_Rescuing -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Rescuing</field>
     <caseTrue>
 
@@ -64,7 +64,7 @@
   <!-- #region MJobs_Operating -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Operating</field>
     <caseTrue>
 
@@ -124,7 +124,7 @@
   <!-- #region MJobs_Caring -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Caring</field>
     <caseTrue>
 
@@ -184,7 +184,7 @@
   <!-- #region MJobs_PriorityHauling -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_PriorityHauling</field>
     <caseTrue>
 
@@ -244,7 +244,7 @@
   <!-- #region MJobs_PriorityCleaning -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_PriorityCleaning</field>
     <caseTrue>
 
@@ -304,7 +304,7 @@
   <!-- #region MJobs_Undertaking -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Undertaking</field>
     <caseTrue>
 
@@ -364,7 +364,7 @@
   <!-- #region MJobs_Butchering -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Butchering</field>
     <caseTrue>
 
@@ -424,7 +424,7 @@
   <!-- #region MJobs_Brewing -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Brewing</field>
     <caseTrue>
 
@@ -484,7 +484,7 @@
   <!-- #region MJobs_Maintaining -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Maintaining</field>
     <caseTrue>
 
@@ -544,7 +544,7 @@
   <!-- #region MJobs_Deconstructing -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Deconstructing</field>
     <caseTrue>
 
@@ -604,7 +604,7 @@
   <!-- #region MJobs_Harvesting -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Harvesting</field>
     <caseTrue>
 
@@ -664,7 +664,7 @@
   <!-- #region MJobs_Drilling -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Drilling</field>
     <caseTrue>
 
@@ -726,7 +726,7 @@
   <!-- #region MJobs_Fabricating -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Fabricating</field>
     <caseTrue>
 
@@ -786,7 +786,7 @@
   <!-- #region MJobs_Synthesizing -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Synthesizing</field>
     <caseTrue>
 
@@ -846,7 +846,7 @@
   <!-- #region MJobs_Refining -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Refining</field>
     <caseTrue>
 
@@ -906,7 +906,7 @@
   <!-- #region MJobs_Smelting -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Smelting</field>
     <caseTrue>
 
@@ -966,7 +966,7 @@
   <!-- #region MJobs_Stonecutting -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Stonecutting</field>
     <caseTrue>
 
@@ -1002,7 +1002,7 @@
   <!-- #region MJobs_Delivering -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Delivering</field>
     <caseTrue>
 
@@ -1086,7 +1086,7 @@
   <!-- #region MJobs_Loading -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Loading</field>
     <caseTrue>
 
@@ -1146,7 +1146,7 @@
   <!-- #region MJobs_Scanning -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Scanning</field>
     <caseTrue>
 

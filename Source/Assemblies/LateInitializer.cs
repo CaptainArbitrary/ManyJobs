@@ -7,7 +7,7 @@ namespace ManyJobs
     {
         static LateInitializer()
         {
-            LoadedModManager.GetMod<Mod>().OnLateInitialize();
+            LoadedModManager.GetMod<ManyJobs>().OnLateInitialize();
         }
     }
 }
