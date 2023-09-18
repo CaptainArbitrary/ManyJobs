@@ -194,9 +194,8 @@ namespace ManyJobs
             if (allOnButton)
             {
                 SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
-                foreach (WorkType workType in WorkTypes)
+                foreach (WorkType workType in filteredWorkTypes)
                 {
-                    _quickSearchWidget.Reset();
                     workType.IsEnabled = true;
                 }
             }
@@ -204,9 +203,8 @@ namespace ManyJobs
             if (allOffButton)
             {
                 SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
-                foreach (WorkType workType in WorkTypes)
+                foreach (WorkType workType in filteredWorkTypes)
                 {
-                    _quickSearchWidget.Reset();
                     workType.IsEnabled = false;
                 }
             }
