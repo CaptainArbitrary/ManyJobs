@@ -2,7 +2,7 @@
 <Patch>
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.Mod</ModClass>
+    <ModClass>ManyJobs.ManyJobs</ModClass>
     <field>MJobs_Brewing</field>
     <caseTrue>
 
