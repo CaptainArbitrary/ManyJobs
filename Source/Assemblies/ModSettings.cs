@@ -11,35 +11,38 @@ namespace ManyJobs
 {
     public class ModSettings : Verse.ModSettings
     {
-        public bool MJobs_Rescuing;
-        public bool MJobs_Operating;
-        public bool MJobs_Caring;
-        public bool MJobs_Teaching;
-        public bool MJobs_PriorityHauling;
-        public bool MJobs_PriorityCleaning;
-        public bool MJobs_Undertaking;
-        public bool MJobs_Counseling;
-        public bool MJobs_Converting;
-        public bool MJobs_Recruiting;
-        public bool MJobs_AnimalTraining;
-        public bool MJobs_AnimalTaming;
-        public bool MJobs_Butchering;
-        public bool MJobs_Brewing;
-        public bool MJobs_Maintaining;
-        public bool MJobs_Deconstructing;
-        public bool MJobs_Harvesting;
-        public bool MJobs_Drilling;
-        public bool MJobs_Mechanitor;
-        public bool MJobs_Fabricating;
-        public bool MJobs_Synthesizing;
-        public bool MJobs_Refining;
-        public bool MJobs_Smelting;
-        public bool MJobs_Stonecutting;
-        public bool MJobs_Delivering;
-        public bool MJobs_Loading;
-        public bool MJobs_Scanning;
+        public bool MJobs_Rescuing = true;
+        public bool MJobs_Operating = true;
+        public bool MJobs_Caring = true;
+        public bool MJobs_Teaching = true;
+        public bool MJobs_PriorityHauling = true;
+        public bool MJobs_PriorityCleaning = true;
+        public bool MJobs_Undertaking = true;
+        public bool MJobs_Counseling = true;
+        public bool MJobs_Converting = true;
+        public bool MJobs_Recruiting = true;
+        public bool MJobs_AnimalTraining = true;
+        public bool MJobs_AnimalTaming = true;
+        public bool MJobs_Butchering = true;
+        public bool MJobs_Brewing = true;
+        public bool MJobs_Maintaining = true;
+        public bool MJobs_Deconstructing = true;
+        public bool MJobs_Harvesting = true;
+        public bool MJobs_Drilling = true;
+        public bool MJobs_Mechanitor = true;
+        public bool MJobs_Fabricating = true;
+        public bool MJobs_Synthesizing = true;
+        public bool MJobs_Refining = true;
+        public bool MJobs_Smelting = true;
+        public bool MJobs_Stonecutting = true;
+        public bool MJobs_Delivering = true;
+        public bool MJobs_Loading = true;
+        public bool MJobs_Merging = false;
+        public bool MJobs_Scanning = true;
 
         private readonly List<WorkType> _workTypes = new List<WorkType>();
+
+        private readonly Dictionary<WorkType, bool> _workTypesDefaults = new Dictionary<WorkType, bool>();
 
         private const string RestartDialogMessage = "Changes to the list of enabled work types will not take effect until you restart the game.\n\nRestart now? Unsaved progress will be lost.";
 
@@ -63,8 +66,9 @@ namespace ManyJobs
         {
             foreach (FieldInfo field in this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
             {
-                _workTypes.Add(new WorkType(field.Name));
-                field.SetValue(this, true);
+                WorkType workType = new WorkType(field.Name, field.GetValue(this) as bool? ?? true);
+                _workTypes.Add(workType);
+                _workTypesDefaults.Add(workType, field.GetValue(this) as bool? ?? true);
             }
         }
 
@@ -110,7 +114,7 @@ namespace ManyJobs
         {
             foreach (WorkType workType in _workTypes)
             {
-                Scribe_Values.Look(ref workType.IsEnabled, workType.Name, true);
+                Scribe_Values.Look(ref workType.IsEnabled, workType.Name, _workTypesDefaults[workType]);
                 workType.IsEnabledInConfigFile = workType.IsEnabled;
                 this.GetType().GetField(workType.Name).SetValue(this, workType.IsEnabled);
             }

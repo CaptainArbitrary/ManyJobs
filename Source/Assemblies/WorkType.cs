@@ -11,10 +11,10 @@ namespace ManyJobs
 
         private WorkTypeDef _workTypeDef;
 
-        public WorkType(string name) {
+        public WorkType(string name, bool enabled) {
             Name = name;
-            IsEnabled = true;
-            IsEnabledInConfigFile = true;
+            IsEnabled = enabled;
+            IsEnabledInConfigFile = enabled;
             _workTypeDef = null;
         }
 

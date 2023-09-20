@@ -539,6 +539,25 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_Loading -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Merging"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Scanning -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">

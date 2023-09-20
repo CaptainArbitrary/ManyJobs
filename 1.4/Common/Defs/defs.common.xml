@@ -855,6 +855,25 @@
     </workTags>
   </WorkTypeDef>
 
+    <WorkTypeDef>
+    <defName>MJobs_Merging</defName>
+    <labelShort>merge</labelShort>
+    <pawnLabel>Hauler</pawnLabel>
+    <gerundLabel>merging</gerundLabel>
+    <description>Combine stacks of items.</description>
+    <verb>Merge</verb>
+    <visible>false</visible>
+    <naturalPriority>305</naturalPriority>
+    <alwaysStartActive>true</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+    <workTags>
+      <li>ManualDumb</li>
+      <li>Hauling</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
   <!-- <WorkTypeDef>
     <defName>Hauling</defName>
     <labelShort>haul</labelShort>
