@@ -514,6 +514,26 @@
   </WorkTypeDef> -->
 
   <WorkTypeDef>
+    <defName>MJobs_Smoothing</defName>
+    <labelShort>smooth</labelShort>
+    <pawnLabel>Smoother</pawnLabel>
+    <gerundLabel>smoothing</gerundLabel>
+    <description>Smooth walls and floors.</description>
+    <verb>Smooth</verb>
+    <visible>false</visible>
+    <naturalPriority>895</naturalPriority>
+    <relevantSkills>
+      <li>Construction</li>
+    </relevantSkills>
+    <workTags>
+      <li>ManualSkilled</li>
+      <li>Commoner</li>
+      <li>Constructing</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
     <defName>MJobs_Harvesting</defName>
     <labelShort>harvest</labelShort>
     <pawnLabel>Harvester</pawnLabel>
