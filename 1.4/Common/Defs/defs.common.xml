@@ -534,6 +534,26 @@
   </WorkTypeDef>
 
   <WorkTypeDef>
+    <defName>MJobs_Painting</defName>
+    <labelShort>paint</labelShort>
+    <pawnLabel>Painter</pawnLabel>
+    <gerundLabel>painting</gerundLabel>
+    <description>Paint buildings and floors.</description>
+    <verb>Paint</verb>
+    <visible>false</visible>
+    <naturalPriority>890</naturalPriority>
+    <disabledForSlaves>true</disabledForSlaves>
+    <relevantSkills>
+      <li>Artistic</li>
+    </relevantSkills>
+    <workTags>
+      <li>Artistic</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
     <defName>MJobs_Harvesting</defName>
     <labelShort>harvest</labelShort>
     <pawnLabel>Harvester</pawnLabel>

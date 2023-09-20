@@ -355,6 +355,23 @@
     </caseTrue>
   </Operation>
 
+  <!-- #region MJobs_Painting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Painting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Painting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
   <!-- #region MJobs_Harvesting -->

@@ -28,6 +28,7 @@ namespace ManyJobs
         public bool MJobs_Maintaining = true;
         public bool MJobs_Deconstructing = true;
         public bool MJobs_Smoothing = false;
+        public bool MJobs_Painting = false;
         public bool MJobs_Harvesting = true;
         public bool MJobs_Drilling = true;
         public bool MJobs_Pruning = false;

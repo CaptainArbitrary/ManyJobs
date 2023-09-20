@@ -447,6 +447,46 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_Painting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Painting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "PaintBuilding"]/workType</xpath>
+        <value>
+          <workType>MJobs_Painting</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "PaintFloor"]/workType</xpath>
+        <value>
+          <workType>MJobs_Painting</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "RemovePaintBuilding"]/workType</xpath>
+        <value>
+          <workType>MJobs_Painting</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "RemovePaintFloor"]/workType</xpath>
+        <value>
+          <workType>MJobs_Painting</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Harvesting -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
