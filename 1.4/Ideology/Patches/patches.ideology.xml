@@ -58,4 +58,30 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_Pruning -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Pruning</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName = "PruneGauranlenTree"]/workType</xpath>
+        <value>
+          <workType>MJobs_Pruning</workType>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName = "ChangeTreeMode"]/workType</xpath>
+        <value>
+          <workType>MJobs_Pruning</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
 </Patch>

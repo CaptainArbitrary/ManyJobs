@@ -376,6 +376,36 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_Pruning -->
+
+  <Operation Class="XmlExtensions.FindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Ideology</li>
+    </mods>
+    <packageId>true</packageId>
+    <logic>and</logic>
+    <caseTrue>
+
+      <Operation Class="XmlExtensions.OptionalPatchExternal">
+        <ModClass>ManyJobs.ManyJobs</ModClass>
+        <field>MJobs_Pruning</field>
+        <caseTrue>
+
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/WorkTypeDef[defName = "MJobs_Pruning"]/visible</xpath>
+            <value>
+              <visible>true</visible>
+            </value>
+          </Operation>
+
+        </caseTrue>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Mechanitor -->
 
   <Operation Class="XmlExtensions.FindMod">
