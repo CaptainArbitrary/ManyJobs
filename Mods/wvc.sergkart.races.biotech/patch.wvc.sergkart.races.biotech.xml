@@ -170,6 +170,40 @@
     </caseTrue>
   </Operation>
 
+  <!-- #region MJobs_Smoothing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Smoothing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "WVC_Golem_Constructoid"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Smoothing</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #region MJobs_Painting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Painting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "WVC_Golem_Constructoid"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Painting</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
   <!-- #region MJobs_Harvesting -->
@@ -316,6 +350,23 @@
         <xpath>Defs/ThingDef[defName = "WVC_Golem_Liftoid"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_Loading</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #region MJobs_Merging -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "WVC_Golem_Liftoid"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Merging</li>
         </value>
       </Operation>
 

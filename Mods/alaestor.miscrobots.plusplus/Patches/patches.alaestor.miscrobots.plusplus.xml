@@ -301,6 +301,66 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_CleaningPollution -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_CleaningPollution</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_CleaningPollution</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_CleaningPollution</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Cleaner" or defName="AIRobot_Cleaner_II" or defName="AIRobot_Cleaner_III" or defName="AIRobot_Cleaner_IV" or defName="AIRobot_Cleaner_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_CleaningPollution>1</MJobs_CleaningPollution>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_CleaningPollution</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_CleaningPollution</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_CleaningPollution>1</MJobs_CleaningPollution>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Undertaking -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
@@ -593,6 +653,126 @@
         <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
         <value>
           <MJobs_Deconstructing>1</MJobs_Deconstructing>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Smoothing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Smoothing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Smoothing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Smoothing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Smoothing>1</MJobs_Smoothing>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Smoothing</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Smoothing</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Smoothing>1</MJobs_Smoothing>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Painting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Painting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Painting</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Painting</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Builder_I" or defName="RPP_Bot_Builder_II" or defName="RPP_Bot_Builder_III" or defName="RPP_Bot_Builder_IV" or defName="RPP_Bot_Builder_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Painting>1</MJobs_Painting>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Painting</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Painting</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Painting>1</MJobs_Painting>
         </value>
       </Operation>
 
@@ -1135,6 +1315,66 @@
         <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
         <value>
           <MJobs_Loading>1</MJobs_Loading>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Merging -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Merging</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Merging</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AIRobot_Hauler" or defName="AIRobot_Hauler_II" or defName="AIRobot_Hauler_III" or defName="AIRobot_Hauler_IV" or defName="AIRobot_Hauler_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Merging>1</MJobs_Merging>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Merging</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Merging</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RPP_Bot_Omni_I" or defName="RPP_Bot_Omni_II" or defName="RPP_Bot_Omni_III" or defName="RPP_Bot_Omni_IV" or defName="RPP_Bot_Omni_V"]/race/mechWorkTypePriorities</xpath>
+        <value>
+          <MJobs_Merging>1</MJobs_Merging>
         </value>
       </Operation>
 

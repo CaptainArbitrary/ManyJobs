@@ -203,6 +203,27 @@
     </workTags>
   </WorkTypeDef>
 
+  <WorkTypeDef>
+    <defName>MJobs_CleaningPollution</defName>
+    <labelShort>clean pollution</labelShort>
+    <pawnLabel>Pollution cleaner</pawnLabel>
+    <gerundLabel>cleaning pollution</gerundLabel>
+    <description>Clean pollution.</description>
+    <verb>Clean</verb>
+    <visible>false</visible>
+    <naturalPriority>1155</naturalPriority>
+    <alwaysStartActive>true</alwaysStartActive>
+    <relevantSkills>
+    </relevantSkills>
+    <requireCapableColonist>true</requireCapableColonist>
+    <workTags>
+      <li>ManualDumb</li>
+      <li>Cleaning</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
   <!-- <WorkTypeDef>
     <defName>BasicWorker</defName>
     <labelShort>basic</labelShort>
@@ -514,6 +535,46 @@
   </WorkTypeDef> -->
 
   <WorkTypeDef>
+    <defName>MJobs_Smoothing</defName>
+    <labelShort>smooth</labelShort>
+    <pawnLabel>Smoother</pawnLabel>
+    <gerundLabel>smoothing</gerundLabel>
+    <description>Smooth walls and floors.</description>
+    <verb>Smooth</verb>
+    <visible>false</visible>
+    <naturalPriority>895</naturalPriority>
+    <relevantSkills>
+      <li>Construction</li>
+    </relevantSkills>
+    <workTags>
+      <li>ManualSkilled</li>
+      <li>Commoner</li>
+      <li>Constructing</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
+    <defName>MJobs_Painting</defName>
+    <labelShort>paint</labelShort>
+    <pawnLabel>Painter</pawnLabel>
+    <gerundLabel>painting</gerundLabel>
+    <description>Paint buildings and floors.</description>
+    <verb>Paint</verb>
+    <visible>false</visible>
+    <naturalPriority>890</naturalPriority>
+    <disabledForSlaves>true</disabledForSlaves>
+    <relevantSkills>
+      <li>Artistic</li>
+    </relevantSkills>
+    <workTags>
+      <li>Artistic</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
     <defName>MJobs_Harvesting</defName>
     <labelShort>harvest</labelShort>
     <pawnLabel>Harvester</pawnLabel>
@@ -590,6 +651,27 @@
     <workTags>
       <li>ManualSkilled</li>
       <li>Mining</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
+    <defName>MJobs_Pruning</defName>
+    <labelShort>prune</labelShort>
+    <pawnLabel>Plant cutter</pawnLabel>
+    <gerundLabel>pruning</gerundLabel>
+    <description>Maintain Gauranlen trees and their dryads.</description>
+    <verb>Prune</verb>
+    <visible>false</visible>
+    <naturalPriority>505</naturalPriority>
+    <requireCapableColonist>true</requireCapableColonist>
+    <relevantSkills>
+      <li>Plants</li>
+    </relevantSkills>
+    <workTags>
+      <li>ManualSkilled</li>
+      <li>PlantWork</li>
       <li>Commoner</li>
       <li>AllWork</li>
     </workTags>
@@ -845,6 +927,25 @@
     <verb>Load</verb>
     <visible>false</visible>
     <naturalPriority>310</naturalPriority>
+    <alwaysStartActive>true</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+    <workTags>
+      <li>ManualDumb</li>
+      <li>Hauling</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+    <WorkTypeDef>
+    <defName>MJobs_Merging</defName>
+    <labelShort>merge</labelShort>
+    <pawnLabel>Hauler</pawnLabel>
+    <gerundLabel>merging</gerundLabel>
+    <description>Combine stacks of items.</description>
+    <verb>Merge</verb>
+    <visible>false</visible>
+    <naturalPriority>305</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <requireCapableColonist>true</requireCapableColonist>
     <workTags>

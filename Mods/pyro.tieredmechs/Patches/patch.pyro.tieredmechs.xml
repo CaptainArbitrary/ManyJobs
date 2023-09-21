@@ -78,6 +78,21 @@
     </caseTrue>
   </Operation>
 
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_LifterPlus" or defName = "Mech_LifterUltra"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Merging</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
   <!-- #region Mech_ConstructoidPlus/Mech_ConstructoidUltra -->
@@ -106,6 +121,36 @@
         <xpath>/Defs/ThingDef[defName = "Mech_ConstructoidPlus" or defName = "Mech_ConstructoidUltra"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_Deconstructing</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Smoothing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_ConstructoidPlus" or defName = "Mech_ConstructoidUltra"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Smoothing</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Painting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_ConstructoidPlus" or defName = "Mech_ConstructoidUltra"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Painting</li>
         </value>
       </Operation>
 
@@ -302,6 +347,21 @@
         <xpath>/Defs/ThingDef[defName = "Mech_CleansweeperPlus" or defName = "Mech_CleansweeperUltra"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_PriorityCleaning</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_CleaningPollution</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_CleansweeperPlus" or defName = "Mech_CleansweeperUltra"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_CleaningPollution</li>
         </value>
       </Operation>
 

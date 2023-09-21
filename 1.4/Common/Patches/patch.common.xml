@@ -126,6 +126,36 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_CleaningPollution -->
+
+  <Operation Class="XmlExtensions.FindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <packageId>true</packageId>
+    <logic>and</logic>
+    <caseTrue>
+
+      <Operation Class="XmlExtensions.OptionalPatchExternal">
+        <ModClass>ManyJobs.ManyJobs</ModClass>
+        <field>MJobs_CleaningPollution</field>
+        <caseTrue>
+
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/WorkTypeDef[defName = "MJobs_CleaningPollution"]/visible</xpath>
+            <value>
+              <visible>true</visible>
+            </value>
+          </Operation>
+
+        </caseTrue>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Undertaking -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
@@ -338,6 +368,42 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_Smoothing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Smoothing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Smoothing"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #region MJobs_Painting -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Painting</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Painting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Harvesting -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
@@ -369,6 +435,36 @@
         <value>
           <visible>true</visible>
         </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Pruning -->
+
+  <Operation Class="XmlExtensions.FindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Ideology</li>
+    </mods>
+    <packageId>true</packageId>
+    <logic>and</logic>
+    <caseTrue>
+
+      <Operation Class="XmlExtensions.OptionalPatchExternal">
+        <ModClass>ManyJobs.ManyJobs</ModClass>
+        <field>MJobs_Pruning</field>
+        <caseTrue>
+
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/WorkTypeDef[defName = "MJobs_Pruning"]/visible</xpath>
+            <value>
+              <visible>true</visible>
+            </value>
+          </Operation>
+
+        </caseTrue>
       </Operation>
 
     </caseTrue>
@@ -529,6 +625,25 @@
 
       <Operation Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Loading"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
+  <!-- #region MJobs_Loading -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Merging"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
