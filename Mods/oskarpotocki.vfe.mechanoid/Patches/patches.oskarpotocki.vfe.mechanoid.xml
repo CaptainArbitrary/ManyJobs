@@ -94,6 +94,23 @@
     </caseTrue>
   </Operation>
 
+  <!-- #region MJobs_CleaningPollution -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_CleaningPollution</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "VFE_Mechanoids_Autocleaner"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_CleaningPollution</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
   <!-- #region MJobs_Drilling -->

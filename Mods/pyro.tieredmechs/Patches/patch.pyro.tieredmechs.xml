@@ -353,6 +353,21 @@
     </caseTrue>
   </Operation>
 
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_CleaningPollution</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_CleansweeperPlus" or defName = "Mech_CleansweeperUltra"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_CleaningPollution</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
 </Patch>

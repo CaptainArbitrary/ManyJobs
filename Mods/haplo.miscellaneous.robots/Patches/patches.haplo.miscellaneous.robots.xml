@@ -57,6 +57,33 @@
     </caseTrue>
   </Operation>
 
+  <!-- #region MJobs_CleaningPollution -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_CleaningPollution</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "AIRobot_Cleaner"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_CleaningPollution</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "AIRobot_Cleaner"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_CleaningPollution</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
   <!-- #region MJobs_Undertaking -->

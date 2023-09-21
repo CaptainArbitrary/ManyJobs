@@ -185,6 +185,13 @@
         </value>
       </Operation>
 
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_Cleansweeper"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_CleaningPollution</li>
+        </value>
+      </Operation>
+
     </caseTrue>
   </Operation>
 
