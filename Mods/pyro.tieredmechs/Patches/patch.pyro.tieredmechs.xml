@@ -78,6 +78,21 @@
     </caseTrue>
   </Operation>
 
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Mech_LifterPlus" or defName = "Mech_LifterUltra"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Merging</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
   <!-- #region Mech_ConstructoidPlus/Mech_ConstructoidUltra -->

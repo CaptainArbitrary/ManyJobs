@@ -322,6 +322,23 @@
     </caseTrue>
   </Operation>
 
+  <!-- #region MJobs_Merging -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "WVC_Golem_Liftoid"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Merging</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
 </Patch>

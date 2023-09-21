@@ -136,4 +136,33 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_Loading -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Merging</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Merging</li>
+        </value>
+      </Operation>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/robotWorkTypes</xpath>
+        <value>
+          <li>
+            <workTypeDef>MJobs_Merging</workTypeDef>
+            <priority>1</priority>
+          </li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
 </Patch>
