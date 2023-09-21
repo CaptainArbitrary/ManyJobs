@@ -170,6 +170,23 @@
     </caseTrue>
   </Operation>
 
+  <!-- #region MJobs_Smoothing -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_Smoothing</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "WVC_Golem_Constructoid"]/race/mechEnabledWorkTypes</xpath>
+        <value>
+          <li>MJobs_Smoothing</li>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
   <!-- #endregion -->
 
   <!-- #region MJobs_Harvesting -->
