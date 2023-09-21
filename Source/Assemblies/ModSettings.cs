@@ -17,6 +17,7 @@ namespace ManyJobs
         public bool MJobs_Teaching = true;
         public bool MJobs_PriorityHauling = true;
         public bool MJobs_PriorityCleaning = true;
+        public bool MJobs_CleaningPollution = false;
         public bool MJobs_Undertaking = true;
         public bool MJobs_Counseling = true;
         public bool MJobs_Converting = true;

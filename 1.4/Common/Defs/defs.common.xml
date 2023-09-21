@@ -203,6 +203,27 @@
     </workTags>
   </WorkTypeDef>
 
+  <WorkTypeDef>
+    <defName>MJobs_CleaningPollution</defName>
+    <labelShort>clean pollution</labelShort>
+    <pawnLabel>Pollution cleaner</pawnLabel>
+    <gerundLabel>cleaning pollution</gerundLabel>
+    <description>Clean pollution.</description>
+    <verb>Clean</verb>
+    <visible>false</visible>
+    <naturalPriority>1155</naturalPriority>
+    <alwaysStartActive>true</alwaysStartActive>
+    <relevantSkills>
+    </relevantSkills>
+    <requireCapableColonist>true</requireCapableColonist>
+    <workTags>
+      <li>ManualDumb</li>
+      <li>Cleaning</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
   <!-- <WorkTypeDef>
     <defName>BasicWorker</defName>
     <labelShort>basic</labelShort>

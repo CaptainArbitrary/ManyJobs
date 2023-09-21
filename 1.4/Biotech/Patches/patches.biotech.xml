@@ -171,6 +171,25 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_CleaningPollution -->
+
+  <Operation Class="XmlExtensions.OptionalPatchExternal">
+    <ModClass>ManyJobs.ManyJobs</ModClass>
+    <field>MJobs_CleaningPollution</field>
+    <caseTrue>
+
+      <Operation Class="PatchOperationReplace">
+        <xpath>Defs/WorkGiverDef[defName = "CleanClearPollution"]/workType</xpath>
+        <value>
+          <workType>MJobs_CleaningPollution</workType>
+        </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Undertaking -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">

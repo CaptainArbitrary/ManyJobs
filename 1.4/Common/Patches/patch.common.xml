@@ -126,6 +126,36 @@
 
   <!-- #endregion -->
 
+  <!-- #region MJobs_CleaningPollution -->
+
+  <Operation Class="XmlExtensions.FindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <packageId>true</packageId>
+    <logic>and</logic>
+    <caseTrue>
+
+      <Operation Class="XmlExtensions.OptionalPatchExternal">
+        <ModClass>ManyJobs.ManyJobs</ModClass>
+        <field>MJobs_CleaningPollution</field>
+        <caseTrue>
+
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/WorkTypeDef[defName = "MJobs_CleaningPollution"]/visible</xpath>
+            <value>
+              <visible>true</visible>
+            </value>
+          </Operation>
+
+        </caseTrue>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- #endregion -->
+
   <!-- #region MJobs_Undertaking -->
 
   <Operation Class="XmlExtensions.OptionalPatchExternal">
