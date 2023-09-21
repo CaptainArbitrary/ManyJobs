@@ -21,6 +21,7 @@
       <MJobs_Caring>7</MJobs_Caring>
       <MJobs_PriorityHauling>7</MJobs_PriorityHauling>
       <MJobs_PriorityCleaning>3</MJobs_PriorityCleaning>
+      <MJobs_CleaningPollution>3</MJobs_CleaningPollution>
         <!-- <BasicWorker>3</BasicWorker> -->
       <MJobs_Undertaking>13</MJobs_Undertaking>
       <MJobs_Recruiting>13</MJobs_Recruiting>
@@ -35,10 +36,13 @@
       <MJobs_Maintaining>10</MJobs_Maintaining>
       <MJobs_Deconstructing>10</MJobs_Deconstructing>
         <!-- <Construction>10</Construction> -->
+      <MJobs_Smoothing>10</MJobs_Smoothing>
+      <MJobs_Painting>10</MJobs_Painting>
       <MJobs_Harvesting>7</MJobs_Harvesting>
       <!-- <Growing>7</Growing> -->
       <!-- <Mining>7</Mining> -->
       <MJobs_Drilling>7</MJobs_Drilling>
+      <MJobs_Pruning>7</MJobs_Pruning>
       <!-- <PlantCutting>7</PlantCutting> -->
       <MJobs_Fabricating>13</MJobs_Fabricating>
       <!-- <Smithing>13</Smithing> -->
@@ -51,6 +55,7 @@
       <!-- <Crafting>7</Crafting> -->
       <MJobs_Delivering>7</MJobs_Delivering>
       <MJobs_Loading>7</MJobs_Loading>
+      <MJobs_Merging>7</MJobs_Merging>
       <Hauling>7</Hauling>
       <!-- <Cleaning>3</Cleaning> -->
       <!-- <Research>13</Research> -->
