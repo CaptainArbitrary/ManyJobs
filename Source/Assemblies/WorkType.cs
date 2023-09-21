@@ -26,6 +26,6 @@ namespace ManyJobs
 
         public string Description => Def?.description ?? string.Empty;
 
-        public override string ToString() => CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Def?.labelShort ?? Name);
+        public override string ToString() => LabelShort;
     }
 }

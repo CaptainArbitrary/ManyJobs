@@ -25,7 +25,6 @@ namespace ManyJobs
         public override void DoSettingsWindowContents(Rect inRect)
         {
             _settings.DoSettingsWindowContents(inRect);
-            base.DoSettingsWindowContents(inRect);
         }
 
         public override void WriteSettings()

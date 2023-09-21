@@ -80,7 +80,7 @@ namespace ManyJobs
                 if (field.Name.StartsWith("MJobs_") && (field.FieldType == typeof(bool)))
                 {
                     bool defaultValue = (bool)field.GetValue(this);
-                    WorkType workType = new WorkType(field.Name, defaultValue);
+                    WorkType workType = new WorkType(name: field.Name, enabled: defaultValue);
                     _workTypes.Add(workType);
                     _workTypesDefaults.Add(workType, defaultValue);
                 }
