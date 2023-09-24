@@ -68,11 +68,22 @@ namespace ManyJobs
 
         public ModSettings()
         {
+            // This is a little convoluted. First we use reflection to get an array of all this class's public instance
+            // fields. Then we iterate over the array and create a new anonymous WorkType object for each field that's
+            // of type bool and that has a name that starts with "MJobs_". We add each anonymous WorkType object to a
+            // list that we can iterate over later. THEN we add each field's value (true or false) to a dictionary that
+            // maps WorkTypes to default values. We use this to decide whether a given bool should default to true or
+            // false when we pass it to Scribe_Values.Look down in the ExposeData method.
+
             foreach (FieldInfo field in this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
             {
-                WorkType workType = new WorkType(field.Name, field.GetValue(this) as bool? ?? true);
-                _workTypes.Add(workType);
-                _workTypesDefaults.Add(workType, field.GetValue(this) as bool? ?? true);
+                if (field.Name.StartsWith("MJobs_") && (field.FieldType == typeof(bool)))
+                {
+                    bool defaultValue = (bool)field.GetValue(this);
+                    WorkType workType = new WorkType(name: field.Name, enabled: defaultValue);
+                    _workTypes.Add(workType);
+                    _workTypesDefaults.Add(workType, defaultValue);
+                }
             }
         }
 
