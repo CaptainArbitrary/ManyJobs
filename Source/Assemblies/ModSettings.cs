@@ -196,7 +196,7 @@ namespace ManyJobs
                 Widgets.Label(nameRect, wt.LabelShort);
 
                 GUI.color = Color.gray;
-                Widgets.Label(descriptionRect, wt.Def?.description ?? string.Empty);
+                Widgets.Label(descriptionRect, wt.Description);
                 GUI.color = Color.white;
 
                 if (Widgets.ButtonInvisible(clickableRect))
