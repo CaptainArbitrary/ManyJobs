@@ -5,22 +5,23 @@ namespace ManyJobs
 {
     public class WorkType
     {
-        public readonly string Name;
+        public string Name { get; }
+        public bool IsEnabledByDefault { get; set; }
         public bool IsEnabled;
-        public bool IsEnabledInConfigFile;
+        public bool? WasEnabledAtStartup { get; set; }
+        public WorkTypeDef Def => _workTypeDef ?? (_workTypeDef = DefDatabase<WorkTypeDef>.GetNamedSilentFail(Name));
 
         private WorkTypeDef _workTypeDef;
 
-        public WorkType(string name, bool enabled) {
+        public WorkType(string name, bool isEnabledByDefault) {
             Name = name;
-            IsEnabled = enabled;
-            IsEnabledInConfigFile = enabled;
+            IsEnabledByDefault = isEnabledByDefault;
+            IsEnabled = false;
+            WasEnabledAtStartup = null;
             _workTypeDef = null;
         }
 
-        public bool IsDirty => IsEnabled != IsEnabledInConfigFile;
-
-        public WorkTypeDef Def => _workTypeDef ?? (_workTypeDef = DefDatabase<WorkTypeDef>.GetNamedSilentFail(Name));
+        public bool IsDirty => IsEnabled != WasEnabledAtStartup;
 
         public string LabelShort => CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Def?.labelShort ?? Name);
 
