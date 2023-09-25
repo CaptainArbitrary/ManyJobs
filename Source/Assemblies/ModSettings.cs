@@ -11,6 +11,7 @@ namespace ManyJobs
 {
     public class ModSettings : Verse.ModSettings
     {
+     // public bool MJobs_WorkTypeName = IsEnabledByDefault;
         public bool MJobs_Rescuing = true;
         public bool MJobs_Operating = true;
         public bool MJobs_Caring = true;
@@ -46,8 +47,6 @@ namespace ManyJobs
 
         private readonly List<WorkType> _workTypes = new List<WorkType>();
 
-        private readonly Dictionary<WorkType, bool> _workTypesDefaults = new Dictionary<WorkType, bool>();
-
         private const string RestartDialogMessage = "Changes to the list of enabled work types will not take effect until you restart the game.\n\nRestart now? Unsaved progress will be lost.";
 
         private readonly Listing_Standard _workTypesListing = new Listing_Standard();
@@ -79,19 +78,18 @@ namespace ManyJobs
             {
                 if (field.Name.StartsWith("MJobs_") && (field.FieldType == typeof(bool)))
                 {
-                    bool defaultValue = (bool)field.GetValue(this);
-                    WorkType workType = new WorkType(name: field.Name, enabled: defaultValue);
-                    _workTypes.Add(workType);
-                    _workTypesDefaults.Add(workType, defaultValue);
+                    bool isEnabledByDefault = (bool)field.GetValue(this);
+                    WorkType wt = new WorkType(field.Name, isEnabledByDefault);
+                    _workTypes.Add(wt);
                 }
             }
         }
 
         public void OnLateInitialize()
         {
-            foreach (WorkType workType in _workTypes)
+            foreach (WorkType wt in _workTypes)
             {
-                Vector2 nameSize = Text.CalcSize(workType.LabelShort);
+                Vector2 nameSize = Text.CalcSize(wt.LabelShort);
                 _maxWorkTypeNameWidth = Mathf.Max(_maxWorkTypeNameWidth, nameSize.x);
             }
 
@@ -110,9 +108,9 @@ namespace ManyJobs
         internal void WriteSettings()
         {
             bool isDirty = false;
-            foreach (WorkType workType in _workTypes)
+            foreach (WorkType wt in _workTypes)
             {
-                if (workType.IsDirty)
+                if (wt.IsDirty)
                 {
                     isDirty = true;
                     break;
@@ -127,11 +125,11 @@ namespace ManyJobs
 
         public override void ExposeData()
         {
-            foreach (WorkType workType in _workTypes)
+            foreach (WorkType wt in _workTypes)
             {
-                Scribe_Values.Look(ref workType.IsEnabled, workType.Name, _workTypesDefaults[workType]);
-                workType.IsEnabledInConfigFile = workType.IsEnabled;
-                this.GetType().GetField(workType.Name).SetValue(this, workType.IsEnabled);
+                Scribe_Values.Look(ref wt.IsEnabled, wt.Name, wt.IsEnabledByDefault);
+                if (wt.WasEnabledAtStartup == null) wt.WasEnabledAtStartup = wt.IsEnabled;
+                this.GetType().GetField(wt.Name).SetValue(this, wt.IsEnabled);
             }
 
             base.ExposeData();
@@ -187,7 +185,7 @@ namespace ManyJobs
             TextAnchor originalAnchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleLeft;
 
-            foreach (WorkType workType in filteredWorkTypes)
+            foreach (WorkType wt in filteredWorkTypes)
             {
                 Rect rect = _workTypesListing.GetRect(GenUI.GapTiny + Text.LineHeight + GenUI.GapTiny);
 
@@ -195,16 +193,16 @@ namespace ManyJobs
                 Rect descriptionRect = new Rect(rect) { x = nameRect.xMax, width = rect.width - nameRect.width - GenUI.Gap * 2 };
                 Rect clickableRect = new Rect(rect) { width = rect.width - Widgets.CheckboxSize };
 
-                Widgets.Label(nameRect, workType.LabelShort);
+                Widgets.Label(nameRect, wt.LabelShort);
 
                 GUI.color = Color.gray;
-                Widgets.Label(descriptionRect, workType.Def?.description ?? string.Empty);
+                Widgets.Label(descriptionRect, wt.Def?.description ?? string.Empty);
                 GUI.color = Color.white;
 
                 if (Widgets.ButtonInvisible(clickableRect))
                 {
-                    workType.IsEnabled = !workType.IsEnabled;
-                    if (workType.IsEnabled)
+                    wt.IsEnabled = !wt.IsEnabled;
+                    if (wt.IsEnabled)
                     {
                         SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
                     }
@@ -214,7 +212,7 @@ namespace ManyJobs
                     }
                 }
 
-                Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.center.y - Widgets.CheckboxSize / 2f), ref workType.IsEnabled);
+                Widgets.Checkbox(new Vector2(rect.xMax - Widgets.CheckboxSize, rect.center.y - Widgets.CheckboxSize / 2f), ref wt.IsEnabled);
 
                 Widgets.DrawHighlightIfMouseover(rect);
 
@@ -238,18 +236,18 @@ namespace ManyJobs
             if (onButton)
             {
                 SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
-                foreach (WorkType workType in filteredWorkTypes)
+                foreach (WorkType wt in filteredWorkTypes)
                 {
-                    workType.IsEnabled = true;
+                    wt.IsEnabled = true;
                 }
             }
 
             if (offButton)
             {
                 SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
-                foreach (WorkType workType in filteredWorkTypes)
+                foreach (WorkType wt in filteredWorkTypes)
                 {
-                    workType.IsEnabled = false;
+                    wt.IsEnabled = false;
                 }
             }
         }
