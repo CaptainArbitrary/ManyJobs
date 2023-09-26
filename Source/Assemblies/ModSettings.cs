@@ -11,41 +11,41 @@ namespace ManyJobs
 {
     public class ModSettings : Verse.ModSettings
     {
-     // public bool MJobs_WorkTypeName = IsEnabledByDefault;
-        public bool MJobs_Rescuing = true;
-        public bool MJobs_Operating = true;
-        public bool MJobs_Caring = true;
-        public bool MJobs_Teaching = true;
-        public bool MJobs_PriorityHauling = true;
-        public bool MJobs_PriorityCleaning = true;
-        public bool MJobs_CleaningPollution = false;
-        public bool MJobs_Undertaking = true;
-        public bool MJobs_Counseling = true;
-        public bool MJobs_Converting = true;
-        public bool MJobs_Recruiting = true;
-        public bool MJobs_AnimalTraining = true;
-        public bool MJobs_AnimalTaming = true;
-        public bool MJobs_Butchering = true;
-        public bool MJobs_Brewing = true;
-        public bool MJobs_Maintaining = true;
-        public bool MJobs_Deconstructing = true;
-        public bool MJobs_Smoothing = false;
-        public bool MJobs_Painting = false;
-        public bool MJobs_Harvesting = true;
-        public bool MJobs_Drilling = true;
-        public bool MJobs_Pruning = false;
-        public bool MJobs_Mechanitor = true;
-        public bool MJobs_Fabricating = true;
-        public bool MJobs_Synthesizing = true;
-        public bool MJobs_Refining = true;
-        public bool MJobs_Smelting = true;
-        public bool MJobs_Stonecutting = true;
-        public bool MJobs_Delivering = true;
-        public bool MJobs_Loading = true;
-        public bool MJobs_Merging = false;
-        public bool MJobs_Scanning = true;
-
-        private readonly List<WorkType> _workTypes = new List<WorkType>();
+        public readonly List<WorkType> WorkTypes = new List<WorkType>()
+        {
+            new WorkType("MJobs_Rescuing", isEnabledByDefault: true),
+            new WorkType("MJobs_Operating", isEnabledByDefault: true),
+            new WorkType("MJobs_Caring", isEnabledByDefault: true),
+            new WorkType("MJobs_Teaching", isEnabledByDefault: true),
+            new WorkType("MJobs_PriorityHauling", isEnabledByDefault: true),
+            new WorkType("MJobs_PriorityCleaning", isEnabledByDefault: true),
+            new WorkType("MJobs_CleaningPollution", isEnabledByDefault: false),
+            new WorkType("MJobs_Undertaking", isEnabledByDefault: true),
+            new WorkType("MJobs_Counseling", isEnabledByDefault: true),
+            new WorkType("MJobs_Converting", isEnabledByDefault: true),
+            new WorkType("MJobs_Recruiting", isEnabledByDefault: true),
+            new WorkType("MJobs_AnimalTraining", isEnabledByDefault: true),
+            new WorkType("MJobs_AnimalTaming", isEnabledByDefault: true),
+            new WorkType("MJobs_Butchering", isEnabledByDefault: true),
+            new WorkType("MJobs_Brewing", isEnabledByDefault: true),
+            new WorkType("MJobs_Maintaining", isEnabledByDefault: true),
+            new WorkType("MJobs_Deconstructing", isEnabledByDefault: true),
+            new WorkType("MJobs_Smoothing", isEnabledByDefault: false),
+            new WorkType("MJobs_Painting", isEnabledByDefault: false),
+            new WorkType("MJobs_Harvesting", isEnabledByDefault: true),
+            new WorkType("MJobs_Drilling", isEnabledByDefault: true),
+            new WorkType("MJobs_Pruning", isEnabledByDefault: false),
+            new WorkType("MJobs_Mechanitor", isEnabledByDefault: true),
+            new WorkType("MJobs_Fabricating", isEnabledByDefault: true),
+            new WorkType("MJobs_Synthesizing", isEnabledByDefault: true),
+            new WorkType("MJobs_Refining", isEnabledByDefault: true),
+            new WorkType("MJobs_Smelting", isEnabledByDefault: true),
+            new WorkType("MJobs_Stonecutting", isEnabledByDefault: true),
+            new WorkType("MJobs_Delivering", isEnabledByDefault: true),
+            new WorkType("MJobs_Loading", isEnabledByDefault: true),
+            new WorkType("MJobs_Merging", isEnabledByDefault: false),
+            new WorkType("MJobs_Scanning", isEnabledByDefault: true)
+        };
 
         private const string RestartDialogMessage = "Changes to the list of enabled work types will not take effect until you restart the game.\n\nRestart now? Unsaved progress will be lost.";
 
@@ -67,27 +67,11 @@ namespace ManyJobs
 
         public ModSettings()
         {
-            // This is a little convoluted. First we use reflection to get an array of all this class's public instance
-            // fields. Then we iterate over the array and create a new anonymous WorkType object for each field that's
-            // of type bool and that has a name that starts with "MJobs_". We add each anonymous WorkType object to a
-            // list that we can iterate over later. THEN we add each field's value (true or false) to a dictionary that
-            // maps WorkTypes to default values. We use this to decide whether a given bool should default to true or
-            // false when we pass it to Scribe_Values.Look down in the ExposeData method.
-
-            foreach (FieldInfo field in this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
-            {
-                if (field.Name.StartsWith("MJobs_") && (field.FieldType == typeof(bool)))
-                {
-                    bool isEnabledByDefault = (bool)field.GetValue(this);
-                    WorkType wt = new WorkType(field.Name, isEnabledByDefault);
-                    _workTypes.Add(wt);
-                }
-            }
         }
 
         public void OnLateInitialize()
         {
-            foreach (WorkType wt in _workTypes)
+            foreach (WorkType wt in WorkTypes)
             {
                 Vector2 nameSize = Text.CalcSize(wt.LabelShort);
                 _maxWorkTypeNameWidth = Mathf.Max(_maxWorkTypeNameWidth, nameSize.x);
@@ -108,7 +92,7 @@ namespace ManyJobs
         internal void WriteSettings()
         {
             bool isDirty = false;
-            foreach (WorkType wt in _workTypes)
+            foreach (WorkType wt in WorkTypes)
             {
                 if (wt.IsDirty)
                 {
@@ -125,11 +109,10 @@ namespace ManyJobs
 
         public override void ExposeData()
         {
-            foreach (WorkType wt in _workTypes)
+            foreach (WorkType wt in WorkTypes)
             {
                 Scribe_Values.Look(ref wt.IsEnabled, wt.Name, wt.IsEnabledByDefault);
                 if (wt.WasEnabledAtStartup == null) wt.WasEnabledAtStartup = wt.IsEnabled;
-                this.GetType().GetField(wt.Name).SetValue(this, wt.IsEnabled);
             }
 
             base.ExposeData();
@@ -143,13 +126,13 @@ namespace ManyJobs
             List<WorkType> filteredWorkTypes;
             if (_filtered)
             {
-                filteredWorkTypes = _workTypes.Where(wt => wt.Def.labelShort.Contains(_filter) || wt.Def.description.Contains(_filter)).ToList();
+                filteredWorkTypes = WorkTypes.Where(wt => wt.LabelShort.Contains(_filter) || wt.Description.Contains(_filter)).ToList();
                 offButtonLabel = SelectedOffButtonLabel;
                 onButtonLabel = SelectedOnButtonLabel;
             }
             else
             {
-                filteredWorkTypes = _workTypes;
+                filteredWorkTypes = WorkTypes;
             }
 
             Rect offButtonRect = new Rect
