@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_PriorityHauling</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_PriorityHauling</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "RefuelVehicle"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "PackVehicleTurret"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "LoadUpgradeMaterials"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Loading</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Loading</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "PackVehicle"]/workType</xpath>
         <value>
           <workType>MJobs_Loading</workType>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
 </Patch>

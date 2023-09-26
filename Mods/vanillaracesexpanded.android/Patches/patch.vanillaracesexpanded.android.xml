@@ -1,55 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Fabricating</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Fabricating</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "VREA_RepairAndroid"]/workType</xpath>
         <value>
           <workType>MJobs_Fabricating</workType>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "VREA_DoBillsAndroidOperation"]/workType</xpath>
         <value>
           <workType>MJobs_Fabricating</workType>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_PriorityHauling</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_PriorityHauling</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "VREA_CarryToSubcorePolyanalyzer"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>Defs/WorkGiverDef[defName = "VREA_HaulToSubcorePolyanalyzer"]</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "VREA_CarryToAndroidBehavioristStation"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
 </Patch>

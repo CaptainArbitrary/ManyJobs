@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Brewing</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Brewing</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.Conditional">
+      <li Class="XmlExtensions.Conditional">
         <xpath>Defs/WorkGiverDef[defName = "VCE_DoBillsVegMilkExtractor"]/workType</xpath>
         <caseTrue>
-          <Operation Class="PatchOperationReplace">
+          <li Class="PatchOperationReplace">
             <xpath>Defs/WorkGiverDef[defName = "VCE_DoBillsVegMilkExtractor"]/workType</xpath>
             <value>
               <workType>MJobs_Brewing</workType>
             </value>
-          </Operation>
-        </caseTrue>
-      </Operation>
+          </li>
+        </operations>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
 </Patch>
