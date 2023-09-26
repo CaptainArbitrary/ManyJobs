@@ -3,672 +3,574 @@
 
   <!-- #region MJobs_Rescuing -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Rescuing</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Rescuing</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Rescuing"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Operating -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Operating</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Operating</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Operating"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Caring -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Caring</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Caring</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Caring"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
-  <!-- #region Mjobs_Teaching -->
+  <!-- #region MJobs_Teaching -->
 
-  <Operation Class="XmlExtensions.FindMod">
-    <mods>
-      <li>Ludeon.RimWorld.Biotech</li>
-    </mods>
-    <packageId>true</packageId>
-    <logic>and</logic>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Teaching</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.OptionalPatchExternal">
-        <ModClass>ManyJobs.ManyJobs</ModClass>
-        <field>MJobs_Teaching</field>
-        <caseTrue>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Teaching"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </li>
 
-          <Operation Class="PatchOperationReplace">
-            <xpath>Defs/WorkTypeDef[defName = "MJobs_Teaching"]/visible</xpath>
-            <value>
-              <visible>true</visible>
-            </value>
-          </Operation>
-
-        </caseTrue>
-      </Operation>
-
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_PriorityHauling -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_PriorityHauling</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_PriorityHauling</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityHauling"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_PriorityCleaning -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_PriorityCleaning</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_PriorityCleaning</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_PriorityCleaning"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_CleaningPollution -->
 
-  <Operation Class="XmlExtensions.FindMod">
-    <mods>
-      <li>Ludeon.RimWorld.Biotech</li>
-    </mods>
-    <packageId>true</packageId>
-    <logic>and</logic>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_CleaningPollution</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.OptionalPatchExternal">
-        <ModClass>ManyJobs.ManyJobs</ModClass>
-        <field>MJobs_CleaningPollution</field>
-        <caseTrue>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.Rimworld.Biotech">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_CleaningPollution"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </li>
 
-          <Operation Class="PatchOperationReplace">
-            <xpath>Defs/WorkTypeDef[defName = "MJobs_CleaningPollution"]/visible</xpath>
-            <value>
-              <visible>true</visible>
-            </value>
-          </Operation>
-
-        </caseTrue>
-      </Operation>
-
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Undertaking -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Undertaking</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Undertaking</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Undertaking"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Counseling -->
 
-  <Operation Class="XmlExtensions.FindMod">
-    <mods>
-      <li>weilbyte.snapout</li>
-    </mods>
-    <packageId>true</packageId>
-    <logic>or</logic>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Counseling</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.OptionalPatchExternal">
-        <ModClass>ManyJobs.ManyJobs</ModClass>
-        <field>MJobs_Counseling</field>
-        <caseTrue>
+      <li Class="PatchOperationReplace" MayRequire="weilbyte.snapout">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Counseling"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </li>
 
-          <Operation Class="PatchOperationReplace">
-            <xpath>Defs/WorkTypeDef[defName = "MJobs_Counseling"]/visible</xpath>
-            <value>
-              <visible>true</visible>
-            </value>
-          </Operation>
-
-        </caseTrue>
-      </Operation>
-
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Converting -->
 
-  <Operation Class="XmlExtensions.FindMod">
-    <mods>
-      <li>Ludeon.RimWorld.Ideology</li>
-    </mods>
-    <packageId>true</packageId>
-    <logic>and</logic>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Converting</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.OptionalPatchExternal">
-        <ModClass>ManyJobs.ManyJobs</ModClass>
-        <field>MJobs_Converting</field>
-        <caseTrue>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Ideology">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Converting"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </li>
 
-          <Operation Class="PatchOperationReplace">
-            <xpath>Defs/WorkTypeDef[defName = "MJobs_Converting"]/visible</xpath>
-            <value>
-              <visible>true</visible>
-            </value>
-          </Operation>
-
-        </caseTrue>
-      </Operation>
-
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Recruiting -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Recruiting</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Recruiting</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Recruiting"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_AnimalTraining -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_AnimalTraining</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_AnimalTraining</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_AnimalTraining"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_AnimalTaming -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_AnimalTaming</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_AnimalTaming</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_AnimalTaming"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Butchering -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Butchering</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Butchering</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Butchering"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Brewing -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Brewing</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Brewing</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Brewing"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Maintaining -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Maintaining</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Maintaining</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Maintaining"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Deconstructing -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Deconstructing</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Deconstructing</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Deconstructing"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Smoothing -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Smoothing</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Smoothing</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Smoothing"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #region MJobs_Painting -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Painting</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Painting</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Painting"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Harvesting -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Harvesting</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Harvesting</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Harvesting"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Drilling -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Drilling</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Drilling</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Drilling"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Pruning -->
 
-  <Operation Class="XmlExtensions.FindMod">
-    <mods>
-      <li>Ludeon.RimWorld.Ideology</li>
-    </mods>
-    <packageId>true</packageId>
-    <logic>and</logic>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Pruning</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.OptionalPatchExternal">
-        <ModClass>ManyJobs.ManyJobs</ModClass>
-        <field>MJobs_Pruning</field>
-        <caseTrue>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Ideology">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Pruning"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </li>
 
-          <Operation Class="PatchOperationReplace">
-            <xpath>Defs/WorkTypeDef[defName = "MJobs_Pruning"]/visible</xpath>
-            <value>
-              <visible>true</visible>
-            </value>
-          </Operation>
-
-        </caseTrue>
-      </Operation>
-
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Mechanitor -->
 
-  <Operation Class="XmlExtensions.FindMod">
-    <mods>
-      <li>Ludeon.RimWorld.Biotech</li>
-    </mods>
-    <packageId>true</packageId>
-    <logic>and</logic>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Mechanitor</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.OptionalPatchExternal">
-        <ModClass>ManyJobs.ManyJobs</ModClass>
-        <field>MJobs_Mechanitor</field>
-        <caseTrue>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Biotech">
+        <xpath>Defs/WorkTypeDef[defName = "MJobs_Mechanitor"]/visible</xpath>
+        <value>
+          <visible>true</visible>
+        </value>
+      </li>
 
-          <Operation Class="PatchOperationReplace">
-            <xpath>Defs/WorkTypeDef[defName = "MJobs_Mechanitor"]/visible</xpath>
-            <value>
-              <visible>true</visible>
-            </value>
-          </Operation>
-
-        </caseTrue>
-      </Operation>
-
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Fabricating -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Fabricating</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Fabricating</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Fabricating"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Synthesizing -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Synthesizing</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Synthesizing</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Synthesizing"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Refining -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Refining</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Refining</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Refining"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Smelting -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Smelting</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Smelting</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Smelting"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Stonecutting -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Stonecutting</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Stonecutting</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Stonecutting"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Delivering -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Delivering</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Delivering</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Delivering"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Loading -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Loading</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Loading</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Loading"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
-  <!-- #region MJobs_Loading -->
+  <!-- #region MJobs_Merging -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Merging</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Merging</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Merging"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Scanning -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Scanning</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Scanning</workType>
+    <operations>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkTypeDef[defName = "MJobs_Scanning"]/visible</xpath>
         <value>
           <visible>true</visible>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
