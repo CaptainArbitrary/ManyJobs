@@ -4,7 +4,7 @@
   <author>CaptainArbitrary</author>
   <description>Many Jobs attempts to improve the Work tab by creating new work types and rearranging how the game's jobs are categorized into those work types.</description>
   <url>https://github.com/CaptainArbitrary/ManyJobs</url>
-  <modVersion>1.6.2-alpha.1</modVersion>
+  <modVersion>1.7.0-beta.1</modVersion>
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
