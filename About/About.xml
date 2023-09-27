@@ -8,14 +8,6 @@
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
-  <modDependencies>
-    <li>
-      <packageId>imranfish.xmlextensions</packageId>
-      <displayName>XML Extensions</displayName>
-      <downloadUrl>https://github.com/15adhami/XmlExtensions/releases</downloadUrl>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/2574315206</steamWorkshopUrl>
-    </li>
-  </modDependencies>
   <incompatibleWith>
     <li>CodeOptimist.JobSplitter</li>
     <li>DarthSergeant.NurseJob</li>
