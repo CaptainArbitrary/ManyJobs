@@ -1,3 +1,31 @@
+## Release 1.7.0-beta.1
+
+### New Features
+
+Added five new work types which are disabled by default ([PR #124](https://github.com/CaptainArbitrary/ManyJobs/pull/124))
+
+- The new work types are stack merging, tree pruning, floor and wall smoothing, building and floor painting, and cleaning pollution
+- They're off by default because if they were all on the Work tab would just be too crowded
+- To use them, go to the mod options dialog and turn on the ones you want
+
+### Enhancements
+
+Redesigned mod options dialog to be easier to use and more scalable ([PR #117](https://github.com/CaptainArbitrary/ManyJobs/pull/117))
+
+- Dialog is now more compact, showing more on screen at one time
+- Dialog features a filter widget for quick searching of the list of added work types
+- "All On" and "All Off" buttons have been relabeled "Enable All"/"Disable All" unless the list of added work types is filtered; in that case they're "Enable Shown" and "Disable Shown"
+
+Renamed Mod subclass from Mod (lol) to ManyJobs ([PR #118](https://github.com/CaptainArbitrary/ManyJobs/pull/118))
+
+- Note that this will prevent the mod from reading old mod settings config files (unhelpfully named "Mod_3013527266_Mod.xml") in favor of new config files (more helpfully named "Mod_3013527266_ManyJobs.xml"). If you've made any changes to the mod options, you'll need to redo them, but only the first time you run the game after updating.
+
+Removed dependency on XML Extensions ([PR #130](https://github.com/CaptainArbitrary/ManyJobs/pull/130))
+
+- Wrote a custom patch operation to handle conditionally applying patches at startup based on which work types are enabled or disabled
+- Replaced uses of XmlExtensions.PatchOperationAddOrReplace with a PatchOperationReplace and a PatchOperationAdd inside a PatchOperationConditional
+- Replaced uses of XmlExtensions.Conditional with PatchOperationConditional
+
 ## Release 1.6.2-alpha.1
 
 ### Enhancements
