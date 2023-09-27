@@ -3,26 +3,34 @@
 
   <!-- #region MJobs_PriorityHauling -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_PriorityHauling</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_PriorityHauling</workType>
+    <operations>
 
-      <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-        <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]</xpath>
-        <value>
-          <visible>false</visible>
-        </value>
-      </Operation>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]/visible</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]/visible</xpath>
+          <value>
+            <visible>false</visible>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]</xpath>
+          <value>
+            <visible>false</visible>
+          </value>
+        </nomatch>
+      </li>
 
-      <Operation Class="PatchOperationReplace">
+      <li Class="PatchOperationReplace">
         <xpath>Defs/WorkGiverDef[defName = "HaulUrgently"]/workType</xpath>
         <value>
           <workType>MJobs_PriorityHauling</workType>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->

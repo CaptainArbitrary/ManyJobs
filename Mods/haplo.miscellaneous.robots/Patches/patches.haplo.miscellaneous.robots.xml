@@ -3,19 +3,18 @@
 
   <!-- #region MJobs_PriorityHauling -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_PriorityHauling</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_PriorityHauling</workType>
+    <operations>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_PriorityHauling</li>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/robotWorkTypes</xpath>
         <value>
           <li>
@@ -23,28 +22,27 @@
             <priority>1</priority>
           </li>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_PriorityCleaning -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_PriorityCleaning</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_PriorityCleaning</workType>
+    <operations>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Cleaner"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_PriorityCleaning</li>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Cleaner"]/robotWorkTypes</xpath>
         <value>
           <li>
@@ -52,26 +50,25 @@
             <priority>1</priority>
           </li>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #region MJobs_CleaningPollution -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_CleaningPollution</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_CleaningPollution</workType>
+    <operations>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Cleaner"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_CleaningPollution</li>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Cleaner"]/robotWorkTypes</xpath>
         <value>
           <li>
@@ -79,47 +76,45 @@
             <priority>1</priority>
           </li>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Undertaking -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Undertaking</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Undertaking</workType>
+    <operations>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_Undertaking</li>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Delivering -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Delivering</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Delivering</workType>
+    <operations>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_Delivering</li>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/robotWorkTypes</xpath>
         <value>
           <li>
@@ -127,28 +122,27 @@
             <priority>1</priority>
           </li>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Loading -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Loading</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Loading</workType>
+    <operations>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_Loading</li>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/robotWorkTypes</xpath>
         <value>
           <li>
@@ -156,28 +150,27 @@
             <priority>1</priority>
           </li>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
 
   <!-- #region MJobs_Loading -->
 
-  <Operation Class="XmlExtensions.OptionalPatchExternal">
-    <ModClass>ManyJobs.ManyJobs</ModClass>
-    <field>MJobs_Merging</field>
-    <caseTrue>
+  <Operation Class="ManyJobs.PatchOps.IfWorkTypeIsEnabled">
+    <workType>MJobs_Merging</workType>
+    <operations>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/race/mechEnabledWorkTypes</xpath>
         <value>
           <li>MJobs_Merging</li>
         </value>
-      </Operation>
+      </li>
 
-      <Operation Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName = "AIRobot_Hauler"]/robotWorkTypes</xpath>
         <value>
           <li>
@@ -185,9 +178,9 @@
             <priority>1</priority>
           </li>
         </value>
-      </Operation>
+      </li>
 
-    </caseTrue>
+    </operations>
   </Operation>
 
   <!-- #endregion -->
