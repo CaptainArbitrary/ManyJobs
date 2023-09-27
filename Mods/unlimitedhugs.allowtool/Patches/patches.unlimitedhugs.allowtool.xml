@@ -7,11 +7,20 @@
     <workType>MJobs_PriorityHauling</workType>
     <operations>
 
-      <li Class="XmlExtensions.PatchOperationAddOrReplace">
-        <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]</xpath>
-        <value>
-          <visible>false</visible>
-        </value>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]/visible</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]/visible</xpath>
+          <value>
+            <visible>false</visible>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/WorkTypeDef[defName = "HaulingUrgent"]</xpath>
+          <value>
+            <visible>false</visible>
+          </value>
+        </nomatch>
       </li>
 
       <li Class="PatchOperationReplace">
