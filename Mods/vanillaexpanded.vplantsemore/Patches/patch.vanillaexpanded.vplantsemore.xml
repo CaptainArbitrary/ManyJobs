@@ -5,16 +5,14 @@
     <workType>MJobs_Brewing</workType>
     <operations>
 
-      <li Class="XmlExtensions.Conditional">
+      <li Class="PatchOperationConditional">
         <xpath>Defs/WorkGiverDef[defName = "VCE_DoBillsVegMilkExtractor"]/workType</xpath>
-        <caseTrue>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/WorkGiverDef[defName = "VCE_DoBillsVegMilkExtractor"]/workType</xpath>
-            <value>
-              <workType>MJobs_Brewing</workType>
-            </value>
-          </li>
-        </operations>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/WorkGiverDef[defName = "VCE_DoBillsVegMilkExtractor"]/workType</xpath>
+          <value>
+            <workType>MJobs_Brewing</workType>
+          </value>
+        </match>
       </li>
 
     </operations>
