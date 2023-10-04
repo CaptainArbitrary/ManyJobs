@@ -1,38 +1,11 @@
-<p align="center">
-<img alt="" src="About/Preview.png">
-</p>
-
-<p align="center">
-  <a href="https://rimworldgame.com/">
-    <img alt="Built for RimWorld" src="https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fraw.githubusercontent.com%2FCaptainArbitrary%2FManyJobs%2Fmain%2FAbout%2FAbout.xml&query=%2FModMetaData%2FsupportedVersions%2Fli%5Blast()%5D&label=Built%20for%20RimWorld&style=for-the-badge" />
-  </a>
-&emsp;
-  <a href="LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/CaptainArbitrary/ManyJobs?style=for-the-badge" />
-  </a>
-&emsp;
-  <a href="https://github.com/CaptainArbitrary/ManyJobs/actions/workflows/ci.yml">
-    <img alt="CI Status" src="https://img.shields.io/github/actions/workflow/status/CaptainArbitrary/ManyJobs/ci.yml?style=for-the-badge&label=CI" />
-  </a>
-&emsp;
-  <a href="https://github.com/CaptainArbitrary/ManyJobs/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/CaptainArbitrary/ManyJobs?style=for-the-badge" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://discord.gg/4SrvKaQTB3">
-    <img alt="Join me on Discord" src="https://img.shields.io/badge/join_me_on-discord-blue?style=for-the-badge&logo=discord"/>
-  </a>
-&emsp;
-  <a href="https://ko-fi.com/T6T1NNFAL">
-    <img alt="Buy me a coffee" src="https://shields.io/badge/ko--fi-Buy_me_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badge"/>
-  </a>
-</p>
+[![License](https://img.shields.io/github/license/CaptainArbitrary/ManyJobs?style=for-the-badge)](https://github.com/CaptainArbitrary/ManyJobs/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/CaptainArbitrary/ManyJobs?style=for-the-badge&label=GitHub%20Release)](https://github.com/CaptainArbitrary/ManyJobs/releases)
+[![Join me on Discord](https://img.shields.io/badge/join_me_on-discord-blue?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/4SrvKaQTB3)
+[![Buy me a coffee](https://shields.io/badge/ko--fi-Buy_me_a_coffee-ff5f5f?logo=ko-fi&logoColor=white&style=for-the-badge)](https://ko-fi.com/T6T1NNFAL)
 
 ## Description
 
-I've always had a love-hate relationship with RimWorld's Work tab. Getting pawns to do _what_ you _when_ you want them to do it has been the source of a lot of frustration for me. Now, there's an argument to be made that that's part of the challenge of the game. If so, then it's a part of the game that _I don't particularly enjoy,_ so I decided to do something about it.
+Many Jobs adds a number of new work types to the game, and rearranges the relationships between work types and jobs.
 
 [![Many Jobs Work Tab](.github/README/Many_Jobs_Work_Tab.png)](.github/README/Many_Jobs_Work_Tab.png?raw=true)
 
@@ -42,18 +15,17 @@ I've also tried to put work types in a sensible order of priority. Rescuing inju
 
 ## Compatibility
 
-Many Jobs is incompatible with any other mod that does the same basic thing:
+Many Jobs is _compatible_ with Royalty, Ideology and Biotech.
+
+Many Jobs is _incompatible_ with any other mod that does the same basic thing. The following is a representative but incomplete list of incompatible mods:
 
 - [[FSF] Complex Jobs](https://steamcommunity.com/sharedfiles/filedetails/?id=2069684319)
 - [Job Splitter](https://steamcommunity.com/sharedfiles/filedetails/?id=1211661009)
 - [Nurse Job](https://steamcommunity.com/sharedfiles/filedetails/?id=1820501433)
 - [Some more jobs](https://steamcommunity.com/sharedfiles/filedetails/?id=2245161494)
+- [Repair Work Type (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2590677308)
 
 These mods all improve the Work tab, just in different ways. If you don't like mine, try the others. They're all good.
-
-### DLC
-
-Many Jobs is compatible with Royalty, Ideology and Biotech.
 
 ### Supported Mods
 
@@ -65,8 +37,6 @@ Many Jobs is compatible with Royalty, Ideology and Biotech.
 - [Grouped Pawns Lists](https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428)
 
 In my opinion these two mods together dramatically improve the Work tab user interface, making it easier to read and use.
-
-[![Work Tab Work Tab](.github/README/Work_Tab_Work_Tab_lol.png)](.github/README/Work_Tab_Work_Tab_lol.png?raw=true)
 
 ## FAQ
 
