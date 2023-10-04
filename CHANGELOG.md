@@ -1,3 +1,7 @@
+## Release 1.7.0
+
+No changes.
+
 ## Release 1.7.0-beta.1
 
 ### New Features
